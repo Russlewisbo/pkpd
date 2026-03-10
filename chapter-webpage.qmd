@@ -1,0 +1,679 @@
+---
+title: "Pharmacokinetics and Pharmacodynamics of Antiinfective Agents"
+subtitle: "Chapter 19"
+author:
+  - name: Manjunath P. Pai
+  - name: Mackenzie L. Cottrell
+date: last-modified
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    theme: cosmo
+    code-fold: true
+bibliography: references.bib
+csl: vancouver.csl
+---
+
+## Introduction {#sec-introduction}
+
+Pharmacokinetics (PK) and pharmacodynamics (PD) systems analyses provide the mathematical framework within pharmacology to identify antiinfective dosing regimens with the greatest risk-benefit ratio [@Buxton2018].
+
+::: {.callout-note}
+## Key Definitions
+
+- **Pharmacology**: The study concerning a compound related to its history, source, physical and chemical properties, compounding, biochemical and physiologic effects, mechanisms of action and resistance, absorption, distribution, metabolism, excretion, and therapeutic and other uses [@Buxton2018]
+
+- **Pharmacokinetics (PK)**: Describes the process by which a drug enters and leaves the body based on absorption, distribution, metabolism, and excretion to define systemic exposure [@Blumenthal2018]
+
+- **Pharmacodynamics (PD)**: Describes the biochemical and physiologic response of the drug and its mechanism of action [@Blumenthal2018]
+:::
+
+PK-PD analyses are integrated to define the exposure response, where the response can be a measure of safety, efficacy, or emergence of resistance. Optimal dosing regimens rely on modeling and simulation to balance the probability of efficacy relative to safety thresholds [@Buxton2018; @Blumenthal2018].
+
+::: {.callout-important}
+## Unique Aspects of Antiinfective PK-PD
+Antiinfective PK-PD is unique in pharmacology in that this relationship includes the effects of the drug on:
+
+1. The infective pathogen
+2. The host
+3. Collateral effects on the microbiome [@Craig1998; @Drusano2007]
+:::
+
+Because antiinfective agents chiefly affect nonmammalian target sites, the doses of these agents tend to be an order of magnitude higher than those of other pharmacologic classes [@Silver2011]. Another challenge involves reductions in potency of antiinfective agents over time due to emergence of resistance.
+
+## Pharmacokinetic Principles {#sec-pk-principles}
+
+The plasma or serum concentration-time curve represents complex physiologic processes that are simplified and visually represented by the concentration-time curve. The shape of this curve can be modified by altering the rates of drug entry, distribution, metabolic transformation, and elimination through intrinsic or extrinsic factors [@Vieira2014].
+
+<!-- IMAGE NEEDED: Figure 19.2 - Simulated serum concentration-time profile showing oral vs IV administration -->
+
+### Absorption {#sec-absorption}
+
+*Absorption* describes the movement of drug from an extravascular space to an intravascular space [@Buxton2018]. For antiinfective agents, the two most common modes of drug administration that require absorption are the oral and intramuscular routes.
+
+::: {.callout-tip}
+## Bioavailability
+The amount of drug that reaches the systemic circulation is expressed as a percentage of the total amount that could have been absorbed. This percentage is defined as the drug's absolute or relative **bioavailability**:
+
+- **Absolute bioavailability**: Comparison of extravascular route with intravenous administration
+- **Relative bioavailability**: Comparison of two different extravascularly administered dosage forms [@Buxton2018]
+:::
+
+#### Factors Affecting Oral Absorption
+
+A major process variable in oral drug absorption is the solubility and permeability of the compound in the gastrointestinal tract. Most drugs in development tend to be insoluble, requiring significant efforts through medicinal chemistry or pharmaceutical sciences for formulation development [@Burger2018].
+
+Oral absorption can be saturable or nonsaturable with factors such as:
+
+- Degradation in the gut by acid or proteolysis
+- Gut metabolism and first-pass liver drug metabolism by enzymes
+- Influx and efflux transporters influencing the rate and extent of absorption
+- Drug interactions with other compounds or food that may bind the drug or reduce solubility
+
+::: {.callout-note}
+## Enterohepatic Recirculation
+Drugs and their conjugated metabolites can be secreted through the bile into the intestines and reabsorbed into circulation through deconjugation by gut flora, a process known as **enterohepatic recirculation**. This mechanism plays an important role in prolonging the elimination of drugs such as certain antibiotics, nonsteroidal antiinflammatory drugs, hormones, opioids, digoxin, and warfarin.
+:::
+
+### Distribution {#sec-distribution}
+
+The shape of the concentration-time curve is modeled most commonly using a proportionality constant known as the *volume of distribution (V~d~)* and is termed the *apparent volume of distribution (V~d~/F)* when the drug is administered by the extravascular route [@Toutain2004].
+
+::: {.callout-warning}
+## Important Concept
+The V~d~ is not a real or physiologic volume, but rather a value that relates drug concentration in the system to the amount of drug present in that system. This system can be defined as a single compartment (V~d1~) or as multiple compartments (V~d1~, V~d2~, ... V~dn~) to mathematically fit the shape of the concentration-time curve.
+:::
+
+#### Factors Affecting Distribution
+
+Factors that alter the physiologic distribution of drug into tissue include:
+
+- Lipophilicity
+- Partition coefficient of the drug between different types of tissues
+- Blood flow to tissues
+- pH and binding affinity to plasma proteins relative to tissue components [@Buxton2018]
+
+Drug transporters play a role in defining the net drug concentration at the site of infection through influx and efflux transporters [@Gandhi2012]. Transporter function can be influenced by genetic and environmental factors and thus varies from person to person.
+
+#### Protein Binding Considerations
+
+Drugs binding to serum proteins have a major influence on V~d~:
+
+| Drug Type | Binding Protein | Effect on V~d~ |
+|:----------|:----------------|:---------------|
+| Acidic drugs (β-lactams) | Albumin | Lower V~d~ (retained in plasma) |
+| Basic drugs (macrolides) | α~1~-acid glycoprotein | Larger V~d~ (retained in tissues) |
+
+: Effect of Protein Binding on Volume of Distribution {#tbl-protein-binding}
+
+::: {.callout-important}
+## Clinical Pearl
+Protein binding is an important consideration for antimicrobial agents because **unbound drug** is available to exert antimicrobial activity, and in vitro methods used to assess potency through the MIC evaluate unbound drug [@Craig1977].
+:::
+
+### Metabolism {#sec-metabolism}
+
+Drug metabolism reactions are classified as either phase I or phase II reactions [@Blumenthal2018; @Burger2018].
+
+#### Phase I Reactions
+
+*Phase I reactions* can transform a substrate into an active or inactive metabolite and in some cases into a more toxic substrate. Phase I reactions generally are under the control of the *cytochrome P-450 (CYP) system*.
+
+::: {.callout-note}
+## CYP Enzyme System
+- CYP enzymes are heme-containing proteins located in the endoplasmic reticulum of a variety of cell types, most abundantly in the liver
+- CYP enzymes are controlled by a superfamily of genes classified into families according to their amino acid sequences
+- The term *CYP3A4* designates a mammalian enzyme (CYP) family 3, subfamily A, gene 4
+:::
+
+**Primary CYP Enzymes for Drug Metabolism** (in decreasing order of importance):
+
+1. CYP3A
+2. CYP2D6
+3. CYP2C
+4. CYP1A2
+5. CYP2E1
+
+#### Genetic Polymorphism
+
+CYP enzymes are affected by many factors that stimulate or inhibit their ability to metabolize drugs. Genetic factors have been shown to result in a phenomenon called **polymorphism** [@Karczewski2012].
+
+For some CYP enzymes, such as CYP2D6, distinct metabolic patterns exist in a population:
+
+- Poor metabolizers
+- Intermediate metabolizers
+- Extensive metabolizers
+- Ultrarapid metabolizers
+
+::: {.callout-tip}
+## Clinical Application: Ritonavir Boosting
+Ritonavir has been used to decrease the activity of CYP3A isozymes in the gut, allowing greater absorption of other protease inhibitors (PIs) such as tipranavir and darunavir and reducing the overall cost of therapy. The recently approved treatment for COVID-19, Paxlovid, relies on ritonavir-boosted nirmatrelvir [@Hammond2022].
+:::
+
+#### Phase II Reactions
+
+*Phase II reactions*, which also show genetic polymorphism, involve conjugation of the parent compound with larger molecules, which increases the polarity of the parent molecule and permits excretion. Although phase II reactions generally lead to inactivation of the parent compound, occasionally conjugation increases the potency of the parent compound or results in the formation of another biologically active compound.
+
+::: {.callout-warning}
+## Antibiotic-Drug Interactions
+Oral antibiotics that disrupt intestinal microflora such as ciprofloxacin, amoxicillin-clavulanic acid, metronidazole, and trimethoprim-sulfamethoxazole have been shown to result in subtherapeutic MPA (mycophenolic acid) concentrations and increase the risk of organ rejection. This highlights the importance of considering the impact of gut flora disruptions on the pharmacology of medications with a narrow therapeutic index.
+:::
+
+### Elimination {#sec-elimination}
+
+The AUC over a specific time period is proportional to the dose administered (for drugs that follow linear PK) and inversely related to *total drug clearance (CL~T~)* [@Vieira2014]. CL~T~ reflects the unit volume of a system that is cleared of drug per unit time (e.g., L/h).
+
+#### Routes of Elimination
+
+**Renal Clearance (CL~r~)**: Describes the volume per unit time that the body eliminates a substance via the kidneys, through various mechanisms including:
+
+- Glomerular filtration
+- Tubular secretion (an energy-dependent, transporter-mediated process)
+- Tubular reabsorption
+
+**Nonrenal Clearance (CL~nr~)**: Describes the sum of clearance pathways that do not involve the kidneys [@Blumenthal2018], including:
+
+- Biliary tree (e.g., ceftriaxone)
+- Intestine (e.g., azithromycin)
+- Skin and lungs (respiration)
+- DNA chelation and inactivation (e.g., aminoglycosides in cystic fibrosis sputum)
+
+## Pharmacokinetic Abbreviations Reference {#sec-pk-abbreviations}
+
+| Type of Term | Abbreviation | Definition |
+|:-------------|:-------------|:-----------|
+| **Pharmacokinetics** | | |
+| Absorption | F | Bioavailability: absolute bioavailability |
+| | K~a~ | Absorption rate constant |
+| Distribution | V~d~ | Volume of distribution |
+| | V~d~/F | Apparent volume of distribution |
+| | V~ss~ | Volume of distribution at steady state |
+| | CL~D~ | Distributional clearance |
+| Metabolism | K~m~ | Drug concentration at which enzyme system metabolizes at half of V~m~ |
+| | V~m~ | Maximal metabolic capacity (Michaelis-Menten) |
+| | CYP | Cytochrome P-450 enzyme systems |
+| Elimination | CL~r~ | Renal clearance |
+| | CL~nr~ | Nonrenal clearance |
+| | CL~T~ | Total clearance |
+| | t~½~ | Half-life |
+| **Pharmacodynamics** | | |
+| | MIC~90~ | Minimal inhibitory concentration for 90% of isolates |
+| | EC~50~ | Effective concentration for 50% of all isolates |
+| | MPC | Mutant prevention concentration |
+| | MSW | Mutant selection window |
+| | IC~50~ | Inhibitory concentration for 50% of isolates |
+| | C~max~/MIC | Peak antimicrobial serum concentration to MIC ratio |
+| | AUC/MIC | 24-h area under the serum antimicrobial concentration-time curve to MIC ratio |
+| | AUIC | 24-h area under the inhibitory curve |
+| | T > MIC | Time that serum antimicrobial concentrations are above the organism's MIC |
+| | PAE | Postantibiotic effect |
+
+: Quick Reference Pharmacologic Abbreviations and Their Definitions {#tbl-abbreviations}
+
+## Antimicrobial Potency {#sec-antimicrobial-potency}
+
+Antimicrobial agents may be bacteriostatic at low concentrations but bactericidal at high concentrations. These bacteriostatic and bactericidal concentrations have been used to quantitate the activity of an agent against an organism [@Turnidge2007].
+
+### Methods to Measure Antimicrobial Activity
+
+Approaches to measure antimicrobial activity have broadly included:
+
+1. **Agar-based macrodilution and microdilution systems**: Can include disk-diffusion of an antibiotic to create a zone of inhibition (diameter measurement)
+2. **Broth dilution systems**: Allow measurement of an MIC based on a doubling-dilution (log~2~) scale (e.g., 0.5, 1, 2, 4 mg/L)
+3. **Gradient strips**: Create antimicrobial gradients to quantitate the MIC on an arithmetic scale
+
+::: {.callout-note}
+## Key Microbiological Parameters
+
+- **MIC~90~**: *MIC for 90% of all surveyed isolates* of a bacterial species
+- **IC~50~ or EC~50~**: *Inhibitory or effective concentration for 50% of all surveyed isolates* of a strain of virus
+- **Minimal bactericidal concentration**: The lowest concentration at or above the MIC required to kill a microorganism
+:::
+
+### Limitations of In Vitro Parameters
+
+Although these in vitro parameters are helpful epidemiologically, they represent determination of fixed values that cannot fully reflect the dynamic in vivo process such as [@Rizk2019]:
+
+1. The time course of activity or the potential for persistent antiinfective effect after the concentration at the site has decreased below the MIC or minimal bactericidal concentration
+2. The interaction of the immune system with the drug and pathogen
+3. Exposures necessary to prevent the development of resistance or organism mutation
+
+::: {.callout-important}
+## Combination Drug Use
+Importantly, these parameters reflect specific drug-organism in vitro measurements that cannot reflect the combination drug use profile as empirical therapy and for documented polymicrobial infections [@Turnidge2007].
+:::
+
+### Drug Interactions: Synergism, Additivity, and Antagonism
+
+Although antiinfective agents can be used individually, in many instances they are used together:
+
+- **Synergism**: Activity of two or more antiinfective agents given together that is greater than the sum of activity had the agents been given separately
+- **Additivity** (also known as *indifference*): Activity of two or more agents together that equals the sum of activity of each agent
+- **Antagonism**: Activity of two or more antiinfective agents given together that is lower than the activity of the most active agent given separately
+
+Combinations of agents are used to enhance efficacy, rate, and extent of organism killing or to reduce the development of resistance but can have conflicting results [@Torella2010].
+
+## Pharmacodynamics Indices {#sec-pd-indices}
+
+PD combines PK parameters and microbiology parameters to describe drug effect in relation to some measure of exposure. These PK measures of exposure include [@Rizk2019]:
+
+- Maximal concentration (C~max~; peak)
+- Minimal concentration (C~min~; trough)
+- AUC integrated over a specified time period (AUC~0–t~) or infinity (AUC~0–inf~)
+- Duration of time that the concentration exceeds a threshold value
+
+### The Three Primary PK-PD Indices
+
+In the case of antiinfective agents, three PK-PD indices based on serum or plasma concentrations have been associated with efficacy:
+
+<!-- IMAGE NEEDED: Figure 19.3 - Common antibiotic PK-PD relationships showing Cmax, AUC0-24, T>MIC, and Cmin -->
+
+| PK-PD Index | Description | Associated Antibiotic Classes |
+|:------------|:------------|:------------------------------|
+| **C~max~/MIC** | Peak antimicrobial concentration to MIC ratio | Aminoglycosides, fluoroquinolones, daptomycin |
+| **AUC/MIC** | 24-h area under the curve to MIC ratio | Fluoroquinolones, vancomycin, glycopeptides |
+| **T > MIC** | Time that concentrations remain above the MIC | β-lactams, carbapenems, cephalosporins |
+
+: Primary PK-PD Indices for Antiinfective Agents {#tbl-pkpd-indices}
+
+::: {.callout-tip}
+## Correlation Between Indices
+Antimicrobial agents deemed to be concentration dependent with a good correlation to C~max~/MIC also have some degree of correlation to AUC/MIC. The same phenomenon is true for antimicrobial agents deemed to manifest time-dependent PK-PD [@Tam2011].
+:::
+
+### Distribution and Elimination Phases
+
+The rise and fall in drug concentrations are often evaluated through blood sampling and most often have two phases:
+
+1. **Distribution phase (α phase)**: A more rapid initial decline referred to as the distribution phase
+2. **Elimination phase (β phase)**: Followed by a reduction in the slope referred to as the elimination phase
+
+This second phase in the concentration-time profile often coincides with the concentration profile expected in the interstitial space of tissues with the scale of this profile dependent on the degree of plasma protein binding.
+
+## Methodology for Study of PK-PD Effects {#sec-methodology}
+
+### In Vitro Models {#sec-in-vitro-models}
+
+The most widely accepted model used to study in vitro PK-PD effects of antiinfective agents is the "hollow fiber model" system [@Blaser1985; @Bulitta2019].
+
+::: {.callout-note}
+## Hollow Fiber Model
+- Uses a cartridge composed of thousands of hollow porous fibers sealed at each end
+- Growth media enters one end and passes through the inside of the fibers to the opposite end
+- Microorganisms or virally infected cells are inoculated on the outside of the fibers and multiply in the space between the fibers (extracapillary space)
+- Antiinfective agents, nutrients, and metabolic waste can cross the fibers but the larger microorganisms cannot
+:::
+
+**Advantages**:
+- Can expose microorganisms to predetermined dynamic or static concentrations simulating expected PK in humans
+- Allows sampling via a port to quantify microorganism load and drug concentrations
+- Offers control over bacterial inoculum and drug concentration-time profiles
+
+**Limitations**:
+- Does not currently assess the effects of the immune system on organism killing or growth inhibition
+- Results in relatively high organism loads and lack host immune function
+- May predict higher effective doses than would be defined by immune intact animal models
+
+### Animal Models {#sec-animal-models}
+
+Rodent models are often used to determine PK-PD by first making the animal neutropenic before infection to improve the model's reliability and reproducibility. Craig et al. showed that the presence of neutrophils may affect antibacterial activity with fluoroquinolones, penicillin, clindamycin, and doxycycline [@Kiem2002].
+
+**Advantages**:
+- Allow for frequent sampling of blood and tissue
+- Allow a broad dosage range to be investigated along with a wide range of organism inocula
+- Allow investigation of variation in a single parameter at a time
+
+**Limitations**:
+- Lack of standardization of the inoculum size (often large inocula are required to produce infection)
+- Faster rate of drug elimination in small mammals compared with humans
+- AUC values may not replicate human concentration-time profiles
+
+### Clinical Trials {#sec-clinical-trials}
+
+Preclinical and early clinical (phase I and II) PK-PD relationships are often being applied to justify dose selection for the two phase III clinical trials that are necessary to gain regulatory approval to market a drug [@Martinez2012; @Rizk2019].
+
+::: {.callout-warning}
+## Limitation of Phase III Trials
+The high cost of phase III trials limits significant modification of the study design to rectify and retest assumptions about dose selection. Hence most human trials that have defined PK-PD relationships have been based on the retrospective review of postmarketing drugs or post hoc subgroup analyses of prospectively collected data.
+:::
+
+Clinical trials have used three measures of assessment to relate to antimicrobial PK-PD [@Scaglione2009]:
+
+1. Clinical outcome
+2. Microbiologic cure
+3. Development of resistance
+
+## Concentration-Dependent vs. Time-Dependent Killing {#sec-killing-patterns}
+
+### Concentration-Dependent Killing Agents {#sec-concentration-dependent}
+
+Concentration-dependent killing agents include:
+
+- Aminoglycosides
+- Fluoroquinolones
+- Metronidazole
+- Daptomycin
+
+For these agents, higher C~max~/MIC ratios are required for gram-positive pathogens compared with gram-negative pathogens.
+
+<!-- IMAGE NEEDED: Figure 19.4 - Time-kill curves for P. aeruginosa showing concentration-dependent killing with tobramycin, ciprofloxacin, and ticarcillin -->
+
+::: {.callout-tip}
+## Fluoroquinolone PK-PD and Resistance
+Evaluation of the influence of PK-PD on bacterial resistance has been best characterized with fluoroquinolones and aminoglycosides. Blaser et al. examined the C~max~/MIC ratio for enoxacin and netilmicin against various gram-negative organisms. Regrowth of organisms occurred in all cultures when enoxacin or netilmicin attained ratios lower than 8. On redosing of these antibiotics after bacterial regrowth, no killing was seen because of the development of resistance [@Blaser1987].
+:::
+
+### Time-Dependent Killing Agents {#sec-time-dependent}
+
+Time-dependent killing agents include:
+
+- Penicillins
+- Cephalosporins
+- Aztreonam
+- Vancomycin (for which AUC/MIC is predictive)
+- Carbapenems
+- Macrolides
+- Linezolid
+- Tigecycline
+- Doxycycline
+- Clindamycin
+
+For agents active against gram-negative bacteria, the rate of kill is maximized when concentrations at the site of the bacterial infection are typically four times higher than the MIC of the organism [@Craig1998].
+
+::: {.callout-important}
+## T > MIC Thresholds
+A report using animal studies with *Streptococcus pneumoniae* in which treatment was performed with penicillins or cephalosporins showed:
+
+- When T > MIC was ≤20% of the dosing interval → **100% mortality**
+- When T > MIC was 40% to 50% of the dosing interval → **0% to 10% mortality** [@Rizk2019]
+:::
+
+## Postantibiotic Effect {#sec-pae}
+
+After a short exposure of bacteria to an antimicrobial agent, complete or partial suppression of bacterial growth may last for a period of time after the drug is removed. This phenomenon is termed the **postantibiotic effect (PAE)** [@Craig1998].
+
+| Antibiotic Class | PAE Against Gram-Negative | PAE Against Gram-Positive |
+|:-----------------|:-------------------------|:-------------------------|
+| Aminoglycosides | 2–6 hours | 2 hours |
+| Fluoroquinolones | 2–6 hours | 2 hours |
+| β-Lactam antibiotics | Little or no PAE | 2 hours |
+
+: Postantibiotic Effect Duration by Antibiotic Class {#tbl-pae}
+
+::: {.callout-note}
+## Clinical Implications of PAE
+- An agent with a **long PAE** can be dosed less frequently than an antimicrobial agent lacking a PAE
+- An agent with **little or no PAE** may be most effective if given as a continuous infusion so that the serum concentration always exceeds the MIC
+:::
+
+Factors that affect the in vitro PAE include:
+
+- Specific combinations of antimicrobial agents
+- Antimicrobial concentration
+- Duration of antimicrobial exposure
+- pH
+- Size of inoculum
+- Type of growth medium
+- Bacterial growth phase
+
+## Applied Clinical Pharmacokinetics and Pharmacodynamics {#sec-applied-pkpd}
+
+The exposure-response relationship predictive of effect and safety may not be complete when an antiinfective agent is first marketed. Over the past 50 years, the principles outlined earlier have been applied to improve the clinical management of patients through design of alternative drug dose regimens that take advantage of the exposure-response relationship [@Martinez2012].
+
+These strategies have broadly included:
+
+1. **Higher-dose extended-interval dosing**: For concentration-dependent antimicrobial agents
+2. **Continuous or extended infusions**: For time-dependent antimicrobial agents
+
+::: {.callout-tip}
+## Precision Medicine Approach
+Conceptually, use of more intensive dosing regimens at treatment initiation followed by dose titration with clinical improvement or worsening would be ideal. Testing this approach requires more complex covariate-adjusted response-adaptive designs of antiinfective agents with a companion biomarker of response to tease out true differences between regimens [@Musuamba2017].
+:::
+
+### Higher-Dose Extended-Interval Dosing {#sec-extended-interval}
+
+This dosing strategy has primarily been used to optimize the PK-PD profile of concentration-dependent antimicrobial agents such as:
+
+- Tobramycin
+- Levofloxacin
+- Daptomycin
+- Oritavancin
+- Dalbavancin
+- Azithromycin
+
+#### Aminoglycoside Extended-Interval Dosing
+
+High-dose extended-interval aminoglycoside dosing serves as the model for validation of this approach [@Pai2014]:
+
+| Parameter | Traditional Dosing | Extended-Interval Dosing |
+|:----------|:------------------|:------------------------|
+| Gentamicin/Tobramycin dose | 1 mg/kg TID | 5–7 mg/kg once daily |
+| Target C~max~/MIC | Variable | 8–10 |
+| Rationale | Maintain levels | Optimize PK-PD, minimize toxicity |
+
+: Comparison of Traditional vs Extended-Interval Aminoglycoside Dosing {#tbl-aminoglycoside-dosing}
+
+::: {.callout-important}
+## Clinical Target for Tobramycin
+The objective of the tobramycin regimen of 5–10 mg/kg once daily is to achieve a serum concentration of 16–20 mg/L 1.5–2 hours after a half-hour infusion (postdistribution phase). We seek to achieve a serum C~max~/MIC ratio of **8–10**, based on an MIC~90~ of tobramycin against *P. aeruginosa* of 2 mg/L because this PK-PD index has been correlated to predict clinical success [@Moore1987].
+:::
+
+#### Front-Loaded Regimens
+
+The application of higher doses at treatment initiation has more recently been referred to as **front-loaded regimens**, based on similar theories to suppress tumor growth [@Goldie1983].
+
+Examples include:
+
+- **Oritavancin**: Single 1200 mg dose shown to have similar safety and efficacy as daily administration (200 mg for 3–7 days) for complicated skin and soft tissue infections [@Dunbar2011]
+- **Azithromycin**: 5-day treatment course (500 mg loading, then 250 mg × 4 days) approved for community-acquired pneumonia
+- **Rifampin**: Higher dose of 15 mg/kg/day versus standard 10 mg/kg/day studied in tuberculous meningitis [@Heemskerk2016]
+
+### Continuous-Infusion and Extended-Infusion Regimens {#sec-continuous-infusion}
+
+The effects of intermittent, extended, and continuous infusion on the serum concentration time profile are illustrated in @fig-infusion-comparison.
+
+<!-- IMAGE NEEDED: Figure 19.5 - Simulated serum concentration-time profile comparing 1-h, 4-h, and continuous infusion -->
+
+::: {.callout-note}
+## Key Principle
+Concentrations above a threshold concentration (e.g., 8 mg/L) are maintained for the longest period of time with the use of an initial combination of a short infusion (loading dose) followed by a continuous infusion. As a consequence, concentrations can be maintained above this threshold with a **2-g/day regimen** compared with a **3-g/day regimen** (30% lower total daily dose).
+:::
+
+#### Loading Dose Importance
+
+<!-- IMAGE NEEDED: Figure 19.6 - Comparison of continuous infusion with and without loading dose -->
+
+Use of a continuous infusion regimen **without a loading dose** will lead to a delay in the time that the concentration exceeds a threshold. Martinez et al. reviewed this topic and highlighted the importance of achieving effective concentrations at treatment initiation when the organism load is expected to be at its highest [@Martinez2012].
+
+#### Clinical Evidence for Extended Infusions
+
+A systematic review and meta-analysis of extended and continuous infusion of piperacillin-tazobactam and carbapenems based on nonrandomized studies suggested that these dosing approaches may be associated with a lower risk for mortality compared with shorter intermittent infusions [@Falagas2013].
+
+| Study Type | Finding |
+|:-----------|:--------|
+| Meta-analysis of prolonged-infusion piperacillin-tazobactam | 1.46-fold lower odds of mortality with prolonged infusions [@Rhodes2018] |
+| BLING-II trial (piperacillin-tazobactam, meropenem) | Comparable outcomes; no definitive superiority [@Dulhunty2015] |
+| BLISS trial | Comparable outcomes between continuous and intermittent β-lactam infusion [@AbdulAziz2016] |
+
+: Summary of Clinical Evidence for Extended/Continuous Infusion Strategies {#tbl-extended-infusion-evidence}
+
+::: {.callout-warning}
+## Implementation Challenges
+Surveys suggest that translation or acceptance of this dosing paradigm still requires a consensus guideline, education, and acceptance in the United States and abroad.
+:::
+
+### Dose-Refinement Considerations {#sec-dose-refinement}
+
+Selection of a specific antiinfective dosing regimen relies on the assumption that a dose-response relationship exists in support of this regimen [@Dulhunty2013]. The regimen that is approved for clinical use is the population average dose that maximizes the probability of clinical effect.
+
+::: {.callout-important}
+## Limitation of Population-Based Dosing
+The optimal dose of an antiinfective agent for every specific population (e.g., pregnant patients, patients receiving dialysis, pediatric patients) is not known when it is first approved for clinical use. Therefore a system to aid dose selection or refinement that is necessary to calculate the optimal dose has developed.
+:::
+
+#### Therapeutic Drug Monitoring (TDM)
+
+The clearest example of dose refinement is documented with the triazole antifungal agents, owing to high interpatient variability in drug absorption and metabolism:
+
+- **Itraconazole and posaconazole**: Unpredictable oral absorption necessitates TDM
+- **Voriconazole**: Metabolized by CYP2C19 isoenzymes encoded by a polymorphic gene; common coadministered drugs such as omeprazole can inhibit this isoenzyme system
+
+::: {.callout-note}
+## TDM Practice Guidelines
+The most recent practice guidelines for the diagnosis and management of aspergillosis include clinical scenarios in which TDM of voriconazole, itraconazole, and posaconazole is justifiable.
+:::
+
+#### Vancomycin TDM Evolution
+
+In practice, TDM of the aminoglycosides and vancomycin is most common, but definitions of the target exposure ranges associated with effect and toxicity have changed over time.
+
+::: {.callout-tip}
+## Vancomycin AUC/MIC Target
+Let us assume that a vancomycin AUC/MIC target >400 h^−1^ is associated with a higher probability of effect against a pathogen with a modal MIC~90~ of 1 mg/L. A 2-g daily dose achieves a median AUC of 400 mg · h/L in a population and so represents the average population dose.
+
+**Clinical scenario**: A patient is treated empirically with 2 g/day but is then determined to be infected with MRSA having a vancomycin MIC of 0.5 mg/L. Should we reduce the dose in half to achieve an AUC of 200 mg · h/L?
+
+The answer is most likely **no**. Alternatively, if the MIC was 2 mg/L, should we double the daily dose? The answer may be yes, but we should also expect the risk for toxicity to increase.
+:::
+
+We expect the current practice of vancomycin TDM to evolve from simple measurement and dose adjustment based on trough concentrations to one that considers AUC estimation using two serum samples or a single serum sample with Bayesian analysis.
+
+## Antiretroviral Pharmacodynamics {#sec-antiretroviral-pd}
+
+Antiretrovirals can be used to suppress viral replication in people living with HIV or as preexposure prophylaxis to prevent transmission in people who are at high risk of HIV acquisition.
+
+::: {.callout-note}
+## Unique Aspects of Antiretroviral PK-PD
+In contrast to the previously discussed antimicrobials, antiretrovirals are unique in their site of action, which is most commonly inside or on the surface of the mammalian cell. Toxicity can result from interference with the host cell's physiology as seen with the early antiretroviral agents commonly associated with adverse events, including diarrhea and mitochondrial toxicity.
+:::
+
+<!-- IMAGE NEEDED: Figure 19.7 - Hypothetical exposure vs. desired/undesired drug effect curves showing therapeutic window -->
+
+### The Therapeutic Window Concept
+
+Using dosing strategies that achieve a concentration profile between effective and toxic thresholds in each individual patient is of utmost importance. One strategy to manage this balance is to design treatment regimens that combine antiretrovirals targeting different phases of the viral life cycle.
+
+::: {.callout-important}
+## Combination Therapy Rationale
+Combination therapy harnesses the pharmacologic principles of additivity and synergy, where the effect of the drugs given in combination is equal to or above what would be expected given the potency of each individual agent, respectively. Thus combination dosing can lower the concentrations required for viral inhibition and widen the therapeutic window.
+:::
+
+### PK-PD Relationships by Antiretroviral Class
+
+#### Protease Inhibitors (PIs)
+
+PK-PD relationships have been well-studied for commonly prescribed PIs:
+
+| Drug | Key PK-PD Finding |
+|:-----|:------------------|
+| Atazanavir | AUC significantly correlated with antiviral activity; C~trough~ correlated with hyperbilirubinemia |
+| Darunavir | Early reports described significant PK-PD for twice-daily dosing; not substantiated for once-daily dosing |
+| Lopinavir/ritonavir | C~trough~ is an important predictor of response in treatment-experienced patients |
+
+: PK-PD Relationships for Protease Inhibitors {#tbl-pi-pkpd}
+
+#### Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs)
+
+- **Efavirenz**: Target plasma concentrations between 1000 and 4000 ng/mL to minimize the risk of virologic failure and central nervous system toxicity
+- **Rilpivirine**: C~trough~ of 100 ng/mL is a significant predictor of virologic suppression at 48 weeks of therapy
+- **Doravirine**: C~trough~ significantly correlated with viral suppression in phase IIb dose-ranging studies
+
+#### Integrase Strand Transfer Inhibitors (INSTIs)
+
+The role of C~trough~ as a marker of efficacy of INSTIs may be less clear:
+
+- **Dolutegravir**: C~trough~ best predicted plasma viral load reduction on day 11 of monotherapy with an EC~50~ C~trough~ value of 36 ng/mL
+- **Raltegravir**: PK-PD relationships correlating C~trough~ with antiviral activity have been described for once-daily dosing but not observed for 400 mg twice-daily dosing
+- **Bictegravir**: Preliminary evidence of significant PK-PD relationship, though phase III trials did not corroborate
+
+::: {.callout-note}
+## Why INSTIs May Lack Clear PK-PD Relationships
+The notable absence of definitive PK-PD indices for INSTIs is likely attributed to potent, well-tolerated clinical doses achieving PK exposure at the plateau of the exposure-response curve.
+:::
+
+#### Nucleoside Reverse Transcriptase Inhibitors (NRTIs)
+
+Defining PK-PD relationships for NRTIs is more difficult because these drugs are intracellularly phosphorylated to their active diphosphate and triphosphate metabolites.
+
+- Plasma parent drug concentrations do not consistently correlate with metabolite concentrations
+- However, increases in zidovudine triphosphate (50%) and lamivudine triphosphate (33%) concentrations have been positively correlated with the rate of HIV-1 RNA decline after starting therapy
+
+::: {.callout-tip}
+## Tenofovir Alafenamide: Targeted Prodrug Approach
+High plasma tenofovir concentrations have been associated with increased risk of nephrotoxicity. The prodrug formulation, **tenofovir alafenamide**, reduces this risk by maximizing cellular uptake, thereby minimizing plasma tenofovir exposure. This case illustrates the use of a targeted-prodrug approach to alter biodistribution and PK-PD of a compound to improve efficacy and safety.
+:::
+
+### Antiretroviral Therapeutic Drug Monitoring
+
+With established PK-PD relationships, antiretroviral TDM can be considered. Some antiretroviral drugs (particularly PIs and raltegravir) can have significant intraindividual PK variability owing to food effects and other environmental influences.
+
+::: {.callout-important}
+## Current Guidelines for Antiretroviral TDM
+TDM for efficacy and toxicity can be warranted in certain clinical circumstances in which virologic response may be unpredictable or antiretroviral options are limited:
+
+- Pregnant patients who have risk factors associated with virologic failure
+- Patients with pathophysiologic conditions that alter drug PK (GI, hepatic, or renal dysfunction)
+- Antiretroviral treatment–experienced patients
+- Patients with clinically significant drug or food interactions
+- Patients with concentration-dependent drug toxicities
+- Patients with alternative dosing regimens or antiretroviral combinations
+- Treatment-adherent patients with lack of virologic response
+:::
+
+## Pharmacodynamics for Other Antiviral Drugs {#sec-other-antivirals}
+
+### Hepatitis C Virus (HCV)
+
+PK-PD relationships have also been established in the treatment of HCV. Since the first direct-acting agents (DAAs) were approved for HCV treatment in 2011, 10 more agents with improved potency have joined the market.
+
+- **Boceprevir and telaprevir**: Virologic suppression was highly dependent on C~min~ (demonstrated in the phase II telaprevir trial)
+- **Newer DAAs**: PK-PD relationships have been more difficult to define; multiple studies have failed to describe a predictable relationship for sofosbuvir-ledipasvir PK estimates and SVR
+
+### Cytomegalovirus (CMV)
+
+**Foscarnet**, a polymerase and reverse-transcriptase inhibitor used to treat CMV, exhibits both a PK-PD and PK-toxicity relationship:
+
+- AUC strongly correlates with outcomes of increased days to progression of CMV retinitis
+- AUC also correlates with increased nephrotoxicity risk
+
+::: {.callout-note}
+## Foscarnet TDM in Hemodialysis
+TDM is not well validated for foscarnet but has been successfully employed in patients receiving hemodialysis. In this report, dose adjustments were made to achieve C~max~ concentrations of 500–800 µM between the proposed efficacy (CMV IC~50~ = 100–300 µM) and toxicity (>1000 µM) thresholds.
+:::
+
+### Herpes Simplex Virus Type 2 (HSV-2)
+
+The interplay between PK and PD is well-illustrated by an observation from the CAPRISA-004 trial that intravaginal administration of 1% tenofovir gel (being studied for HIV preexposure prophylaxis) decreased risk of HSV type 2 (HSV-2).
+
+::: {.callout-tip}
+## Topical Drug Delivery Advantage
+Oral doses of tenofovir required to achieve genital tract tenofovir concentrations near the HSV-2 EC~50~ (14,000–19,000 ng/mL) would exceed the safety limits for plasma exposure. Yet, topical administration bypasses these safety concerns and delivers tenofovir (TFV) directly to the site of action.
+
+Subsequent analyses of CAPRISA-004 demonstrated a significant correlation between genital TFV concentration ≥10,000 ng/mL and decreased risk of HSV-2 acquisition—illustrating that a comprehensive understanding of PK-PD relationships can be harnessed to develop new clinical applications for old drugs.
+:::
+
+## Conclusions {#sec-conclusions}
+
+Optimal dose selection of an antiinfective agent for an individual patient is an indispensable goal of clinical practice. The study of the interrelationship between drug exposure and response through PK-PD analyses is now an established component of antiinfective drug development.
+
+::: {.callout-important}
+## Key Takeaways
+
+1. **PK-PD provides a framework** to follow a pathway that integrates information from in vitro, in vivo, clinical, and in silico experiments to define a dosing regimen that increases the probability of effect and reduces the probability of toxicity in a population
+
+2. **Various nonpharmacologic factors** can influence efficacy and safety-related outcomes in individuals; these unmeasured or immeasurable factors can confound our assessment of the "true" exposure-response relationship
+
+3. **Clinical use of an agent in populations underrepresented in early studies** leads to an identification of pharmacologic and nonpharmacologic factors that influence outcome
+
+4. **Our understanding evolves** with the clinical use of an agent; continued innovations in genomics, assays, and computer software capabilities will foster individualized antiinfective dose selection
+
+5. **The interplay between the gut microbiome and antiinfective drugs** is imperative for advancing our comprehension of pharmacomicrobiomics, with the ultimate aim of translating these insights into practical clinical recommendations
+:::
+
+## References {#sec-references}
+
+::: {#refs}
+:::
