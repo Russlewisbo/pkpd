@@ -1,0 +1,3296 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="chapter-slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="chapter-slides_files/libs/quarto-html/tabby.min.js"></script>
+<script src="chapter-slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="chapter-slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="chapter-slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="chapter-slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="chapter-slides_files/libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="chapter-slides_files/libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="chapter-slides_files/libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="chapter-slides_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="chapter-slides_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="chapter-slides_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.16">
+
+  <meta name="author" content="Russell E. Lewis">
+  <meta name="dcterms.date" content="2026-03-01">
+  <title>Pharmacokinetics &amp; Pharmacodynamics of Antimicrobial Agents</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="chapter-slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="chapter-slides_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="chapter-slides_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="chapter-slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="chapter-slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="chapter-slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="chapter-slides_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="chapter-slides_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="chapter-slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="chapter-slides_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="chapter-slides_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="chapter-slides_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Pharmacokinetics &amp; Pharmacodynamics of Antimicrobial Agents</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Russell E. Lewis 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-03-01</p>
+</section>
+<section class="slide level2">
+
+<style>
+.reveal h2 {
+  text-align: center;
+  color: #9B0014;
+}
+</style>
+</section>
+<section id="pharmacokinetics-and-pharmacodynamics-of-antiinfective-agents" class="slide level2" data-background-color="#9B0014">
+<h2>Pharmacokinetics and Pharmacodynamics of Antiinfective Agents</h2>
+<p><br> <br></p>
+<center>
+<p>Prof.&nbsp;Russell E. Lewis <br> Department of Molecular Medicine <br> University of Padua</p>
+<p><br> <i class="fa-solid fa-envelope fa-1x" aria-label="envelope"></i> russelledward.lewis@unipd.it <br> <i class="fa-brands fa-github fa-1x" aria-label="github"></i> https://github.com/Russlewisbo</p>
+<p><br> slides available at: www.padovaid.com</p>
+</center>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img data-src="images/dmmunipd_logo.jpeg" width="150"></td>
+<td><img data-src="images/unipd_seal_white.svg" width="200"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<p><br></p>
+<p>After completing this lecture, learners will be able to:</p>
+<ol type="1">
+<li>Define pharmacokinetics and pharmacodynamics in the context of antiinfective therapy</li>
+<li>Explain the key pharmacokinetic parameters (ADME) and their clinical relevance</li>
+<li>Identify the three primary PK-PD indices and their associated antibiotic classes</li>
+<li>Compare concentration-dependent vs.&nbsp;time-dependent killing patterns</li>
+<li>Apply extended-interval and continuous infusion dosing strategies</li>
+<li>Discuss therapeutic drug monitoring principles for antiinfectives</li>
+<li>Apply PK-PD concepts to clinical case scenarios</li>
+</ol>
+<aside class="notes">
+<p>Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session that will provide the mathematical and conceptual framework for optimizing antiinfective dosing. We’ll move from basic principles to clinical applications. Emphasize that PK-PD is unique in that it considers effects on the pathogen, host, AND microbiome.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lecture-outline" class="slide level2">
+<h2>Lecture outline</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Part 1: Foundations</strong> (~30 min)</p>
+<ul>
+<li>Introduction to PK-PD</li>
+<li>Pharmacokinetic principles (ADME)</li>
+<li>Key PK parameters</li>
+<li>Measuring antimicrobial potency</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Part 2: Applications</strong> (~45 min)</p>
+<ul>
+<li>PK-PD indices</li>
+<li>Killing patterns</li>
+<li>Dosing strategies</li>
+<li>TDM principles</li>
+<li>Clinical case studies</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Here’s our roadmap for today. We’ll spend the first 30 minutes on foundational concepts, then move into clinical applications. Feel free to ask questions as we go.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-pk-pd-matters-a-clinical-vignette" class="slide level2 smaller">
+<h2>Why PK-PD Matters: A clinical vignette</h2>
+<p>Case Introduction</p>
+<p>A 65-year-old man with <em>Pseudomonas aeruginosa</em> pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. On day 3, he’s not improving. The MIC comes back as <strong>16 mg/L</strong> (susceptible breakpoint).</p>
+<p><strong>What would you do?</strong></p>
+<div class="fragment">
+<p><strong>Options to consider:</strong></p>
+<ul>
+<li>Increase the dose?</li>
+<li>Change the antibiotic?</li>
+<li>Change how you give the antibiotic?</li>
+</ul>
+<p><em>We’ll return to this case at the end of the lecture…</em></p>
+</div>
+<aside class="notes">
+<p>Let’s start with a case that illustrates why PK-PD matters. This patient has a susceptible organism but isn’t responding. By the end of this lecture, you’ll have the tools to analyze this situation and optimize therapy. Keep this case in mind as we go through the material.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="part-1-foundations" class="title-slide slide level1 center" data-background-color="#9B0014">
+<h1>PART 1: FOUNDATIONS</h1>
+
+</section>
+<section id="pharmacokinetic-and-pharmacodynamic-principles" class="slide level2">
+<h2>Pharmacokinetic and Pharmacodynamic Principles</h2>
+</section>
+<section id="what-is-pharmacology" class="slide level2">
+<h2>What is Pharmacology?</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Pharmacology</strong>: The study concerning a compound related to its history, source, physical and chemical properties, compounding, biochemical and physiologic effects, mechanisms of action and resistance, absorption, distribution, metabolism, excretion, and therapeutic and other uses</p>
+</div>
+</div>
+</div>
+<p><strong>Two key components:</strong></p>
+<ul>
+<li><strong>Pharmacokinetics (PK)</strong>: What the body does to the drug</li>
+<li><strong>Pharmacodynamics (PD)</strong>: What the drug does to the body</li>
+</ul>
+<aside class="notes">
+<p>Let’s start with basic definitions. Pharmacology encompasses everything about a drug. For our purposes, we focus on PK (how the body handles the drug) and PD (the drug’s effects). In antiinfectives, PD includes effects on the pathogen.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pk-vs-pd-the-conceptual-framework" class="slide level2">
+<h2>PK vs PD: The conceptual framework</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 633.69 332.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-328 629.69,-328 629.69,4 -4,4"></polygon>
+<!-- patient -->
+<g id="node1" class="node">
+<title>patient</title>
+<text text-anchor="middle" x="48.24" y="-301.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Patient factors</text>
+</g>
+<!-- PK -->
+<g id="node2" class="node">
+<title>PK</title>
+<ellipse fill="none" stroke="black" cx="157.24" cy="-234" rx="100.75" ry="18"></ellipse>
+<text text-anchor="middle" x="157.24" y="-229.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Pharmacokinetics (PK)</text>
+</g>
+<!-- patient&#45;&gt;PK -->
+<g id="edge1" class="edge">
+<title>patient-&gt;PK</title>
+<path fill="none" stroke="black" d="M74.9,-287.88C89.34,-278.61 107.33,-267.05 122.82,-257.1"></path>
+<polygon fill="black" stroke="black" points="125.07,-259.81 131.6,-251.47 121.29,-253.92 125.07,-259.81"></polygon>
+</g>
+<!-- PKPD -->
+<g id="node8" class="node">
+<title>PKPD</title>
+<ellipse fill="none" stroke="black" cx="270.24" cy="-162" rx="38.32" ry="18"></ellipse>
+<text text-anchor="middle" x="270.24" y="-157.8" font-family="Lato,Arial,sans-serif" font-size="14.00">PK/PD</text>
+</g>
+<!-- PK&#45;&gt;PKPD -->
+<g id="edge6" class="edge">
+<title>PK-&gt;PKPD</title>
+<path fill="none" stroke="black" d="M183.73,-216.59C200.39,-206.26 221.97,-192.9 239.4,-182.1"></path>
+<polygon fill="black" stroke="black" points="241.43,-184.96 248.09,-176.72 237.75,-179.01 241.43,-184.96"></polygon>
+</g>
+<!-- drug -->
+<g id="node3" class="node">
+<title>drug</title>
+<text text-anchor="middle" x="157.24" y="-301.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Drug factors</text>
+</g>
+<!-- drug&#45;&gt;PK -->
+<g id="edge2" class="edge">
+<title>drug-&gt;PK</title>
+<path fill="none" stroke="black" d="M157.24,-287.7C157.24,-279.98 157.24,-270.71 157.24,-262.11"></path>
+<polygon fill="black" stroke="black" points="160.74,-262.1 157.24,-252.1 153.74,-262.1 160.74,-262.1"></polygon>
+</g>
+<!-- intrinsic -->
+<g id="node4" class="node">
+<title>intrinsic</title>
+<text text-anchor="middle" x="279.24" y="-301.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Intrinsic resistance</text>
+</g>
+<!-- PD -->
+<g id="node5" class="node">
+<title>PD</title>
+<ellipse fill="none" stroke="black" cx="402.24" cy="-234" rx="107.7" ry="18"></ellipse>
+<text text-anchor="middle" x="402.24" y="-229.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Pharmacodynamics (PD)</text>
+</g>
+<!-- intrinsic&#45;&gt;PD -->
+<g id="edge3" class="edge">
+<title>intrinsic-&gt;PD</title>
+<path fill="none" stroke="black" d="M309.33,-287.88C325.92,-278.43 346.69,-266.61 364.37,-256.55"></path>
+<polygon fill="black" stroke="black" points="366.34,-259.45 373.3,-251.47 362.88,-253.37 366.34,-259.45"></polygon>
+</g>
+<!-- PD&#45;&gt;PKPD -->
+<g id="edge7" class="edge">
+<title>PD-&gt;PKPD</title>
+<path fill="none" stroke="black" d="M371.29,-216.59C351.07,-205.86 324.66,-191.86 303.92,-180.86"></path>
+<polygon fill="black" stroke="black" points="305.3,-177.63 294.82,-176.04 302.02,-183.82 305.3,-177.63"></polygon>
+</g>
+<!-- acquired -->
+<g id="node6" class="node">
+<title>acquired</title>
+<text text-anchor="middle" x="421.24" y="-301.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Acquired resistance</text>
+</g>
+<!-- acquired&#45;&gt;PD -->
+<g id="edge4" class="edge">
+<title>acquired-&gt;PD</title>
+<path fill="none" stroke="black" d="M416.54,-287.7C414.42,-279.9 411.87,-270.51 409.52,-261.83"></path>
+<polygon fill="black" stroke="black" points="412.88,-260.84 406.88,-252.1 406.12,-262.67 412.88,-260.84"></polygon>
+</g>
+<!-- inoculum -->
+<g id="node7" class="node">
+<title>inoculum</title>
+<text text-anchor="middle" x="564.24" y="-301.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Infection inoculum</text>
+</g>
+<!-- inoculum&#45;&gt;PD -->
+<g id="edge5" class="edge">
+<title>inoculum-&gt;PD</title>
+<path fill="none" stroke="black" d="M524.61,-287.88C501.62,-277.94 472.55,-265.38 448.52,-255"></path>
+<polygon fill="black" stroke="black" points="449.8,-251.74 439.24,-250.99 447.03,-258.17 449.8,-251.74"></polygon>
+</g>
+<!-- microbiological -->
+<g id="node9" class="node">
+<title>microbiological</title>
+<polygon fill="none" stroke="black" points="349.14,-108 191.33,-108 191.33,-72 349.14,-72 349.14,-108"></polygon>
+<text text-anchor="middle" x="270.24" y="-85.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Microbiological outcome</text>
+</g>
+<!-- PKPD&#45;&gt;microbiological -->
+<g id="edge8" class="edge">
+<title>PKPD-&gt;microbiological</title>
+<path fill="none" stroke="black" d="M270.24,-143.7C270.24,-135.98 270.24,-126.71 270.24,-118.11"></path>
+<polygon fill="black" stroke="black" points="273.74,-118.1 270.24,-108.1 266.74,-118.1 273.74,-118.1"></polygon>
+</g>
+<!-- clinical -->
+<g id="node10" class="node">
+<title>clinical</title>
+<polygon fill="none" stroke="black" points="326.27,-36 214.21,-36 214.21,0 326.27,0 326.27,-36"></polygon>
+<text text-anchor="middle" x="270.24" y="-13.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Clinical outcome</text>
+</g>
+<!-- microbiological&#45;&gt;clinical -->
+<g id="edge9" class="edge">
+<title>microbiological-&gt;clinical</title>
+<path fill="none" stroke="black" d="M270.24,-71.7C270.24,-63.98 270.24,-54.71 270.24,-46.11"></path>
+<polygon fill="black" stroke="black" points="273.74,-46.1 270.24,-36.1 266.74,-46.1 273.74,-46.1"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="theuretzbacher2012"><sup><a href="#/references" role="doc-biblioref" onclick="">1</a></sup></span></p>
+</div></aside></section>
+<section id="pharmacology-of-antimicrobials" class="slide level2">
+<h2>Pharmacology of antimicrobials</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 582.13 242.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 238.4)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238.4 578.13,-238.4 578.13,4 -4,4"></polygon>
+<g id="clust2" class="cluster">
+<title>cluster_1</title>
+<polygon fill="lightblue" stroke="lightblue" points="282.3,-67.4 282.3,-226.4 566.13,-226.4 566.13,-67.4 282.3,-67.4"></polygon>
+<text text-anchor="middle" x="424.22" y="-209.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Pharmacodynamics (PD)</text>
+</g>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<polygon fill="lightblue" stroke="lightblue" points="8,-109.4 8,-192.4 262.3,-192.4 262.3,-109.4 8,-109.4"></polygon>
+<text text-anchor="middle" x="135.15" y="-175.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Pharmacokinetics (PK)</text>
+</g>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<polygon fill="white" stroke="white" points="121.73,-156.4 16.09,-156.4 16.09,-120.4 121.73,-120.4 121.73,-156.4"></polygon>
+<text text-anchor="middle" x="68.91" y="-134.2" font-family="Lato,Arial,sans-serif" font-size="14.00">Dosing regimen</text>
+</g>
+<!-- dosing -->
+<g id="node2" class="node">
+<title>dosing</title>
+<polygon fill="yellow" stroke="yellow" points="254.55,-159 157.57,-159 157.57,-117.8 254.55,-117.8 254.55,-159"></polygon>
+<text text-anchor="middle" x="206.06" y="-142.6" font-family="Lato,Arial,sans-serif" font-size="14.00">Conc. vs. </text>
+<text text-anchor="middle" x="206.06" y="-125.8" font-family="Lato,Arial,sans-serif" font-size="14.00"> time in serum</text>
+<text text-anchor="middle" x="122.23" y="-105" font-family="Lato,Arial,sans-serif" font-size="14.00"> </text>
+<text text-anchor="middle" x="122.23" y="-88.2" font-family="Lato,Arial,sans-serif" font-size="14.00"> &nbsp;&nbsp;&nbsp;</text>
+<text text-anchor="middle" x="122.23" y="-71.4" font-family="Lato,Arial,sans-serif" font-size="14.00"> &nbsp;</text>
+<text text-anchor="middle" x="122.23" y="-54.6" font-family="Lato,Arial,sans-serif" font-size="14.00">Absorption </text>
+<text text-anchor="middle" x="122.23" y="-37.8" font-family="Lato,Arial,sans-serif" font-size="14.00">Distribution </text>
+<text text-anchor="middle" x="122.23" y="-21" font-family="Lato,Arial,sans-serif" font-size="14.00">Metabolism </text>
+<text text-anchor="middle" x="122.23" y="-4.2" font-family="Lato,Arial,sans-serif" font-size="14.00">Elimination</text>
+</g>
+<!-- start&#45;&gt;dosing -->
+<g id="edge1" class="edge">
+<title>start-&gt;dosing</title>
+<path fill="none" stroke="black" d="M121.78,-138.4C130.14,-138.4 138.84,-138.4 147.33,-138.4"></path>
+<polygon fill="black" stroke="black" points="147.54,-141.9 157.54,-138.4 147.54,-134.9 147.54,-141.9"></polygon>
+</g>
+<!-- tissue -->
+<g id="node3" class="node">
+<title>tissue</title>
+<polygon fill="white" stroke="white" points="387.26,-193 292.94,-193 292.94,-151.8 387.26,-151.8 387.26,-193"></polygon>
+<text text-anchor="middle" x="340.1" y="-176.6" font-family="Lato,Arial,sans-serif" font-size="14.00">Conc. vs. </text>
+<text text-anchor="middle" x="340.1" y="-159.8" font-family="Lato,Arial,sans-serif" font-size="14.00"> time in tissue</text>
+</g>
+<!-- dosing&#45;&gt;tissue -->
+<g id="edge2" class="edge">
+<title>dosing-&gt;tissue</title>
+<path fill="none" stroke="black" d="M254.36,-150.58C263.58,-152.95 273.34,-155.47 282.83,-157.91"></path>
+<polygon fill="black" stroke="black" points="282.02,-161.32 292.58,-160.42 283.76,-154.54 282.02,-161.32"></polygon>
+</g>
+<!-- infection -->
+<g id="node4" class="node">
+<title>infection</title>
+<polygon fill="white" stroke="white" points="389.69,-133.8 290.51,-133.8 290.51,-75 389.69,-75 389.69,-133.8"></polygon>
+<text text-anchor="middle" x="340.1" y="-117" font-family="Lato,Arial,sans-serif" font-size="14.00">Conc. vs. </text>
+<text text-anchor="middle" x="340.1" y="-100.2" font-family="Lato,Arial,sans-serif" font-size="14.00"> time at site of </text>
+<text text-anchor="middle" x="340.1" y="-83.4" font-family="Lato,Arial,sans-serif" font-size="14.00"> infection</text>
+</g>
+<!-- dosing&#45;&gt;infection -->
+<g id="edge3" class="edge">
+<title>dosing-&gt;infection</title>
+<path fill="none" stroke="black" d="M254.36,-126.22C262.85,-124.03 271.8,-121.73 280.56,-119.47"></path>
+<polygon fill="black" stroke="black" points="281.54,-122.84 290.35,-116.95 279.8,-116.06 281.54,-122.84"></polygon>
+</g>
+<!-- PD1 -->
+<g id="node5" class="node">
+<title>PD1</title>
+<polygon fill="white" stroke="white" points="558.25,-193 425.77,-193 425.77,-151.8 558.25,-151.8 558.25,-193"></polygon>
+<text text-anchor="middle" x="492.01" y="-176.6" font-family="Lato,Arial,sans-serif" font-size="14.00">Pharmacological or &nbsp;</text>
+<text text-anchor="middle" x="492.01" y="-159.8" font-family="Lato,Arial,sans-serif" font-size="14.00"> toxicological effect</text>
+</g>
+<!-- tissue&#45;&gt;PD1 -->
+<g id="edge4" class="edge">
+<title>tissue-&gt;PD1</title>
+<path fill="none" stroke="black" d="M387.3,-172.4C396.3,-172.4 405.96,-172.4 415.62,-172.4"></path>
+<polygon fill="black" stroke="black" points="415.67,-175.9 425.67,-172.4 415.67,-168.9 415.67,-175.9"></polygon>
+</g>
+<!-- PD2 -->
+<g id="node6" class="node">
+<title>PD2</title>
+<polygon fill="white" stroke="white" points="556.52,-125 427.51,-125 427.51,-83.8 556.52,-83.8 556.52,-125"></polygon>
+<text text-anchor="middle" x="492.01" y="-108.6" font-family="Lato,Arial,sans-serif" font-size="14.00">Antimicrobal effect </text>
+<text text-anchor="middle" x="492.01" y="-91.8" font-family="Lato,Arial,sans-serif" font-size="14.00"> vs. time</text>
+</g>
+<!-- infection&#45;&gt;PD2 -->
+<g id="edge5" class="edge">
+<title>infection-&gt;PD2</title>
+<path fill="none" stroke="black" d="M389.77,-104.4C398.56,-104.4 407.9,-104.4 417.22,-104.4"></path>
+<polygon fill="black" stroke="black" points="417.3,-107.9 427.3,-104.4 417.3,-100.9 417.3,-107.9"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
+<aside class="notes">
+<p>This diagram shows the relationship between PK and PD. PK determines the concentration at the site of action; PD determines what happens once the drug gets there. In antiinfectives, the “receptor” is the bacterial target, and the “effect” is killing or inhibiting the pathogen.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p><span class="citation" data-cites="craig_1998"><sup><a href="#/references" role="doc-biblioref" onclick="">2</a></sup></span></p>
+</div></aside></section>
+<section id="what-makes-antiinfective-pk-pd-unique" class="slide level2">
+<h2>What makes antiinfective PK-PD unique?</h2>
+<center>
+<strong>Three-way relationship</strong>
+</center>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Drug → Pathogen</strong></p>
+<ul>
+<li>Direct antimicrobial effect</li>
+<li>Kill or inhibit growth</li>
+<li>Resistance selection</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Drug → Host</strong></p>
+<ul>
+<li>Efficacy</li>
+<li>Toxicity</li>
+<li>Immune modulation</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Drug → Microbiome</strong></p>
+<ul>
+<li>Collateral damage</li>
+<li><em>C. difficile</em> risk</li>
+<li>Resistance reservoir</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Unlike most drugs that only affect the host, antiinfectives have a triangular relationship. This creates complexity but also opportunities for optimization. Doses are typically an order of magnitude higher than other drug classes because we’re targeting non-mammalian sites. The microbiome effects are increasingly recognized as important.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-concentration-time-curve-your-roadmap" class="slide level2">
+<h2>The Concentration-time curve: Your roadmap</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/AUC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/AUC.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</section>
+<section id="the-concentration-time-curve" class="slide level2">
+<h2>The Concentration-time curve</h2>
+<p><strong>Key parameters from the curve:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 10%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Peak concentration</td>
+<td style="text-align: left;">C<sub>max</sub></td>
+<td style="text-align: left;">Highest concentration achieved</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Trough concentration</td>
+<td style="text-align: left;">C<sub>min</sub></td>
+<td style="text-align: left;">Lowest concentration (before next dose)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Area under curve</td>
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">Total drug exposure over time</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Half-life</td>
+<td style="text-align: left;">t<sub>½</sub></td>
+<td style="text-align: left;">Time for concentration to decrease by 50%</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>The concentration-time curve is fundamental to PK-PD. Every dosing decision affects the shape of this curve. We measure several parameters from this curve that relate to efficacy and toxicity. Understanding how to read and manipulate this curve is essential for dose optimization.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="understanding-half-life-t½" class="slide level2">
+<h2>Understanding half-life (t½)</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Half-life (t½)</strong> = Time required for the plasma concentration to decrease by 50%</p>
+</div>
+</div>
+</div>
+<p><strong>Clinical implications:</strong></p>
+<ul>
+<li><strong>Time to steady state</strong> = 4-5 half-lives</li>
+<li><strong>Washout time</strong> = 4-5 half-lives</li>
+<li><strong>Dosing interval</strong> often based on t½</li>
+</ul>
+<div class="fragment">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug</th>
+<th style="text-align: left;">Half-life</th>
+<th style="text-align: left;">Typical Dosing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Piperacillin</td>
+<td style="text-align: left;">1 hour</td>
+<td style="text-align: left;">q6-8h</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ceftriaxone</td>
+<td style="text-align: left;">8 hours</td>
+<td style="text-align: left;">q24h</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Azithromycin</td>
+<td style="text-align: left;">68 hours</td>
+<td style="text-align: left;">Once daily × 3-5 days</td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p>Half-life determines how quickly drug accumulates and how often we need to dose. Short half-life drugs need more frequent dosing. It takes 4-5 half-lives to reach steady state. Ceftriaxone’s long half-life allows once-daily dosing despite being a β-lactam.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="steady-state-concept" class="slide level2">
+<h2>Steady state concept</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/steadystate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/steadystate.png" class="quarto-figure quarto-figure-center" width="1200"></a></p>
+</figure>
+</div>
+<p><strong>Key principles:</strong></p>
+<ul>
+<li>Accumulation occurs with repeated dosing</li>
+<li>Steady state = rate in equals rate out</li>
+<li>Takes <strong>4-5 half-lives</strong> to achieve</li>
+<li>Peak and trough fluctuate around average</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Clinical Pearl</strong></p>
+</div>
+<div class="callout-content">
+<p>Don’t check “steady state” levels too early—the result won’t reflect true exposure!</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>With repeated dosing, drug accumulates until we reach steady state. This is when each dose replaces exactly what was eliminated since the last dose. For aminoglycosides with a 2-hour half-life, steady state is reached in 8-10 hours. For vancomycin with a 6-hour half-life, it takes about 24-30 hours. Checking levels too early leads to incorrect dose adjustments.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="adme-the-four-pillars-of-pk" class="slide level2">
+<h2>ADME: The four pillars of PK</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/adme_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/adme_diagram.png" class="quarto-figure quarto-figure-center" width="800"></a></p>
+</figure>
+</div>
+<aside class="notes">
+<p>ADME is the backbone of pharmacokinetics. Each process has parameters we can measure and factors that affect them. Understanding these allows for dose individualization in different patient populations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="absorption-getting-drug-into-the-body" class="slide level2">
+<h2>Absorption: Getting Drug Into the Body</h2>
+</section>
+<section id="bioavailability-f" class="slide level2">
+<h2>Bioavailability (F)</h2>
+<p>Fraction of administered dose reaching systemic circulation - IV administration: F = 100% (by definition) - Oral administration: F varies widely</p>
+<p><strong>Factors affecting oral bioavailability:</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Solubility/permeability</li>
+<li>Gastric pH</li>
+<li>First-pass metabolism</li>
+<li>Food effects</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>P-glycoprotein efflux</li>
+<li>Drug interactions</li>
+<li>Formulation</li>
+<li>GI disease</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Bioavailability tells us how much drug actually gets into the bloodstream. IV is our reference (100%). Oral bioavailability varies enormously—from nearly 100% for fluoroquinolones to very low for vancomycin (oral vancomycin stays in the gut). First-pass metabolism by gut and liver CYP enzymes can dramatically reduce bioavailability.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clinical-examples-bioavailability" class="slide level2">
+<h2>Clinical Examples: Bioavailability</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug</th>
+<th style="text-align: left;">Oral Bioavailability</th>
+<th style="text-align: left;">Clinical Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Levofloxacin</td>
+<td style="text-align: left;">~100%</td>
+<td style="text-align: left;">Oral = IV</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Metronidazole</td>
+<td style="text-align: left;">~100%</td>
+<td style="text-align: left;">Oral = IV</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Amoxicillin</td>
+<td style="text-align: left;">70-90%</td>
+<td style="text-align: left;">Good absorption</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Posaconazole (suspension)</td>
+<td style="text-align: left;">Variable</td>
+<td style="text-align: left;">Food dependent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oral vancomycin</td>
+<td style="text-align: left;">&lt;5%</td>
+<td style="text-align: left;">Stays in GI tract</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>IV-to-Oral Conversion</strong></p>
+</div>
+<div class="callout-content">
+<p>High bioavailability drugs are excellent candidates for early IV-to-oral conversion—same exposure, lower cost, earlier discharge!</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>These examples illustrate the range of oral bioavailability. Fluoroquinolones and metronidazole have such good absorption that oral and IV are essentially interchangeable—important for antimicrobial stewardship and early discharge. Posaconazole absorption is highly food-dependent with the suspension formulation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="enterohepatic-recirculation" class="slide level2">
+<h2>Enterohepatic Recirculation</h2>
+<div class="cell" data-reveal="true" data-fig-width="9" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Liver] --&gt;|Bile| B[GI Tract]
+    B --&gt;|Conjugated drug| C[Gut bacteria]
+    C --&gt;|Deconjugation| D[Free drug]
+    D --&gt;|Reabsorption| A
+
+    style C fill:#ffcccc
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Clinical significance:</strong></p>
+<ul>
+<li>Prolongs drug elimination</li>
+<li>Antibiotics disrupting gut flora can interrupt this cycle</li>
+<li>Important for: β-lactams, mycophenolic acid, oral contraceptives</li>
+</ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Antibiotics can reduce MPA levels in transplant patients → rejection risk!</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Enterohepatic recirculation is an often-overlooked PK concept. Drugs are conjugated in the liver, excreted in bile, deconjugated by gut bacteria, and reabsorbed. Antibiotics that disrupt gut flora can reduce levels of other medications—this is why we worry about antibiotics affecting oral contraceptive efficacy.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="distribution-where-does-the-drug-go" class="slide level2">
+<h2>Distribution: Where Does the Drug Go?</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Volume of Distribution (Vd)</strong></p>
+</div>
+<div class="callout-content">
+<p>A proportionality constant relating plasma concentration to total amount of drug in the body</p>
+<p><span class="math display">\[V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}\]</span></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Important concept:</strong> Vd is NOT a physiologic volume!</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Vd Value</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">~3 L</td>
+<td style="text-align: left;">Confined to plasma</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">~14 L</td>
+<td style="text-align: left;">Extracellular fluid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">~42 L</td>
+<td style="text-align: left;">Total body water</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;42 L</td>
+<td style="text-align: left;">Extensive tissue binding</td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p>Volume of distribution is a key concept that students often misunderstand. It’s not a real volume—it’s a mathematical relationship. A drug with Vd of 500 L isn’t really distributed in 500 liters; it means the drug is extensively bound in tissues, leaving low plasma concentrations. Aminoglycosides have small Vd (stay in ECF); macrolides have huge Vd (accumulate in tissues).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="factors-affecting-distribution" class="slide level2">
+<h2>Factors Affecting Distribution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Drug properties:</strong></p>
+<ul>
+<li>Lipophilicity</li>
+<li>Molecular size</li>
+<li>Charge/ionization</li>
+<li>Protein binding affinity</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Patient factors:</strong></p>
+<ul>
+<li>Body composition</li>
+<li>Plasma proteins</li>
+<li>Blood flow</li>
+<li>Tissue barriers (BBB, prostate)</li>
+</ul>
+</div></div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug Type</th>
+<th style="text-align: left;">Binding Protein</th>
+<th style="text-align: left;">Effect on Vd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Acidic (β-lactams)</td>
+<td style="text-align: left;">Albumin</td>
+<td style="text-align: left;">Lower Vd</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Basic (macrolides)</td>
+<td style="text-align: left;">α₁-acid glycoprotein</td>
+<td style="text-align: left;">Higher Vd</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Distribution is affected by both drug and patient factors. Lipophilic drugs cross membranes easily and have larger Vd. Protein binding keeps drug in the plasma—acidic drugs bind albumin, basic drugs bind AAG. In critically ill patients with hypoalbuminemia, free drug levels increase, potentially affecting both efficacy and toxicity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="protein-binding-clinical-significance" class="slide level2">
+<h2>Protein Binding: Clinical Significance</h2>
+<div class="r-fit-text">
+<p><strong>Only UNBOUND drug is pharmacologically active!</strong></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>MIC testing uses unbound drug</li>
+<li>Highly bound = less active drug</li>
+<li>Free drug crosses membranes</li>
+<li>Free drug is eliminated</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Clinical scenarios:</strong></p>
+<ul>
+<li>Hypoalbuminemia → ↑ free drug</li>
+<li>Uremia → ↓ protein binding</li>
+<li>Drug displacement interactions</li>
+<li>Burns, sepsis, cirrhosis</li>
+</ul>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example: Ceftriaxone</strong></p>
+</div>
+<div class="callout-content">
+<p>85-95% protein bound → only 5-15% is active. In hypoalbuminemia, free fraction increases → potential toxicity and altered PK</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This is critical for antiinfectives. The MIC we measure in the lab reflects unbound drug activity. A drug that’s 99% protein bound has only 1% available to kill bacteria. Changes in protein binding due to disease states can dramatically alter free drug levels. Some institutions now measure free drug concentrations for highly bound drugs like ceftriaxone.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="metabolism-phase-i-reactions" class="slide level2">
+<h2>Metabolism: Phase I Reactions</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Cytochrome P450 System</strong></p>
+</div>
+<div class="callout-content">
+<p>Heme-containing enzymes in the liver (and gut) that oxidize drugs</p>
+</div>
+</div>
+</div>
+<p><strong>Primary CYP enzymes</strong> (by importance for drugs):</p>
+<ol type="1">
+<li><strong>CYP3A4</strong> ← Metabolizes ~50% of drugs</li>
+<li>CYP2D6</li>
+<li>CYP2C9/2C19</li>
+<li>CYP1A2</li>
+<li>CYP2E1</li>
+</ol>
+<div class="fragment">
+<p><strong>CYP nomenclature:</strong> CYP<strong>3</strong>A<strong>4</strong> = Family 3, Subfamily A, Gene 4</p>
+</div>
+<aside class="notes">
+<p>The CYP system handles phase I metabolism—oxidation, reduction, hydrolysis. CYP3A4 is the workhorse, metabolizing about half of all drugs. This is why drug interactions involving CYP3A4 are so common. The gut also has CYP3A4, contributing to first-pass metabolism.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="genetic-polymorphism-in-drug-metabolism" class="slide level2">
+<h2>Genetic Polymorphism in Drug Metabolism</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>CYP2C19 Example</strong></p>
+</div>
+<div class="callout-content">
+<p>Polymorphisms create distinct metabolizer phenotypes:</p>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Phenotype</th>
+<th style="text-align: left;">Frequency</th>
+<th style="text-align: left;">Clinical Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Poor metabolizer</td>
+<td style="text-align: left;">2-5% Caucasians, 15-20% Asians</td>
+<td style="text-align: left;">↑ Drug levels</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intermediate metabolizer</td>
+<td style="text-align: left;">25-35%</td>
+<td style="text-align: left;">Moderately ↑ levels</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Extensive metabolizer</td>
+<td style="text-align: left;">35-50%</td>
+<td style="text-align: left;">Normal metabolism</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ultrarapid metabolizer</td>
+<td style="text-align: left;">5-10%</td>
+<td style="text-align: left;">↓ Drug levels</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Voriconazole</strong>: CYP2C19 poor metabolizers have <strong>4× higher</strong> exposure → toxicity risk</p>
+</div>
+<aside class="notes">
+<p>Genetic polymorphisms in CYP enzymes create distinct metabolizer phenotypes. This is particularly important for voriconazole, which is metabolized by CYP2C19. Poor metabolizers (more common in Asian populations) have dramatically higher levels. This is one reason voriconazole TDM is recommended. Some institutions do pharmacogenomic testing before starting certain drugs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clinical-application-pk-boosting" class="slide level2">
+<h2>Clinical Application: PK Boosting</h2>
+<div class="cell" data-reveal="true" data-fig-width="9" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Protease Inhibitor] --&gt; B[Gut CYP3A4]
+    B --&gt; C[↓ Absorption]
+    R[Ritonavir] -.-&gt;|Inhibits| B
+    A --&gt; D[↑ Bioavailability]
+
+    style R fill:#f9f,stroke:#333
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Examples of boosted regimens:</strong></p>
+<ul>
+<li>Lopinavir/<strong>ritonavir</strong> (Kaletra)</li>
+<li>Darunavir/<strong>ritonavir</strong> or /<strong>cobicistat</strong></li>
+<li>Nirmatrelvir/<strong>ritonavir</strong> (Paxlovid)</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Ritonavir is used as a PK enhancer, not for its antiviral activity!</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so potently that we use it to boost other protease inhibitors. This allows lower doses and less frequent dosing. The same principle is used in Paxlovid for COVID-19. Cobicistat is a newer booster with no antiviral activity—it’s purely a PK enhancer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="elimination-renal-clearance" class="slide level2">
+<h2>Elimination: Renal Clearance</h2>
+<p><strong>Total Clearance = Renal + Nonrenal</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Renal elimination mechanisms:</strong></p>
+<ol type="1">
+<li><strong>Glomerular filtration</strong>
+<ul>
+<li>Passive, depends on GFR</li>
+<li>Only unbound drug filtered</li>
+</ul></li>
+<li><strong>Tubular secretion</strong>
+<ul>
+<li>Active transport (OAT, OCT)</li>
+<li>Can exceed GFR</li>
+</ul></li>
+<li><strong>Tubular reabsorption</strong>
+<ul>
+<li>Returns drug to circulation</li>
+</ul></li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p><strong>Primarily renally cleared:</strong></p>
+<ul>
+<li>Aminoglycosides</li>
+<li>Vancomycin</li>
+<li>β-lactams (most)</li>
+<li>Fluoroquinolones (partial)</li>
+<li>Acyclovir</li>
+<li>Fluconazole</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Understanding elimination pathways is essential for dose adjustment. Renally cleared drugs need dose reduction in kidney disease. Tubular secretion is an active process that can be inhibited by other drugs—this is why probenecid can increase penicillin levels. The three mechanisms combine to determine total renal clearance.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="elimination-nonrenal-clearance" class="slide level2">
+<h2>Elimination: Nonrenal Clearance</h2>
+<p><strong>Nonrenal routes:</strong></p>
+<ul>
+<li><strong>Hepatic metabolism</strong> (most common)</li>
+<li><strong>Biliary excretion</strong> (ceftriaxone, azithromycin)</li>
+<li><strong>Intestinal secretion</strong></li>
+<li><strong>Other</strong> (lung, skin)</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug</th>
+<th style="text-align: left;">Primary Elimination</th>
+<th style="text-align: left;">Dose Adjustment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ceftriaxone</td>
+<td style="text-align: left;">40% biliary</td>
+<td style="text-align: left;">None for renal impairment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Metronidazole</td>
+<td style="text-align: left;">Hepatic</td>
+<td style="text-align: left;">Reduce in liver failure</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Azithromycin</td>
+<td style="text-align: left;">Biliary/fecal</td>
+<td style="text-align: left;">None for renal impairment</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Not all drugs are renally cleared. Ceftriaxone is unique among cephalosporins—40% is excreted unchanged in bile, so no dose adjustment needed for renal impairment. This makes it useful in patients with kidney disease. Hepatic metabolism requires dose adjustment in liver failure, which is harder to predict than renal dosing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measuring-antimicrobial-potency-the-mic" class="slide level2">
+<h2>Measuring Antimicrobial Potency: The MIC</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Minimum Inhibitory Concentration (MIC)</strong></p>
+</div>
+<div class="callout-content">
+<p>The lowest concentration of an antimicrobial that inhibits visible growth of a microorganism after overnight incubation</p>
+</div>
+</div>
+</div>
+<p><strong>Key points:</strong></p>
+<ul>
+<li>Measured using serial <strong>2-fold dilutions</strong> (log₂ scale)</li>
+<li>Values: 0.25, 0.5, 1, 2, 4, 8, 16… mg/L</li>
+<li><strong>MIC<sub>90</sub></strong>: MIC for 90% of isolates tested</li>
+<li>Does NOT measure killing—only inhibition</li>
+</ul>
+<aside class="notes">
+<p>The MIC is fundamental to PK-PD but has limitations. It’s a single point measurement that doesn’t capture the dynamic in vivo situation. It’s determined using doubling dilutions, so there’s inherent imprecision—a true MIC of 3 would be reported as 4. MIC90 is used for epidemiologic comparisons between agents and helps set breakpoints.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="limitations-of-in-vitro-parameters" class="slide level2">
+<h2>Limitations of In Vitro Parameters</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What MIC Doesn’t Tell Us</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<ol type="1">
+<li><strong>Rate of killing</strong> at different concentrations</li>
+<li><strong>Persistent effects</strong> after drug removal (PAE)</li>
+<li><strong>Immune system interactions</strong></li>
+<li><strong>Resistance emergence</strong> over time</li>
+<li><strong>Tissue penetration</strong> and local concentrations</li>
+<li><strong>Inoculum effects</strong> (higher bacterial loads)</li>
+</ol>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Solution: PK-PD Integration</strong></p>
+</div>
+<div class="callout-content">
+<p>Combine MIC with pharmacokinetic parameters to predict clinical outcomes</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>The MIC is useful but incomplete. It doesn’t tell us how fast bacteria are killed, whether there’s persistent effect after drug removal, or how the immune system contributes. This is why we need PK-PD—integrating the MIC with drug exposure parameters gives us better predictors of clinical outcomes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="part-2-applications" class="title-slide slide level1 center" data-background-color="#2c3e50">
+<h1>PART 2: APPLICATIONS</h1>
+
+</section>
+<section id="pk-pd-indices-dosing-strategies-and-clinical-applications" class="slide level2">
+<h2>PK-PD Indices, Dosing Strategies, and Clinical Applications</h2>
+</section>
+<section id="the-three-pk-pd-indices" class="slide level2">
+<h2>The Three PK-PD Indices</h2>
+<!-- IMAGE NEEDED: Comprehensive PK-PD diagram showing all three indices -->
+<table class="caption-top">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 26%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Index</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">What It Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>C<sub>max</sub>/MIC</strong></td>
+<td style="text-align: left;">Peak ÷ MIC</td>
+<td style="text-align: left;">Intensity of exposure</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>AUC/MIC</strong></td>
+<td style="text-align: left;">AUC₀₋₂₄ ÷ MIC</td>
+<td style="text-align: left;">Total exposure relative to potency</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>T &gt; MIC</strong></td>
+<td style="text-align: left;">% time above MIC</td>
+<td style="text-align: left;">Duration of effective exposure</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Key Insight</strong></p>
+</div>
+<div class="callout-content">
+<p>The “best” index depends on the antibiotic’s mechanism of action and killing characteristics</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>These three indices are the foundation of antibiotic PK-PD. Each index relates drug exposure to the MIC. Different antibiotics show strongest correlation with different indices. Choosing the right dosing strategy depends on understanding which index matters for your drug.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pk-pd-index-by-antibiotic-class" class="slide level2">
+<h2>PK-PD Index by Antibiotic Class</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 34%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Antibiotic Class</th>
+<th style="text-align: left;">Primary Index</th>
+<th style="text-align: left;">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aminoglycosides</td>
+<td style="text-align: left;">C<sub>max</sub>/MIC</td>
+<td style="text-align: left;">8-10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fluoroquinolones</td>
+<td style="text-align: left;">AUC/MIC (or C<sub>max</sub>/MIC)</td>
+<td style="text-align: left;">30-50 (Gram+), 100-125 (Gram-)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">β-Lactams</td>
+<td style="text-align: left;">T &gt; MIC</td>
+<td style="text-align: left;">40-70% of interval</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Vancomycin</td>
+<td style="text-align: left;">AUC/MIC</td>
+<td style="text-align: left;">400-600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daptomycin</td>
+<td style="text-align: left;">AUC/MIC (or C<sub>max</sub>/MIC)</td>
+<td style="text-align: left;">Variable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Linezolid</td>
+<td style="text-align: left;">AUC/MIC</td>
+<td style="text-align: left;">80-120</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>This table is your clinical reference. Aminoglycosides and fluoroquinolones show concentration-dependent killing—higher peaks are better. β-lactams show time-dependent killing—duration of exposure matters. Vancomycin was traditionally thought to be time-dependent, but AUC/MIC has emerged as the best predictor. These targets guide our dosing strategies.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="concentration-dependent-killing" class="slide level2">
+<h2>Concentration-Dependent Killing</h2>
+<div class="r-fit-text">
+<p><strong>Higher concentration = Faster killing</strong></p>
+</div>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Killing rate increases with concentration</li>
+<li>Significant post-antibiotic effect (PAE)</li>
+<li>Optimal strategy: <strong>Maximize the peak</strong></li>
+</ul>
+<p><strong>Agents:</strong></p>
+<ul>
+<li>Aminoglycosides</li>
+<li>Fluoroquinolones</li>
+<li>Daptomycin</li>
+<li>Metronidazole</li>
+<li>Amphotericin B</li>
+</ul>
+<aside class="notes">
+<p>Concentration-dependent agents kill faster at higher concentrations—there’s no ceiling effect until you reach toxic levels. They also have prolonged PAE, meaning bacteria don’t regrow immediately when drug levels fall. This allows once-daily dosing: give a big dose, achieve high peak, then let levels fall during the drug-free interval while PAE persists.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="concentration-dependent-killing-the-evidence" class="slide level2">
+<h2>Concentration-Dependent Killing: The Evidence</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Classic Study: Blaser et al.</strong></p>
+</div>
+<div class="callout-content">
+<p>Examined C<sub>max</sub>/MIC ratios for enoxacin and netilmicin against Gram-negative organisms:</p>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">C<sub>max</sub>/MIC Ratio</th>
+<th style="text-align: left;">Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt; 8</td>
+<td style="text-align: left;">Bacterial regrowth in ALL cultures</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">≥ 8</td>
+<td style="text-align: left;">Sustained killing</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Critical finding:</strong> When antibiotics were redosed after regrowth at sub-optimal ratios, <strong>NO killing occurred</strong> due to resistance emergence</p>
+</div>
+<aside class="notes">
+<p>This landmark study established the C<sub>max</sub>/MIC ratio of 8-10 as the target for concentration-dependent antibiotics. Below this threshold, not only did bacteria regrow, but they became resistant. This has profound implications—underdosing these agents can select for resistance. This is why we use high-dose extended-interval aminoglycoside regimens.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="time-dependent-killing" class="slide level2">
+<h2>Time-Dependent Killing</h2>
+<div class="r-fit-text">
+<p><strong>Duration above MIC = Efficacy</strong></p>
+</div>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Killing rate saturates at low multiples of MIC (4×)</li>
+<li>Minimal post-antibiotic effect (against Gram-negatives)</li>
+<li>Optimal strategy: <strong>Maximize time above MIC</strong></li>
+</ul>
+<p><strong>Agents:</strong></p>
+<ul>
+<li>Penicillins</li>
+<li>Cephalosporins</li>
+<li>Carbapenems</li>
+<li>Aztreonam</li>
+<li>Macrolides, clindamycin</li>
+<li>Linezolid</li>
+</ul>
+<aside class="notes">
+<p>Time-dependent agents show maximal killing at 4× MIC—going higher doesn’t kill faster. They have minimal PAE against Gram-negatives, so bacteria start regrowing as soon as levels drop below MIC. The goal is to keep concentrations above MIC for as long as possible. This is the rationale for continuous or extended infusions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="time-dependent-killing-animal-model-evidence" class="slide level2">
+<h2>Time-Dependent Killing: Animal Model Evidence</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Classic Data: S. pneumoniae Studies</strong></p>
+</div>
+<div class="callout-content">
+<p>Treatment with penicillins or cephalosporins showed dramatic mortality differences:</p>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">T &gt; MIC</th>
+<th style="text-align: left;">Mortality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">≤ 20% of dosing interval</td>
+<td style="text-align: left;"><strong>100%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40-50% of dosing interval</td>
+<td style="text-align: left;"><strong>0-10%</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><strong>Target T &gt; MIC:</strong></p>
+<ul>
+<li>Bacteriostatic effect: 30-40%</li>
+<li>Bactericidal effect: 50-70%</li>
+<li>Maximum effect: ≥70%</li>
+</ul>
+</div>
+<aside class="notes">
+<p>These animal studies established the T&gt;MIC thresholds we use today. The difference between 20% and 40-50% T&gt;MIC is the difference between 100% mortality and near-zero mortality. For serious infections, we aim for bactericidal targets of 50-70%. Immunocompromised patients may need even higher targets.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="post-antibiotic-effect-pae" class="slide level2">
+<h2>Post-Antibiotic Effect (PAE)</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>Suppression of bacterial growth that persists <strong>after</strong> drug concentrations fall below MIC</p>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Antibiotic Class</th>
+<th style="text-align: left;">PAE: Gram-negative</th>
+<th style="text-align: left;">PAE: Gram-positive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aminoglycosides</td>
+<td style="text-align: left;">2-6 hours</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fluoroquinolones</td>
+<td style="text-align: left;">2-6 hours</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Carbapenems</td>
+<td style="text-align: left;">1-2 hours</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Penicillins</td>
+<td style="text-align: left;"><strong>Little/none</strong></td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cephalosporins</td>
+<td style="text-align: left;"><strong>Little/none</strong></td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>PAE is the continued suppression of bacterial growth after drug removal. It’s caused by non-lethal damage to bacteria that takes time to repair. Aminoglycosides and fluoroquinolones have long PAE against Gram-negatives, allowing drug-free intervals. β-lactams lack PAE against Gram-negatives, meaning bacteria regrow immediately—this is why continuous infusion makes sense.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pae-clinical-implications" class="slide level2">
+<h2>PAE: Clinical Implications</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Long PAE:</strong></p>
+<ul>
+<li>Allows extended dosing intervals</li>
+<li>Supports once-daily dosing</li>
+<li>Example: Once-daily aminoglycosides</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Short/No PAE:</strong></p>
+<ul>
+<li>Needs sustained concentrations</li>
+<li>Consider continuous infusion</li>
+<li>Example: β-lactams via extended infusion</li>
+</ul>
+</div></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>PAE Enhancement</strong></p>
+</div>
+<div class="callout-content">
+<p>PAE can be prolonged by: - Higher drug concentrations - Longer exposure duration - Sub-inhibitory concentrations</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Understanding PAE helps explain dosing strategies. Once-daily aminoglycosides work because PAE covers the drug-free interval. β-lactams against Gram-negatives need continuous exposure because bacteria start regrowing immediately. Interestingly, even sub-MIC concentrations can extend PAE—this is why the entire dosing interval contributes to efficacy.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="methods-for-studying-pk-pd" class="slide level2">
+<h2>Methods for Studying PK-PD</h2>
+<p>Three complementary approaches:</p>
+<ol type="1">
+<li><strong>In vitro models</strong> (Hollow fiber)</li>
+<li><strong>Animal models</strong> (Neutropenic mouse)</li>
+<li><strong>Clinical studies</strong> (Human PK-PD)</li>
+</ol>
+<div class="fragment">
+<div class="cell" data-reveal="true" data-fig-width="9" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[In Vitro] --&gt; B[Animal Models]
+    B --&gt; C[Phase I/II Trials]
+    C --&gt; D[Phase III/Clinical Use]
+
+    style A fill:#90EE90
+    style B fill:#87CEEB
+    style C fill:#DDA0DD
+    style D fill:#F0E68C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>PK-PD is established through a progression of studies. In vitro hollow fiber models provide controlled conditions. Animal models add immune function (or remove it for reproducibility). Clinical trials validate findings in humans. Each level informs dose selection for the next stage.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hollow-fiber-infection-model" class="slide level2">
+<h2>Hollow Fiber Infection Model</h2>
+<!-- IMAGE NEEDED: Hollow fiber model schematic -->
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Bacteria grow in extracapillary space</li>
+<li>Drug pumped through fibers simulates human PK</li>
+<li>Serial sampling measures bacterial counts</li>
+<li>Can model resistance emergence</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Precise control of drug concentrations</li>
+<li>Mimics human PK profiles</li>
+<li>No animal subjects</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>No immune system</li>
+<li>May overestimate required doses</li>
+</ul>
+<aside class="notes">
+<p>The hollow fiber model is the gold standard for in vitro PK-PD. It’s essentially an artificial capillary system where we can precisely control drug exposure. We can simulate human PK profiles and watch bacterial populations over days. FDA now accepts hollow fiber data to support dose selection for new antibiotics.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="translating-pk-pd-to-clinical-dosing" class="slide level2">
+<h2>Translating PK-PD to Clinical Dosing</h2>
+<p><strong>From bench to bedside:</strong></p>
+<ol type="1">
+<li>Identify the PK-PD index that predicts efficacy</li>
+<li>Determine the target value from preclinical studies</li>
+<li>Use Monte Carlo simulation to find doses achieving target in most patients</li>
+<li>Validate in clinical trials</li>
+<li>Apply to patient populations</li>
+</ol>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Challenge</strong></p>
+</div>
+<div class="callout-content">
+<p>Population average doses may not achieve targets in all patients—especially critically ill!</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Monte Carlo simulation uses population PK data and MIC distributions to predict what percentage of patients will achieve PK-PD targets with different doses. This is how new dosing regimens are designed. The challenge is that population averages mask individual variability—critically ill patients, obese patients, and those with altered renal function may need individualized dosing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="extended-interval-aminoglycoside-dosing" class="slide level2">
+<h2>Extended-Interval Aminoglycoside Dosing</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Revolution in Aminoglycoside Dosing</strong></p>
+</div>
+<div class="callout-content">
+<p>Traditional: 1-2 mg/kg q8h → Modern: 5-7 mg/kg q24h</p>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Traditional</th>
+<th style="text-align: left;">Extended-Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Peak (C<sub>max</sub>)</td>
+<td style="text-align: left;">5-10 mg/L</td>
+<td style="text-align: left;">15-25 mg/L</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Trough</td>
+<td style="text-align: left;">&lt;2 mg/L</td>
+<td style="text-align: left;">&lt;1 mg/L</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C<sub>max</sub>/MIC</td>
+<td style="text-align: left;">Often &lt;8</td>
+<td style="text-align: left;">8-10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nephrotoxicity</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">Lower</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Efficacy</td>
+<td style="text-align: left;">Variable</td>
+<td style="text-align: left;">Optimized</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Extended-interval aminoglycoside dosing is the poster child for translating PK-PD into practice. Higher doses achieve optimal Cmax/MIC ratios. The drug-free interval allows renal cortical cells to recover, reducing nephrotoxicity. Multiple meta-analyses show equal or better efficacy with less toxicity. This is now standard of care.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="extended-interval-aminoglycosides-rationale" class="slide level2">
+<h2>Extended-Interval Aminoglycosides: Rationale</h2>
+<p><strong>Why it works:</strong></p>
+<ol type="1">
+<li><strong>Concentration-dependent killing</strong>: Higher peaks = better killing</li>
+<li><strong>Post-antibiotic effect</strong>: Covers drug-free interval</li>
+<li><strong>Adaptive resistance</strong>: Drug-free time allows resensitization</li>
+<li><strong>Saturable renal uptake</strong>: Less accumulation in renal cortex</li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Target</strong></p>
+</div>
+<div class="callout-content">
+<p>Achieve C<sub>max</sub>/MIC of <strong>8-10</strong> based on expected MIC<sub>90</sub> of target organisms</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Four mechanisms explain why extended-interval dosing improves the therapeutic index. Higher peaks optimize the PK-PD target. PAE maintains suppression during the drug-free interval. Bacteria develop adaptive resistance during exposure that reverses during drug-free time. And the renal uptake mechanism saturates, so higher peaks don’t proportionally increase kidney accumulation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="β-lactam-infusion-strategies" class="slide level2">
+<h2>β-Lactam Infusion Strategies</h2>
+<p>Three approaches:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Strategy</th>
+<th style="text-align: left;">Infusion Time</th>
+<th style="text-align: left;">T &gt; MIC</th>
+<th style="text-align: left;">Daily Dose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intermittent</td>
+<td style="text-align: left;">30 min</td>
+<td style="text-align: left;">Lowest</td>
+<td style="text-align: left;">Standard</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Extended</td>
+<td style="text-align: left;">3-4 hours</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">Same or lower</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Continuous</td>
+<td style="text-align: left;">24 hours</td>
+<td style="text-align: left;">100%</td>
+<td style="text-align: left;">Often lower</td>
+</tr>
+</tbody>
+</table>
+<!-- IMAGE NEEDED: Comparison of three infusion strategies concentration-time curves -->
+<aside class="notes">
+<p>For time-dependent antibiotics, extending the infusion increases T&gt;MIC. With extended infusion (3-4 hours), you can achieve similar T&gt;MIC with less total drug. Continuous infusion achieves 100% T&gt;MIC by definition. The choice depends on the clinical situation, organism MIC, and practical considerations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="extended-infusion-the-loading-dose" class="slide level2">
+<h2>Extended Infusion: The Loading Dose</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Critical Concept</strong></p>
+</div>
+<div class="callout-content">
+<p>Continuous or extended infusion <strong>without a loading dose</strong> delays therapeutic concentrations!</p>
+</div>
+</div>
+</div>
+<!-- IMAGE NEEDED: Comparison of continuous infusion with and without loading dose -->
+<p><strong>Always give a loading dose:</strong></p>
+<ul>
+<li>Achieves therapeutic levels immediately</li>
+<li>Critical when bacterial load is highest</li>
+<li>Load = Standard intermittent dose</li>
+<li>Then transition to extended/continuous infusion</li>
+</ul>
+<aside class="notes">
+<p>This is a common mistake. Starting continuous infusion without a loading dose means it takes hours to reach therapeutic levels—during which time bacteria are multiplying freely. Always give a loading dose first, then transition to extended or continuous infusion. This is especially important in sepsis when time to effective therapy matters.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clinical-evidence-extended-β-lactam-infusions" class="slide level2">
+<h2>Clinical Evidence: Extended β-Lactam Infusions</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Evidence</th>
+<th style="text-align: left;">Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Meta-analysis (Rhodes 2018)</td>
+<td style="text-align: left;">1.46× lower mortality with prolonged pip-tazo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Meta-analysis (Falagas 2013)</td>
+<td style="text-align: left;">Lower mortality with prolonged carbapenems</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BLING-II RCT</td>
+<td style="text-align: left;">Comparable 90-day survival</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BLISS RCT</td>
+<td style="text-align: left;">Comparable outcomes</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Why RCTs Show Less Benefit</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Selection bias in observational studies (sicker patients get standard dosing)</li>
+<li>RCTs include patients who would do well either way</li>
+<li>Greatest benefit likely in: high MICs, critically ill, immunocompromised</li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>The evidence is strongest from observational data showing mortality benefits with extended infusions. RCTs have shown comparable outcomes, which may reflect patient selection—patients in RCTs are often less sick than real-world populations. Extended infusion likely has greatest benefit for high-MIC organisms and critically ill patients where PK-PD target attainment is most challenging.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="special-populations-critically-ill-patients" class="slide level2">
+<h2>Special Populations: Critically Ill Patients</h2>
+<p><strong>Why PK is altered in critical illness:</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>↑ Volume of Distribution:</strong></p>
+<ul>
+<li>Third spacing</li>
+<li>Fluid resuscitation</li>
+<li>Hypoalbuminemia</li>
+<li>Capillary leak</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Altered Clearance:</strong></p>
+<ul>
+<li>Augmented renal clearance (ARC)</li>
+<li>Acute kidney injury</li>
+<li>CRRT</li>
+<li>Hepatic dysfunction</li>
+</ul>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Standard doses often <strong>underdose</strong> critically ill patients initially, then <strong>overdose</strong> as organ function changes</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Critically ill patients are the hardest to dose. Early in sepsis, volume expands dramatically, diluting drugs. ARC (GFR &gt;130 mL/min) is common in young septic patients—they clear drugs faster than normal. Then organ failure develops and clearance drops. Standard doses often fail to achieve targets. This population benefits most from TDM and individualized dosing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="therapeutic-drug-monitoring-principles" class="slide level2">
+<h2>Therapeutic Drug Monitoring: Principles</h2>
+<p><strong>When is TDM valuable?</strong></p>
+<ol type="1">
+<li>Narrow therapeutic index</li>
+<li>High interpatient variability</li>
+<li>Poorly predictable PK</li>
+<li>Defined PK-PD targets</li>
+<li>Concentration-related toxicity</li>
+<li>Clinical consequences of under/overdosing</li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Commonly Monitored Antiinfectives</strong></p>
+</div>
+<div class="callout-content">
+<p>Aminoglycosides, vancomycin, voriconazole, posaconazole, flucytosine</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>TDM isn’t useful for all drugs—it requires defined targets and situations where measurements will change management. Aminoglycosides have narrow therapeutic indices. Vancomycin has variable PK and defined AUC targets. Voriconazole has genetic polymorphism affecting metabolism. For each drug, know WHY you’re monitoring and WHAT you’ll do with the result.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vancomycin-evolution-of-monitoring" class="slide level2">
+<h2>Vancomycin: Evolution of Monitoring</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Old Paradigm:</strong></p>
+<ul>
+<li>Target: Trough 15-20 mg/L</li>
+<li>Simple to implement</li>
+<li>“Higher trough = better”</li>
+<li>Associated with nephrotoxicity</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>New Paradigm (2020 Guidelines):</strong></p>
+<ul>
+<li>Target: AUC/MIC 400-600</li>
+<li>AUC-based dosing</li>
+<li>Requires 2 samples or Bayesian</li>
+<li>Better precision, less toxicity</li>
+</ul>
+</div></div>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Key Change</strong></p>
+</div>
+<div class="callout-content">
+<p>Troughs of 15-20 mg/L often give <strong>AUC/MIC &gt;600</strong> → increased nephrotoxicity without added benefit</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This is a major practice change. For years we targeted troughs of 15-20, but this often resulted in excessive AUC and nephrotoxicity. The 2020 consensus guidelines recommend AUC-based monitoring targeting 400-600. This can be done with two samples (peak and trough) or with Bayesian software using a single trough. The shift requires new workflows but reduces toxicity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vancomycin-auc-estimation-methods" class="slide level2">
+<h2>Vancomycin AUC Estimation Methods</h2>
+<p><strong>Option 1: Two-Sample Method</strong></p>
+<ul>
+<li>Draw peak (1-2h post-infusion) and trough (before next dose)</li>
+<li>Calculate AUC using first-order equations</li>
+<li>More accurate, more complex</li>
+</ul>
+<p><strong>Option 2: Bayesian Estimation</strong></p>
+<ul>
+<li>Single trough concentration</li>
+<li>Population PK model + patient covariates</li>
+<li>Software estimates individual PK parameters</li>
+<li>Predicts AUC from one level</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Practical Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Many institutions are implementing Bayesian vancomycin dosing software (e.g., DoseMeRx, InsightRx)</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>AUC-based vancomycin monitoring can be implemented two ways. The two-sample method is more accurate but requires two blood draws. Bayesian estimation uses a population model refined by the patient’s trough—software does the math. Either method is better than trough-only monitoring. Check what resources your institution has available.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="antifungal-tdm-azoles" class="slide level2">
+<h2>Antifungal TDM: Azoles</h2>
+<p><strong>Why TDM is important for azoles:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug</th>
+<th style="text-align: left;">Issue</th>
+<th style="text-align: left;">Target Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Voriconazole</td>
+<td style="text-align: left;">CYP2C19 polymorphism</td>
+<td style="text-align: left;">1-5 mg/L</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Itraconazole</td>
+<td style="text-align: left;">Variable absorption</td>
+<td style="text-align: left;">≥0.5-1 mg/L</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Posaconazole</td>
+<td style="text-align: left;">Food-dependent absorption</td>
+<td style="text-align: left;">≥0.7-1 mg/L</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Voriconazole Toxicity</strong></p>
+</div>
+<div class="callout-content">
+<p>Levels &gt;5.5 mg/L associated with: - Visual disturbances - Hepatotoxicity - CNS effects - Hallucinations</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Azole antifungals have highly variable PK making TDM valuable. Voriconazole is metabolized by polymorphic CYP2C19—poor metabolizers can have toxic levels on standard doses. Posaconazole suspension requires fat for absorption. Newer formulations (tablets, IV) are more reliable. For serious fungal infections, TDM helps ensure adequate exposure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="antiretroviral-pk-pd-unique-considerations" class="slide level2">
+<h2>Antiretroviral PK-PD: Unique Considerations</h2>
+<p><strong>What makes ARVs different:</strong></p>
+<ul>
+<li>Site of action: <strong>Inside mammalian cells</strong></li>
+<li>Many require intracellular activation (NRTIs → triphosphates)</li>
+<li>Plasma levels may not reflect site concentrations</li>
+<li>Combination therapy is standard</li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The Therapeutic Window</strong></p>
+</div>
+<div class="callout-content">
+<p>Antiretrovirals must achieve concentrations that: - Suppress viral replication (efficacy) - Don’t cause toxicity - Prevent resistance emergence</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Antiretrovirals present unique PK-PD challenges. Many work inside cells where we can’t easily measure concentrations. NRTIs must be phosphorylated to their active triphosphate forms—plasma parent drug levels don’t predict intracellular metabolite levels. Combination therapy exploits synergy to widen the therapeutic window.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="case-study-1-aminoglycoside-dosing" class="slide level2">
+<h2>Case Study 1: Aminoglycoside Dosing</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Clinical Scenario</strong></p>
+</div>
+<div class="callout-content">
+<p>62-year-old man, 80 kg, CrCl 90 mL/min, with hospital-acquired pneumonia. You want to start tobramycin. MIC<sub>90</sub> of <em>P. aeruginosa</em> at your hospital is 2 mg/L.</p>
+<p><strong>Traditional dosing:</strong> 1.5 mg/kg q8h = 120 mg q8h <strong>Peak expected:</strong> ~5-6 mg/L → C<sub>max</sub>/MIC = 2.5-3 ❌</p>
+<p><strong>Extended-interval:</strong> 7 mg/kg q24h = 560 mg q24h <strong>Peak expected:</strong> ~20 mg/L → C<sub>max</sub>/MIC = 10 ✓</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Answer:</strong> Extended-interval dosing achieves the PK-PD target of 8-10</p>
+</div>
+<aside class="notes">
+<p>Let’s apply what we’ve learned. With traditional dosing, the peak is too low to achieve the target Cmax/MIC of 8-10. Extended-interval dosing with 7 mg/kg gives a peak around 20 mg/L, achieving Cmax/MIC of 10. This optimizes efficacy while the drug-free interval reduces nephrotoxicity risk.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="case-study-2-β-lactam-optimization" class="slide level2">
+<h2>Case Study 2: β-Lactam Optimization</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Clinical Scenario</strong></p>
+</div>
+<div class="callout-content">
+<p>55-year-old woman with <em>P. aeruginosa</em> bloodstream infection. Piperacillin MIC = 16 mg/L (susceptible). Started on pip-tazo 4.5g q8h (30-min infusion).</p>
+<p>Day 3: Still febrile, blood cultures remain positive.</p>
+</div>
+</div>
+</div>
+<p><strong>Analysis:</strong></p>
+<ul>
+<li>β-lactam → Time-dependent killing → T &gt; MIC matters</li>
+<li>With MIC of 16 mg/L, standard dosing achieves T &gt; MIC of only ~30%</li>
+<li>Target: T &gt; MIC ≥50%</li>
+</ul>
+<div class="fragment">
+<p><strong>Solution:</strong> Extended infusion 4.5g q8h over 4 hours (with loading dose) OR increase to q6h dosing</p>
+</div>
+<aside class="notes">
+<p>This is our opening case! The organism is susceptible, but the MIC is at the high end. Standard 30-minute infusions don’t maintain levels above 16 mg/L long enough. Extended infusion over 4 hours maintains higher trough concentrations, increasing T&gt;MIC to &gt;50%. Alternatively, more frequent dosing (q6h) also increases T&gt;MIC. This is PK-PD in action.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="case-study-3-vancomycin-monitoring" class="slide level2">
+<h2>Case Study 3: Vancomycin Monitoring</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Clinical Scenario</strong></p>
+</div>
+<div class="callout-content">
+<p>45-year-old man with MRSA bacteremia (MIC = 1 mg/L). Started on vancomycin 1.5g q12h. Day 3 trough = 22 mg/L.</p>
+<p><strong>Old approach:</strong> Trough in target range (15-20)—maybe even too high. Continue same dose?</p>
+<p><strong>New approach:</strong> Using Bayesian software, estimated AUC = 680 mg·h/L - AUC/MIC = 680 (target: 400-600) - This patient is <strong>overexposed</strong> → nephrotoxicity risk</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Action:</strong> Reduce dose to target AUC/MIC of 400-600</p>
+</div>
+<aside class="notes">
+<p>This case illustrates why AUC-based monitoring is better than troughs. A trough of 22 looks borderline acceptable under the old paradigm. But the estimated AUC is 680—well above the 400-600 target. This patient has unnecessary exposure and increased nephrotoxicity risk. AUC-based monitoring would catch this and prompt dose reduction.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="return-to-opening-case" class="slide level2">
+<h2>Return to Opening Case</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Remember Our Patient?</strong></p>
+</div>
+<div class="callout-content">
+<p>65-year-old man with <em>P. aeruginosa</em> pneumonia on pip-tazo 4.5g q8h, not improving. MIC = 16 mg/L.</p>
+</div>
+</div>
+</div>
+<p><strong>Now you can answer:</strong></p>
+<ol type="1">
+<li><strong>What’s the relevant PK-PD index?</strong> T &gt; MIC (β-lactam)</li>
+<li><strong>Is the target being achieved?</strong> Likely not with high MIC</li>
+<li><strong>What’s your recommendation?</strong>
+<ul>
+<li>Extended infusion (4.5g over 4h q8h) with loading dose</li>
+<li>OR increase frequency to q6h</li>
+<li>Consider combination therapy</li>
+</ul></li>
+<li><strong>Why not just increase the dose?</strong> Extending infusion increases T &gt; MIC more efficiently than higher doses</li>
+</ol>
+<aside class="notes">
+<p>Now we can fully analyze this case. The patient isn’t responding because standard pip-tazo dosing doesn’t achieve adequate T&gt;MIC for an organism with MIC of 16. Extended infusion is the most efficient fix—it increases T&gt;MIC without increasing total drug exposure. This is exactly how PK-PD guides clinical decisions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary-key-clinical-pearls" class="slide level2">
+<h2>Summary: Key Clinical Pearls</h2>
+<ol type="1">
+<li><strong>Know your PK-PD index:</strong>
+<ul>
+<li>C<sub>max</sub>/MIC: aminoglycosides, fluoroquinolones</li>
+<li>AUC/MIC: vancomycin, fluoroquinolones</li>
+<li>T &gt; MIC: β-lactams</li>
+</ul></li>
+<li><strong>Match dosing strategy to PK-PD:</strong>
+<ul>
+<li>Concentration-dependent → maximize peak</li>
+<li>Time-dependent → maximize duration</li>
+</ul></li>
+<li><strong>Remember special populations:</strong>
+<ul>
+<li>Critically ill patients often need higher/more frequent doses initially</li>
+<li>TDM helps individualize therapy</li>
+</ul></li>
+</ol>
+<aside class="notes">
+<p>Let’s consolidate the key takeaways. Know which index predicts efficacy for each drug class. Design dosing strategies that optimize that index. Recognize that standard doses don’t work for everyone—critically ill patients especially need individualized approaches. TDM is valuable when targets are known and variability is high.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="summary-dosing-strategy-quick-reference" class="slide level2">
+<h2>Summary: Dosing Strategy Quick Reference</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 30%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug Class</th>
+<th style="text-align: left;">Strategy</th>
+<th style="text-align: left;">Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aminoglycosides</td>
+<td style="text-align: left;">Once-daily high dose</td>
+<td style="text-align: left;">Optimize C<sub>max</sub>/MIC, minimize toxicity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fluoroquinolones</td>
+<td style="text-align: left;">Higher doses when possible</td>
+<td style="text-align: left;">C<sub>max</sub>/MIC and AUC/MIC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">β-Lactams</td>
+<td style="text-align: left;">Extended/continuous infusion</td>
+<td style="text-align: left;">Maximize T &gt; MIC</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Vancomycin</td>
+<td style="text-align: left;">AUC-based dosing</td>
+<td style="text-align: left;">Target AUC/MIC 400-600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Azoles</td>
+<td style="text-align: left;">TDM-guided</td>
+<td style="text-align: left;">High variability</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>Here’s your quick reference card. Aminoglycosides: once-daily. β-lactams: extended infusion when needed. Vancomycin: AUC-based dosing. Azoles: TDM. These principles apply across most clinical situations. Adapt based on organism MIC and patient factors.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="take-home-messages" class="slide level2">
+<h2>Take-Home Messages</h2>
+<ol type="1">
+<li><p><strong>PK-PD integration</strong> is essential for optimizing antiinfective therapy</p></li>
+<li><p><strong>Underdosing is common</strong> and promotes resistance</p></li>
+<li><p><strong>One size doesn’t fit all</strong>—individualize based on patient and pathogen</p></li>
+<li><p><strong>Extended/continuous infusions</strong> can rescue patients failing standard β-lactam dosing</p></li>
+<li><p><strong>TDM</strong> is your tool for precision antiinfective therapy</p></li>
+<li><p><strong>Apply these principles</strong> every time you write an antibiotic order!</p></li>
+</ol>
+<aside class="notes">
+<p>These are the messages I hope you’ll remember tomorrow. PK-PD isn’t just academic—it directly impacts patient outcomes. Think about PK-PD every time you prescribe an antibiotic. Ask yourself: Am I achieving the right target for this drug, this organism, this patient? If not, how can I optimize?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="questions-discussion" class="slide level2 center">
+<h2>Questions &amp; Discussion</h2>
+<div class="r-fit-text">
+<p><strong>Thank you!</strong></p>
+</div>
+<p><strong>Key resources:</strong></p>
+<ul>
+<li>EUCAST: www.eucast.org</li>
+<li>CLSI breakpoint tables</li>
+<li>Sanford Guide</li>
+<li>ID Stewardship pharmacist consultation</li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-theuretzbacher2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Ursula Theuretzbacher. Pharmacokinetic and pharmacodynamic issues for antimicrobial therapy in patients with cancer. Clinical Infectious Diseases. 2012 Jun;54(12):1785–92. doi:<a href="https://doi.org/10.1093/cid/cis210">10.1093/cid/cis210</a></div>
+</div>
+<div id="ref-craig_1998" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">William A. Craig. Pharmacokinetic/pharmacodynamic parameters: Rationale for antibacterial dosing of mice and men. Clinical Infectious Diseases. 1998 Jan;26(1):1–10. doi:<a href="https://doi.org/10.1086/516284">10.1086/516284</a></div>
+</div>
+</div>
+</section>
+<section id="supplementary-pk-abbreviations-reference" class="slide level2 smaller">
+<h2>Supplementary: PK Abbreviations Reference</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Abbreviation</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Bioavailability</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">V<sub>d</sub></td>
+<td style="text-align: left;">Volume of distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CL</td>
+<td style="text-align: left;">Clearance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t<sub>½</sub></td>
+<td style="text-align: left;">Half-life</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C<sub>max</sub></td>
+<td style="text-align: left;">Maximum concentration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C<sub>min</sub></td>
+<td style="text-align: left;">Minimum/trough concentration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AUC</td>
+<td style="text-align: left;">Area under the concentration-time curve</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MIC</td>
+<td style="text-align: left;">Minimum inhibitory concentration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PAE</td>
+<td style="text-align: left;">Post-antibiotic effect</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T &gt; MIC</td>
+<td style="text-align: left;">Time above MIC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TDM</td>
+<td style="text-align: left;">Therapeutic drug monitoring</td>
+</tr>
+</tbody>
+</table>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="chapter-slides_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="chapter-slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="chapter-slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="chapter-slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
