@@ -42,7 +42,8 @@ Prof. Russell E. Lewis <br> Department of Molecular Medicine <br> University of 
 |------------------------------------|------------------------------------|
 | ![](images/dmmunipd_logo.jpeg){width="150"} | ![](images/unipd_seal_white.svg){width="200"} |
 
-## Learning objectives 
+## Learning objectives
+
 <br>
 
 After completing this lecture, learners will be able to:
@@ -55,11 +56,9 @@ After completing this lecture, learners will be able to:
 6.  Discuss therapeutic drug monitoring principles for antiinfectives
 7.  Apply PK-PD concepts to clinical case scenarios
 
-::: {.notes}
+::: notes
 Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session that will provide the mathematical and conceptual framework for optimizing antiinfective dosing. We'll move from basic principles to clinical applications. Emphasize that PK-PD is unique in that it considers effects on the pathogen, host, AND microbiome.
 :::
-
-
 
 ## Lecture outline
 
@@ -84,19 +83,21 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 :::
 :::::
 
-::: {.notes}
+::: notes
 Here's our roadmap for today. We'll spend the first 30 minutes on foundational concepts, then move into clinical applications. Feel free to ask questions as we go.
 :::
 
 ## Why PK-PD Matters: A clinical vignette {.smaller}
 
-Case Introduction
+<br> <br>
 
-A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. On day 3, he's not improving. The MIC comes back as **16 mg/L** (susceptible breakpoint).
+**Case Introduction**
+
+A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. <br> On day 3, he's not improving. The MIC comes back as **16 mg/L** (susceptible breakpoint).
 
 **What would you do?**
 
-::: {.fragment}
+::: fragment
 **Options to consider:**
 
 -   Increase the dose?
@@ -106,7 +107,7 @@ A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperaci
 *We'll return to this case at the end of the lecture...*
 :::
 
-::: {.notes}
+::: notes
 Let's start with a case that illustrates why PK-PD matters. This patient has a susceptible organism but isn't responding. By the end of this lecture, you'll have the tools to analyze this situation and optimize therapy. Keep this case in mind as we go through the material.
 :::
 
@@ -114,21 +115,22 @@ Let's start with a case that illustrates why PK-PD matters. This patient has a s
 
 ## Pharmacokinetic and Pharmacodynamic Principles
 
----
+------------------------------------------------------------------------
 
 ## What is Pharmacology?
 
-::: {.callout-note}
+::: callout-note
 ## Definition
+
 **Pharmacology**: The study concerning a compound related to its history, source, physical and chemical properties, compounding, biochemical and physiologic effects, mechanisms of action and resistance, absorption, distribution, metabolism, excretion, and therapeutic and other uses
 :::
 
 **Two key components:**
 
-- **Pharmacokinetics (PK)**: What the body does to the drug
-- **Pharmacodynamics (PD)**: What the drug does to the body
+-   **Pharmacokinetics (PK)**: What the body does to the drug
+-   **Pharmacodynamics (PD)**: What the drug does to the body
 
-::: {.notes}
+::: notes
 Let's start with basic definitions. Pharmacology encompasses everything about a drug. For our purposes, we focus on PK (how the body handles the drug) and PD (the drug's effects). In antiinfectives, PD includes effects on the pathogen.
 :::
 
@@ -164,7 +166,7 @@ microbiological -> clinical;
 }
 ```
 
-::: {.aside}
+::: aside
 [@theuretzbacher2012]
 :::
 
@@ -213,11 +215,11 @@ digraph G {
 
 ```
 
-::: {.aside}
+::: aside
 [@craig_1998]
 :::
 
-::: {.notes}
+::: notes
 This diagram shows the relationship between PK and PD. PK determines the concentration at the site of action; PD determines what happens once the drug gets there. In antiinfectives, the "receptor" is the bacterial target, and the "effect" is killing or inhibiting the pathogen.
 :::
 
@@ -253,10 +255,9 @@ This diagram shows the relationship between PK and PD. PK determines the concent
 :::
 ::::::
 
-::: {.notes}
+::: notes
 Unlike most drugs that only affect the host, antiinfectives have a triangular relationship. This creates complexity but also opportunities for optimization. Doses are typically an order of magnitude higher than other drug classes because we're targeting non-mammalian sites. The microbiome effects are increasingly recognized as important.
 :::
-
 
 ## The Concentration-time curve: Your roadmap
 
@@ -275,15 +276,13 @@ Unlike most drugs that only affect the host, antiinfectives have a triangular re
 | Area under curve     | AUC    | Total drug exposure over time             |
 | Half-life            | t~½~   | Time for concentration to decrease by 50% |
 
-::: {.notes}
+::: notes
 The concentration-time curve is fundamental to PK-PD. Every dosing decision affects the shape of this curve. We measure several parameters from this curve that relate to efficacy and toxicity. Understanding how to read and manipulate this curve is essential for dose optimization.
 :::
 
-
-
 ## Understanding half-life (t½)
 
-::: {.callout-note}
+::: callout-note
 ## Definition
 
 **Half-life (t½)** = Time required for the plasma concentration to decrease by 50%
@@ -295,7 +294,7 @@ The concentration-time curve is fundamental to PK-PD. Every dosing decision affe
 -   **Washout time** = 4-5 half-lives
 -   **Dosing interval** often based on t½
 
-::: {.fragment}
+::: fragment
 | Drug         | Half-life | Typical Dosing        |
 |:-------------|:----------|:----------------------|
 | Piperacillin | 1 hour    | q6-8h                 |
@@ -303,11 +302,9 @@ The concentration-time curve is fundamental to PK-PD. Every dosing decision affe
 | Azithromycin | 68 hours  | Once daily × 3-5 days |
 :::
 
-::: {.notes}
+::: notes
 Half-life determines how quickly drug accumulates and how often we need to dose. Short half-life drugs need more frequent dosing. It takes 4-5 half-lives to reach steady state. Ceftriaxone's long half-life allows once-daily dosing despite being a β-lactam.
 :::
-
-
 
 ## Steady state concept
 
@@ -320,34 +317,31 @@ Half-life determines how quickly drug accumulates and how often we need to dose.
 -   Takes **4-5 half-lives** to achieve
 -   Peak and trough fluctuate around average
 
-::: {.callout-warning}
+::: callout-warning
 ## Clinical Pearl
 
 Don't check "steady state" levels too early—the result won't reflect true exposure!
 :::
 
-::: {.notes}
+::: notes
 With repeated dosing, drug accumulates until we reach steady state. This is when each dose replaces exactly what was eliminated since the last dose. For aminoglycosides with a 2-hour half-life, steady state is reached in 8-10 hours. For vancomycin with a 6-hour half-life, it takes about 24-30 hours. Checking levels too early leads to incorrect dose adjustments.
 :::
-
-
 
 ## ADME: The four pillars of PK
 
 ![](images/adme_diagram.png){fig-align="center" width="800"}
 
-::: {.notes}
+::: notes
 ADME is the backbone of pharmacokinetics. Each process has parameters we can measure and factors that affect them. Understanding these allows for dose individualization in different patient populations.
 :::
 
+## Absorption: Getting drug into the body
 
-## Absorption: Getting Drug Into the Body
+<br> <br>
 
-
-## Bioavailability (F)
+**Bioavailability (F)**
 
 Fraction of administered dose reaching systemic circulation - IV administration: F = 100% (by definition) - Oral administration: F varies widely
-
 
 **Factors affecting oral bioavailability:**
 
@@ -367,12 +361,13 @@ Fraction of administered dose reaching systemic circulation - IV administration:
 :::
 :::::
 
-::: {.notes}
+::: notes
 Bioavailability tells us how much drug actually gets into the bloodstream. IV is our reference (100%). Oral bioavailability varies enormously—from nearly 100% for fluoroquinolones to very low for vancomycin (oral vancomycin stays in the gut). First-pass metabolism by gut and liver CYP enzymes can dramatically reduce bioavailability.
 :::
 
-
 ## Clinical Examples: Bioavailability
+
+<br> <br>
 
 | Drug                      | Oral Bioavailability | Clinical Note     |
 |:--------------------------|:---------------------|:------------------|
@@ -382,41 +377,31 @@ Bioavailability tells us how much drug actually gets into the bloodstream. IV is
 | Posaconazole (suspension) | Variable             | Food dependent    |
 | Oral vancomycin           | \<5%                 | Stays in GI tract |
 
-::: {.callout-important}
+::: callout-important
 ## IV-to-Oral Conversion
 
 High bioavailability drugs are excellent candidates for early IV-to-oral conversion—same exposure, lower cost, earlier discharge!
 :::
 
-::: {.notes}
+::: notes
 These examples illustrate the range of oral bioavailability. Fluoroquinolones and metronidazole have such good absorption that oral and IV are essentially interchangeable—important for antimicrobial stewardship and early discharge. Posaconazole absorption is highly food-dependent with the suspension formulation.
 :::
 
-
 ## Enterohepatic Recirculation
 
-```{mermaid}
-%%| fig-width: 9
-flowchart LR
-    A[Liver] -->|Bile| B[GI Tract]
-    B -->|Conjugated drug| C[Gut bacteria]
-    C -->|Deconjugation| D[Free drug]
-    D -->|Reabsorption| A
+::: {style="margin-top: 0px; display: flex; justify-content: center;"}
+<iframe src="enterohepatic.html" width="70%" height="300px" style="border: none; transform: scale(1.5); transform-origin: top center; margin-bottom: 120px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
-    style C fill:#ffcccc
-```
+</iframe>
+:::
 
-**Clinical significance:**
+<br> <br> **Clinical significance:** - Prolongs drug elimination - Antibiotics disrupting gut flora can interrupt this cycle - Important for: β-lactams, mycophenolic acid, oral contraceptives
 
--   Prolongs drug elimination
--   Antibiotics disrupting gut flora can interrupt this cycle
--   Important for: β-lactams, mycophenolic acid, oral contraceptives
-
-::: {.callout-warning}
+::: callout-warning
 Antibiotics can reduce MPA levels in transplant patients → rejection risk!
 :::
 
-::: {.notes}
+::: notes
 Enterohepatic recirculation is an often-overlooked PK concept. Drugs are conjugated in the liver, excreted in bile, deconjugated by gut bacteria, and reabsorbed. Antibiotics that disrupt gut flora can reduce levels of other medications—this is why we worry about antibiotics affecting oral contraceptive efficacy.
 :::
 
@@ -424,15 +409,13 @@ Enterohepatic recirculation is an often-overlooked PK concept. Drugs are conjuga
 
 ## Distribution: Where Does the Drug Go?
 
-::: {.callout-note}
-## Volume of Distribution (Vd)
+## Volume of distribution (Vd)
 
 A proportionality constant relating plasma concentration to total amount of drug in the body
 
 $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
-:::
 
-::: {.fragment}
+::: fragment
 **Important concept:** Vd is NOT a physiologic volume!
 
 | Vd Value | Interpretation           |
@@ -443,13 +426,13 @@ $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
 | \>42 L   | Extensive tissue binding |
 :::
 
-::: {.notes}
+::: notes
 Volume of distribution is a key concept that students often misunderstand. It's not a real volume—it's a mathematical relationship. A drug with Vd of 500 L isn't really distributed in 500 liters; it means the drug is extensively bound in tissues, leaving low plasma concentrations. Aminoglycosides have small Vd (stay in ECF); macrolides have huge Vd (accumulate in tissues).
 :::
 
-------------------------------------------------------------------------
+## Factors affecting distribution
 
-## Factors Affecting Distribution
+<br>
 
 ::::: columns
 ::: {.column width="50%"}
@@ -471,12 +454,14 @@ Volume of distribution is a key concept that students often misunderstand. It's 
 :::
 :::::
 
+<br> <br>
+
 | Drug Type          | Binding Protein      | Effect on Vd |
 |:-------------------|:---------------------|:-------------|
 | Acidic (β-lactams) | Albumin              | Lower Vd     |
 | Basic (macrolides) | α₁-acid glycoprotein | Higher Vd    |
 
-::: {.notes}
+::: notes
 Distribution is affected by both drug and patient factors. Lipophilic drugs cross membranes easily and have larger Vd. Protein binding keeps drug in the plasma—acidic drugs bind albumin, basic drugs bind AAG. In critically ill patients with hypoalbuminemia, free drug levels increase, potentially affecting both efficacy and toxicity.
 :::
 
@@ -484,9 +469,9 @@ Distribution is affected by both drug and patient factors. Lipophilic drugs cros
 
 ## Protein Binding: Clinical Significance
 
-::: {.r-fit-text}
-**Only UNBOUND drug is pharmacologically active!**
-:::
+<br>
+
+**Only UNBOUND drug is pharmacologically active!** <br>
 
 ::::: columns
 ::: {.column width="50%"}
@@ -508,13 +493,13 @@ Distribution is affected by both drug and patient factors. Lipophilic drugs cros
 :::
 :::::
 
-::: {.callout-important}
+::: callout-important
 ## Example: Ceftriaxone
 
 85-95% protein bound → only 5-15% is active. In hypoalbuminemia, free fraction increases → potential toxicity and altered PK
 :::
 
-::: {.notes}
+::: notes
 This is critical for antiinfectives. The MIC we measure in the lab reflects unbound drug activity. A drug that's 99% protein bound has only 1% available to kill bacteria. Changes in protein binding due to disease states can dramatically alter free drug levels. Some institutions now measure free drug concentrations for highly bound drugs like ceftriaxone.
 :::
 
@@ -522,7 +507,7 @@ This is critical for antiinfectives. The MIC we measure in the lab reflects unbo
 
 ## Metabolism: Phase I Reactions
 
-::: {.callout-note}
+::: callout-note
 ## Cytochrome P450 System
 
 Heme-containing enzymes in the liver (and gut) that oxidize drugs
@@ -536,19 +521,17 @@ Heme-containing enzymes in the liver (and gut) that oxidize drugs
 4.  CYP1A2
 5.  CYP2E1
 
-::: {.fragment}
+::: fragment
 **CYP nomenclature:** CYP**3**A**4** = Family 3, Subfamily A, Gene 4
 :::
 
-::: {.notes}
+::: notes
 The CYP system handles phase I metabolism—oxidation, reduction, hydrolysis. CYP3A4 is the workhorse, metabolizing about half of all drugs. This is why drug interactions involving CYP3A4 are so common. The gut also has CYP3A4, contributing to first-pass metabolism.
 :::
 
-------------------------------------------------------------------------
-
 ## Genetic Polymorphism in Drug Metabolism
 
-::: {.callout-warning}
+::: callout-warning
 ## CYP2C19 Example
 
 Polymorphisms create distinct metabolizer phenotypes:
@@ -561,28 +544,21 @@ Polymorphisms create distinct metabolizer phenotypes:
 | Extensive metabolizer | 35-50% | Normal metabolism |
 | Ultrarapid metabolizer | 5-10% | ↓ Drug levels |
 
-::: {.fragment}
+::: fragment
 **Voriconazole**: CYP2C19 poor metabolizers have **4× higher** exposure → toxicity risk
 :::
 
-::: {.notes}
+::: notes
 Genetic polymorphisms in CYP enzymes create distinct metabolizer phenotypes. This is particularly important for voriconazole, which is metabolized by CYP2C19. Poor metabolizers (more common in Asian populations) have dramatically higher levels. This is one reason voriconazole TDM is recommended. Some institutions do pharmacogenomic testing before starting certain drugs.
 :::
 
-------------------------------------------------------------------------
-
 ## Clinical Application: PK Boosting
 
-```{mermaid}
-%%| fig-width: 9
-flowchart LR
-    A[Protease Inhibitor] --> B[Gut CYP3A4]
-    B --> C[↓ Absorption]
-    R[Ritonavir] -.->|Inhibits| B
-    A --> D[↑ Bioavailability]
+::: {style="margin-top: 0px; display: flex; justify-content: center;"}
+<iframe src="cyp3a4_boosting.html" width="90%" height="400px" style="border: none; transform: scale(2.0); transform-origin: top center; margin-bottom: 300px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
-    style R fill:#f9f,stroke:#333
-```
+</iframe>
+:::
 
 **Examples of boosted regimens:**
 
@@ -590,15 +566,13 @@ flowchart LR
 -   Darunavir/**ritonavir** or /**cobicistat**
 -   Nirmatrelvir/**ritonavir** (Paxlovid)
 
-::: {.callout-tip}
+::: callout-tip
 Ritonavir is used as a PK enhancer, not for its antiviral activity!
 :::
 
-::: {.notes}
+::: notes
 We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so potently that we use it to boost other protease inhibitors. This allows lower doses and less frequent dosing. The same principle is used in Paxlovid for COVID-19. Cobicistat is a newer booster with no antiviral activity—it's purely a PK enhancer.
 :::
-
-------------------------------------------------------------------------
 
 ## Elimination: Renal Clearance
 
@@ -630,11 +604,9 @@ We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so pot
 :::
 :::::
 
-::: {.notes}
+::: notes
 Understanding elimination pathways is essential for dose adjustment. Renally cleared drugs need dose reduction in kidney disease. Tubular secretion is an active process that can be inhibited by other drugs—this is why probenecid can increase penicillin levels. The three mechanisms combine to determine total renal clearance.
 :::
-
-------------------------------------------------------------------------
 
 ## Elimination: Nonrenal Clearance
 
@@ -651,15 +623,15 @@ Understanding elimination pathways is essential for dose adjustment. Renally cle
 | Metronidazole | Hepatic             | Reduce in liver failure   |
 | Azithromycin  | Biliary/fecal       | None for renal impairment |
 
-::: {.notes}
+::: notes
 Not all drugs are renally cleared. Ceftriaxone is unique among cephalosporins—40% is excreted unchanged in bile, so no dose adjustment needed for renal impairment. This makes it useful in patients with kidney disease. Hepatic metabolism requires dose adjustment in liver failure, which is harder to predict than renal dosing.
 :::
 
-------------------------------------------------------------------------
-
 ## Measuring Antimicrobial Potency: The MIC
 
-::: {.callout-note}
+<br> <br>
+
+::: callout-note
 ## Minimum Inhibitory Concentration (MIC)
 
 The lowest concentration of an antimicrobial that inhibits visible growth of a microorganism after overnight incubation
@@ -672,15 +644,13 @@ The lowest concentration of an antimicrobial that inhibits visible growth of a m
 -   **MIC~90~**: MIC for 90% of isolates tested
 -   Does NOT measure killing—only inhibition
 
-::: {.notes}
+::: notes
 The MIC is fundamental to PK-PD but has limitations. It's a single point measurement that doesn't capture the dynamic in vivo situation. It's determined using doubling dilutions, so there's inherent imprecision—a true MIC of 3 would be reported as 4. MIC90 is used for epidemiologic comparisons between agents and helps set breakpoints.
 :::
 
-------------------------------------------------------------------------
+## Limitations of *In Vitro* parameters
 
-## Limitations of In Vitro Parameters
-
-::: {.callout-warning}
+::: callout-warning
 ## What MIC Doesn't Tell Us
 :::
 
@@ -692,48 +662,50 @@ The MIC is fundamental to PK-PD but has limitations. It's a single point measure
 6.  **Inoculum effects** (higher bacterial loads)
 
 :::: fragment
-::: {.callout-tip}
+::: callout-tip
 ## The Solution: PK-PD Integration
 
 Combine MIC with pharmacokinetic parameters to predict clinical outcomes
 :::
 ::::
 
-::: {.notes}
+::: notes
 The MIC is useful but incomplete. It doesn't tell us how fast bacteria are killed, whether there's persistent effect after drug removal, or how the immune system contributes. This is why we need PK-PD—integrating the MIC with drug exposure parameters gives us better predictors of clinical outcomes.
 :::
 
-------------------------------------------------------------------------
+## PK/PD parameters
 
-# PART 2: APPLICATIONS {background-color="#2c3e50"}
+![](images/pkdp_index.png){fig-align="center"}
 
-## PK-PD Indices, Dosing Strategies, and Clinical Applications
-
-------------------------------------------------------------------------
+# PART 2: APPLICATIONS {background-color="#9B0014"}
 
 ## The Three PK-PD Indices
 
-<!-- IMAGE NEEDED: Comprehensive PK-PD diagram showing all three indices -->
+<br> <br>
 
 | Index          | Formula           | What It Measures                   |
 |:---------------|:------------------|:-----------------------------------|
-| **C~max~/MIC** | Peak ÷ MIC        | Intensity of exposure              |
-| **AUC/MIC**    | AUC₀₋₂₄ ÷ MIC     | Total exposure relative to potency |
+| **C~max~/MIC** | Peak / MIC        | Intensity of exposure              |
+| **AUC/MIC**    | AUC₀₋₂₄ / MIC     | Total exposure relative to potency |
 | **T \> MIC**   | \% time above MIC | Duration of effective exposure     |
 
 :::: fragment
-::: {.callout-important}
+::: callout-important
 ## Key Insight
 
 The "best" index depends on the antibiotic's mechanism of action and killing characteristics
 :::
 ::::
 
-::: {.notes}
+::: notes
 These three indices are the foundation of antibiotic PK-PD. Each index relates drug exposure to the MIC. Different antibiotics show strongest correlation with different indices. Choosing the right dosing strategy depends on understanding which index matters for your drug.
 :::
 
-------------------------------------------------------------------------
+## Example: Cefotaxime in animal models
+
+![](images/pkpdanimal.png){fig-align="center"}
+
+## Example: Ciprofloxacin in mice vs. humans
 
 ## PK-PD Index by Antibiotic Class
 
@@ -746,15 +718,13 @@ These three indices are the foundation of antibiotic PK-PD. Each index relates d
 | Daptomycin       | AUC/MIC (or C~max~/MIC) | Variable                       |
 | Linezolid        | AUC/MIC                 | 80-120                         |
 
-::: {.notes}
+::: notes
 This table is your clinical reference. Aminoglycosides and fluoroquinolones show concentration-dependent killing—higher peaks are better. β-lactams show time-dependent killing—duration of exposure matters. Vancomycin was traditionally thought to be time-dependent, but AUC/MIC has emerged as the best predictor. These targets guide our dosing strategies.
 :::
 
-------------------------------------------------------------------------
-
 ## Concentration-Dependent Killing
 
-::: {.r-fit-text}
+::: r-fit-text
 **Higher concentration = Faster killing**
 :::
 
@@ -772,7 +742,7 @@ This table is your clinical reference. Aminoglycosides and fluoroquinolones show
 -   Metronidazole
 -   Amphotericin B
 
-::: {.notes}
+::: notes
 Concentration-dependent agents kill faster at higher concentrations—there's no ceiling effect until you reach toxic levels. They also have prolonged PAE, meaning bacteria don't regrow immediately when drug levels fall. This allows once-daily dosing: give a big dose, achieve high peak, then let levels fall during the drug-free interval while PAE persists.
 :::
 
@@ -780,7 +750,7 @@ Concentration-dependent agents kill faster at higher concentrations—there's no
 
 ## Concentration-Dependent Killing: The Evidence
 
-::: {.callout-tip}
+::: callout-tip
 ## Classic Study: Blaser et al.
 
 Examined C~max~/MIC ratios for enoxacin and netilmicin against Gram-negative organisms:
@@ -791,11 +761,11 @@ Examined C~max~/MIC ratios for enoxacin and netilmicin against Gram-negative org
 | \< 8             | Bacterial regrowth in ALL cultures |
 | ≥ 8              | Sustained killing                  |
 
-::: {.fragment}
+::: fragment
 **Critical finding:** When antibiotics were redosed after regrowth at sub-optimal ratios, **NO killing occurred** due to resistance emergence
 :::
 
-::: {.notes}
+::: notes
 This landmark study established the C~max~/MIC ratio of 8-10 as the target for concentration-dependent antibiotics. Below this threshold, not only did bacteria regrow, but they became resistant. This has profound implications—underdosing these agents can select for resistance. This is why we use high-dose extended-interval aminoglycoside regimens.
 :::
 
@@ -803,7 +773,7 @@ This landmark study established the C~max~/MIC ratio of 8-10 as the target for c
 
 ## Time-Dependent Killing
 
-::: {.r-fit-text}
+::: r-fit-text
 **Duration above MIC = Efficacy**
 :::
 
@@ -822,7 +792,7 @@ This landmark study established the C~max~/MIC ratio of 8-10 as the target for c
 -   Macrolides, clindamycin
 -   Linezolid
 
-::: {.notes}
+::: notes
 Time-dependent agents show maximal killing at 4× MIC—going higher doesn't kill faster. They have minimal PAE against Gram-negatives, so bacteria start regrowing as soon as levels drop below MIC. The goal is to keep concentrations above MIC for as long as possible. This is the rationale for continuous or extended infusions.
 :::
 
@@ -830,7 +800,7 @@ Time-dependent agents show maximal killing at 4× MIC—going higher doesn't kil
 
 ## Time-Dependent Killing: Animal Model Evidence
 
-::: {.callout-important}
+::: callout-important
 ## Classic Data: S. pneumoniae Studies
 
 Treatment with penicillins or cephalosporins showed dramatic mortality differences:
@@ -841,7 +811,7 @@ Treatment with penicillins or cephalosporins showed dramatic mortality differenc
 | ≤ 20% of dosing interval  | **100%**  |
 | 40-50% of dosing interval | **0-10%** |
 
-::: {.fragment}
+::: fragment
 **Target T \> MIC:**
 
 -   Bacteriostatic effect: 30-40%
@@ -849,7 +819,7 @@ Treatment with penicillins or cephalosporins showed dramatic mortality differenc
 -   Maximum effect: ≥70%
 :::
 
-::: {.notes}
+::: notes
 These animal studies established the T\>MIC thresholds we use today. The difference between 20% and 40-50% T\>MIC is the difference between 100% mortality and near-zero mortality. For serious infections, we aim for bactericidal targets of 50-70%. Immunocompromised patients may need even higher targets.
 :::
 
@@ -857,7 +827,7 @@ These animal studies established the T\>MIC thresholds we use today. The differe
 
 ## Post-Antibiotic Effect (PAE)
 
-::: {.callout-note}
+::: callout-note
 ## Definition
 
 Suppression of bacterial growth that persists **after** drug concentrations fall below MIC
@@ -871,7 +841,7 @@ Suppression of bacterial growth that persists **after** drug concentrations fall
 | Penicillins      | **Little/none**    | 2 hours            |
 | Cephalosporins   | **Little/none**    | 2 hours            |
 
-::: {.notes}
+::: notes
 PAE is the continued suppression of bacterial growth after drug removal. It's caused by non-lethal damage to bacteria that takes time to repair. Aminoglycosides and fluoroquinolones have long PAE against Gram-negatives, allowing drug-free intervals. β-lactams lack PAE against Gram-negatives, meaning bacteria regrow immediately—this is why continuous infusion makes sense.
 :::
 
@@ -897,13 +867,13 @@ PAE is the continued suppression of bacterial growth after drug removal. It's ca
 :::
 :::::
 
-::: {.callout-tip}
+::: callout-tip
 ## PAE Enhancement
 
 PAE can be prolonged by: - Higher drug concentrations - Longer exposure duration - Sub-inhibitory concentrations
 :::
 
-::: {.notes}
+::: notes
 Understanding PAE helps explain dosing strategies. Once-daily aminoglycosides work because PAE covers the drug-free interval. β-lactams against Gram-negatives need continuous exposure because bacteria start regrowing immediately. Interestingly, even sub-MIC concentrations can extend PAE—this is why the entire dosing interval contributes to efficacy.
 :::
 
@@ -917,7 +887,7 @@ Three complementary approaches:
 2.  **Animal models** (Neutropenic mouse)
 3.  **Clinical studies** (Human PK-PD)
 
-::: {.fragment}
+::: fragment
 ```{mermaid}
 %%| fig-width: 9
 flowchart LR
@@ -932,7 +902,7 @@ flowchart LR
 ```
 :::
 
-::: {.notes}
+::: notes
 PK-PD is established through a progression of studies. In vitro hollow fiber models provide controlled conditions. Animal models add immune function (or remove it for reproducibility). Clinical trials validate findings in humans. Each level informs dose selection for the next stage.
 :::
 
@@ -960,7 +930,7 @@ PK-PD is established through a progression of studies. In vitro hollow fiber mod
 -   No immune system
 -   May overestimate required doses
 
-::: {.notes}
+::: notes
 The hollow fiber model is the gold standard for in vitro PK-PD. It's essentially an artificial capillary system where we can precisely control drug exposure. We can simulate human PK profiles and watch bacterial populations over days. FDA now accepts hollow fiber data to support dose selection for new antibiotics.
 :::
 
@@ -976,13 +946,13 @@ The hollow fiber model is the gold standard for in vitro PK-PD. It's essentially
 4.  Validate in clinical trials
 5.  Apply to patient populations
 
-::: {.callout-warning}
+::: callout-warning
 ## Challenge
 
 Population average doses may not achieve targets in all patients—especially critically ill!
 :::
 
-::: {.notes}
+::: notes
 Monte Carlo simulation uses population PK data and MIC distributions to predict what percentage of patients will achieve PK-PD targets with different doses. This is how new dosing regimens are designed. The challenge is that population averages mask individual variability—critically ill patients, obese patients, and those with altered renal function may need individualized dosing.
 :::
 
@@ -990,7 +960,7 @@ Monte Carlo simulation uses population PK data and MIC distributions to predict 
 
 ## Extended-Interval Aminoglycoside Dosing
 
-::: {.callout-tip}
+::: callout-tip
 ## The Revolution in Aminoglycoside Dosing
 
 Traditional: 1-2 mg/kg q8h → Modern: 5-7 mg/kg q24h
@@ -1004,7 +974,7 @@ Traditional: 1-2 mg/kg q8h → Modern: 5-7 mg/kg q24h
 | Nephrotoxicity | Higher      | Lower             |
 | Efficacy       | Variable    | Optimized         |
 
-::: {.notes}
+::: notes
 Extended-interval aminoglycoside dosing is the poster child for translating PK-PD into practice. Higher doses achieve optimal Cmax/MIC ratios. The drug-free interval allows renal cortical cells to recover, reducing nephrotoxicity. Multiple meta-analyses show equal or better efficacy with less toxicity. This is now standard of care.
 :::
 
@@ -1019,13 +989,13 @@ Extended-interval aminoglycoside dosing is the poster child for translating PK-P
 3.  **Adaptive resistance**: Drug-free time allows resensitization
 4.  **Saturable renal uptake**: Less accumulation in renal cortex
 
-::: {.callout-important}
+::: callout-important
 ## Target
 
 Achieve C~max~/MIC of **8-10** based on expected MIC~90~ of target organisms
 :::
 
-::: {.notes}
+::: notes
 Four mechanisms explain why extended-interval dosing improves the therapeutic index. Higher peaks optimize the PK-PD target. PAE maintains suppression during the drug-free interval. Bacteria develop adaptive resistance during exposure that reverses during drug-free time. And the renal uptake mechanism saturates, so higher peaks don't proportionally increase kidney accumulation.
 :::
 
@@ -1043,7 +1013,7 @@ Three approaches:
 
 <!-- IMAGE NEEDED: Comparison of three infusion strategies concentration-time curves -->
 
-::: {.notes}
+::: notes
 For time-dependent antibiotics, extending the infusion increases T\>MIC. With extended infusion (3-4 hours), you can achieve similar T\>MIC with less total drug. Continuous infusion achieves 100% T\>MIC by definition. The choice depends on the clinical situation, organism MIC, and practical considerations.
 :::
 
@@ -1051,7 +1021,7 @@ For time-dependent antibiotics, extending the infusion increases T\>MIC. With ex
 
 ## Extended Infusion: The Loading Dose
 
-::: {.callout-warning}
+::: callout-warning
 ## Critical Concept
 
 Continuous or extended infusion **without a loading dose** delays therapeutic concentrations!
@@ -1066,7 +1036,7 @@ Continuous or extended infusion **without a loading dose** delays therapeutic co
 -   Load = Standard intermittent dose
 -   Then transition to extended/continuous infusion
 
-::: {.notes}
+::: notes
 This is a common mistake. Starting continuous infusion without a loading dose means it takes hours to reach therapeutic levels—during which time bacteria are multiplying freely. Always give a loading dose first, then transition to extended or continuous infusion. This is especially important in sepsis when time to effective therapy matters.
 :::
 
@@ -1081,7 +1051,7 @@ This is a common mistake. Starting continuous infusion without a loading dose me
 | BLING-II RCT | Comparable 90-day survival |
 | BLISS RCT | Comparable outcomes |
 
-::: {.callout-note}
+::: callout-note
 ## Why RCTs Show Less Benefit
 
 -   Selection bias in observational studies (sicker patients get standard dosing)
@@ -1089,7 +1059,7 @@ This is a common mistake. Starting continuous infusion without a loading dose me
 -   Greatest benefit likely in: high MICs, critically ill, immunocompromised
 :::
 
-::: {.notes}
+::: notes
 The evidence is strongest from observational data showing mortality benefits with extended infusions. RCTs have shown comparable outcomes, which may reflect patient selection—patients in RCTs are often less sick than real-world populations. Extended infusion likely has greatest benefit for high-MIC organisms and critically ill patients where PK-PD target attainment is most challenging.
 :::
 
@@ -1119,11 +1089,11 @@ The evidence is strongest from observational data showing mortality benefits wit
 :::
 :::::
 
-::: {.callout-important}
+::: callout-important
 Standard doses often **underdose** critically ill patients initially, then **overdose** as organ function changes
 :::
 
-::: {.notes}
+::: notes
 Critically ill patients are the hardest to dose. Early in sepsis, volume expands dramatically, diluting drugs. ARC (GFR \>130 mL/min) is common in young septic patients—they clear drugs faster than normal. Then organ failure develops and clearance drops. Standard doses often fail to achieve targets. This population benefits most from TDM and individualized dosing.
 :::
 
@@ -1140,13 +1110,13 @@ Critically ill patients are the hardest to dose. Early in sepsis, volume expands
 5.  Concentration-related toxicity
 6.  Clinical consequences of under/overdosing
 
-::: {.callout-tip}
+::: callout-tip
 ## Commonly Monitored Antiinfectives
 
 Aminoglycosides, vancomycin, voriconazole, posaconazole, flucytosine
 :::
 
-::: {.notes}
+::: notes
 TDM isn't useful for all drugs—it requires defined targets and situations where measurements will change management. Aminoglycosides have narrow therapeutic indices. Vancomycin has variable PK and defined AUC targets. Voriconazole has genetic polymorphism affecting metabolism. For each drug, know WHY you're monitoring and WHAT you'll do with the result.
 :::
 
@@ -1175,14 +1145,14 @@ TDM isn't useful for all drugs—it requires defined targets and situations wher
 :::::
 
 :::: fragment
-::: {.callout-important}
+::: callout-important
 ## Key Change
 
 Troughs of 15-20 mg/L often give **AUC/MIC \>600** → increased nephrotoxicity without added benefit
 :::
 ::::
 
-::: {.notes}
+::: notes
 This is a major practice change. For years we targeted troughs of 15-20, but this often resulted in excessive AUC and nephrotoxicity. The 2020 consensus guidelines recommend AUC-based monitoring targeting 400-600. This can be done with two samples (peak and trough) or with Bayesian software using a single trough. The shift requires new workflows but reduces toxicity.
 :::
 
@@ -1203,13 +1173,13 @@ This is a major practice change. For years we targeted troughs of 15-20, but thi
 -   Software estimates individual PK parameters
 -   Predicts AUC from one level
 
-::: {.callout-tip}
+::: callout-tip
 ## Practical Tip
 
 Many institutions are implementing Bayesian vancomycin dosing software (e.g., DoseMeRx, InsightRx)
 :::
 
-::: {.notes}
+::: notes
 AUC-based vancomycin monitoring can be implemented two ways. The two-sample method is more accurate but requires two blood draws. Bayesian estimation uses a population model refined by the patient's trough—software does the math. Either method is better than trough-only monitoring. Check what resources your institution has available.
 :::
 
@@ -1225,13 +1195,13 @@ AUC-based vancomycin monitoring can be implemented two ways. The two-sample meth
 | Itraconazole | Variable absorption       | ≥0.5-1 mg/L  |
 | Posaconazole | Food-dependent absorption | ≥0.7-1 mg/L  |
 
-::: {.callout-warning}
+::: callout-warning
 ## Voriconazole Toxicity
 
 Levels \>5.5 mg/L associated with: - Visual disturbances - Hepatotoxicity - CNS effects - Hallucinations
 :::
 
-::: {.notes}
+::: notes
 Azole antifungals have highly variable PK making TDM valuable. Voriconazole is metabolized by polymorphic CYP2C19—poor metabolizers can have toxic levels on standard doses. Posaconazole suspension requires fat for absorption. Newer formulations (tablets, IV) are more reliable. For serious fungal infections, TDM helps ensure adequate exposure.
 :::
 
@@ -1247,14 +1217,14 @@ Azole antifungals have highly variable PK making TDM valuable. Voriconazole is m
 -   Combination therapy is standard
 
 :::: fragment
-::: {.callout-note}
+::: callout-note
 ## The Therapeutic Window
 
 Antiretrovirals must achieve concentrations that: - Suppress viral replication (efficacy) - Don't cause toxicity - Prevent resistance emergence
 :::
 ::::
 
-::: {.notes}
+::: notes
 Antiretrovirals present unique PK-PD challenges. Many work inside cells where we can't easily measure concentrations. NRTIs must be phosphorylated to their active triphosphate forms—plasma parent drug levels don't predict intracellular metabolite levels. Combination therapy exploits synergy to widen the therapeutic window.
 :::
 
@@ -1262,7 +1232,7 @@ Antiretrovirals present unique PK-PD challenges. Many work inside cells where we
 
 ## Case Study 1: Aminoglycoside Dosing
 
-::: {.callout-tip}
+::: callout-tip
 ## Clinical Scenario
 
 62-year-old man, 80 kg, CrCl 90 mL/min, with hospital-acquired pneumonia. You want to start tobramycin. MIC~90~ of *P. aeruginosa* at your hospital is 2 mg/L.
@@ -1272,11 +1242,11 @@ Antiretrovirals present unique PK-PD challenges. Many work inside cells where we
 **Extended-interval:** 7 mg/kg q24h = 560 mg q24h **Peak expected:** \~20 mg/L → C~max~/MIC = 10 ✓
 :::
 
-::: {.fragment}
+::: fragment
 **Answer:** Extended-interval dosing achieves the PK-PD target of 8-10
 :::
 
-::: {.notes}
+::: notes
 Let's apply what we've learned. With traditional dosing, the peak is too low to achieve the target Cmax/MIC of 8-10. Extended-interval dosing with 7 mg/kg gives a peak around 20 mg/L, achieving Cmax/MIC of 10. This optimizes efficacy while the drug-free interval reduces nephrotoxicity risk.
 :::
 
@@ -1284,7 +1254,7 @@ Let's apply what we've learned. With traditional dosing, the peak is too low to 
 
 ## Case Study 2: β-Lactam Optimization
 
-::: {.callout-tip}
+::: callout-tip
 ## Clinical Scenario
 
 55-year-old woman with *P. aeruginosa* bloodstream infection. Piperacillin MIC = 16 mg/L (susceptible). Started on pip-tazo 4.5g q8h (30-min infusion).
@@ -1298,11 +1268,11 @@ Day 3: Still febrile, blood cultures remain positive.
 -   With MIC of 16 mg/L, standard dosing achieves T \> MIC of only \~30%
 -   Target: T \> MIC ≥50%
 
-::: {.fragment}
+::: fragment
 **Solution:** Extended infusion 4.5g q8h over 4 hours (with loading dose) OR increase to q6h dosing
 :::
 
-::: {.notes}
+::: notes
 This is our opening case! The organism is susceptible, but the MIC is at the high end. Standard 30-minute infusions don't maintain levels above 16 mg/L long enough. Extended infusion over 4 hours maintains higher trough concentrations, increasing T\>MIC to \>50%. Alternatively, more frequent dosing (q6h) also increases T\>MIC. This is PK-PD in action.
 :::
 
@@ -1310,7 +1280,7 @@ This is our opening case! The organism is susceptible, but the MIC is at the hig
 
 ## Case Study 3: Vancomycin Monitoring
 
-::: {.callout-tip}
+::: callout-tip
 ## Clinical Scenario
 
 45-year-old man with MRSA bacteremia (MIC = 1 mg/L). Started on vancomycin 1.5g q12h. Day 3 trough = 22 mg/L.
@@ -1320,11 +1290,11 @@ This is our opening case! The organism is susceptible, but the MIC is at the hig
 **New approach:** Using Bayesian software, estimated AUC = 680 mg·h/L - AUC/MIC = 680 (target: 400-600) - This patient is **overexposed** → nephrotoxicity risk
 :::
 
-::: {.fragment}
+::: fragment
 **Action:** Reduce dose to target AUC/MIC of 400-600
 :::
 
-::: {.notes}
+::: notes
 This case illustrates why AUC-based monitoring is better than troughs. A trough of 22 looks borderline acceptable under the old paradigm. But the estimated AUC is 680—well above the 400-600 target. This patient has unnecessary exposure and increased nephrotoxicity risk. AUC-based monitoring would catch this and prompt dose reduction.
 :::
 
@@ -1332,7 +1302,7 @@ This case illustrates why AUC-based monitoring is better than troughs. A trough 
 
 ## Return to Opening Case
 
-::: {.callout-tip}
+::: callout-tip
 ## Remember Our Patient?
 
 65-year-old man with *P. aeruginosa* pneumonia on pip-tazo 4.5g q8h, not improving. MIC = 16 mg/L.
@@ -1348,7 +1318,7 @@ This case illustrates why AUC-based monitoring is better than troughs. A trough 
     -   Consider combination therapy
 4.  **Why not just increase the dose?** Extending infusion increases T \> MIC more efficiently than higher doses
 
-::: {.notes}
+::: notes
 Now we can fully analyze this case. The patient isn't responding because standard pip-tazo dosing doesn't achieve adequate T\>MIC for an organism with MIC of 16. Extended infusion is the most efficient fix—it increases T\>MIC without increasing total drug exposure. This is exactly how PK-PD guides clinical decisions.
 :::
 
@@ -1367,7 +1337,7 @@ Now we can fully analyze this case. The patient isn't responding because standar
     -   Critically ill patients often need higher/more frequent doses initially
     -   TDM helps individualize therapy
 
-::: {.notes}
+::: notes
 Let's consolidate the key takeaways. Know which index predicts efficacy for each drug class. Design dosing strategies that optimize that index. Recognize that standard doses don't work for everyone—critically ill patients especially need individualized approaches. TDM is valuable when targets are known and variability is high.
 :::
 
@@ -1383,7 +1353,7 @@ Let's consolidate the key takeaways. Know which index predicts efficacy for each
 | Vancomycin | AUC-based dosing | Target AUC/MIC 400-600 |
 | Azoles | TDM-guided | High variability |
 
-::: {.notes}
+::: notes
 Here's your quick reference card. Aminoglycosides: once-daily. β-lactams: extended infusion when needed. Vancomycin: AUC-based dosing. Azoles: TDM. These principles apply across most clinical situations. Adapt based on organism MIC and patient factors.
 :::
 
@@ -1403,7 +1373,7 @@ Here's your quick reference card. Aminoglycosides: once-daily. β-lactams: exten
 
 6.  **Apply these principles** every time you write an antibiotic order!
 
-::: {.notes}
+::: notes
 These are the messages I hope you'll remember tomorrow. PK-PD isn't just academic—it directly impacts patient outcomes. Think about PK-PD every time you prescribe an antibiotic. Ask yourself: Am I achieving the right target for this drug, this organism, this patient? If not, how can I optimize?
 :::
 
@@ -1411,7 +1381,7 @@ These are the messages I hope you'll remember tomorrow. PK-PD isn't just academi
 
 ## Questions & Discussion {.center}
 
-::: {.r-fit-text}
+::: r-fit-text
 **Thank you!**
 :::
 
