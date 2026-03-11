@@ -12,7 +12,7 @@ format:
     width: 1920
     height: 1080
 bibliography: references.bib
-csl: nlm-citation-sequence-superscript.csl
+csl: diagnostic-microbiology-and-infectious-disease.csl
 ---
 
 ```{=html}
@@ -24,7 +24,7 @@ csl: nlm-citation-sequence-superscript.csl
 </style>
 ```
 
-## Pharmacokinetics and Pharmacodynamics of Antiinfective Agents {background-color="#9B0014"}
+## Pharmacokinetics and Pharmacodynamics <br> of Antiinfective Agents {background-color="#9B0014"}
 
 <br> <br>
 
@@ -62,6 +62,8 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 
 ## Lecture outline
 
+<br>
+
 ::::: columns
 ::: {.column width="50%"}
 **Part 1: Foundations** (\~30 min)
@@ -89,9 +91,11 @@ Here's our roadmap for today. We'll spend the first 30 minutes on foundational c
 
 ## Why PK-PD Matters: A clinical vignette {.smaller}
 
-Case Introduction
+<br>
 
-A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. On day 3, he's not improving. The MIC comes back as **16 mg/L** (susceptible breakpoint).
+**Case Introduction**
+
+A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. <br> On day 3, he's not improving. The MIC comes back as **16 mg/L** (susceptible breakpoint).
 
 **What would you do?**
 
@@ -113,8 +117,6 @@ Let's start with a case that illustrates why PK-PD matters. This patient has a s
 
 ## Pharmacokinetic and Pharmacodynamic Principles
 
-------------------------------------------------------------------------
-
 ## What is Pharmacology?
 
 ::: callout-note
@@ -133,6 +135,8 @@ Let's start with basic definitions. Pharmacology encompasses everything about a 
 :::
 
 ## PK vs PD: The conceptual framework
+
+<br>
 
 ```{dot}
 digraph G {
@@ -169,6 +173,8 @@ microbiological -> clinical;
 :::
 
 ## Pharmacology of antimicrobials
+
+<br>
 
 ```{dot}
 digraph G {
@@ -280,10 +286,12 @@ The concentration-time curve is fundamental to PK-PD. Every dosing decision affe
 
 ## Understanding half-life (t½)
 
-<br>
+# <br>
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout-note
+## Definition
 
 **Half-life (t½)** = Time required for the plasma concentration to decrease by 50%
-
 
 **Clinical implications:**
 
@@ -334,7 +342,13 @@ ADME is the backbone of pharmacokinetics. Each process has parameters we can mea
 
 ## Absorption: Getting Drug Into the Body
 
-## Bioavailability (F)
+# \## Bioavailability (F)
+
+## Absorption: Getting drug into the body
+
+<br> <br>
+
+**Bioavailability (F)**
 
 Fraction of administered dose reaching systemic circulation - IV administration: F = 100% (by definition) - Oral administration: F varies widely
 
@@ -362,6 +376,8 @@ Bioavailability tells us how much drug actually gets into the bloodstream. IV is
 
 ## Clinical Examples: Bioavailability
 
+<br> <br>
+
 | Drug                      | Oral Bioavailability | Clinical Note     |
 |:--------------------------|:---------------------|:------------------|
 | Levofloxacin              | \~100%               | Oral = IV         |
@@ -382,22 +398,19 @@ These examples illustrate the range of oral bioavailability. Fluoroquinolones an
 
 ## Enterohepatic Recirculation
 
-```{mermaid}
-%%| fig-width: 9
-flowchart LR
-    A[Liver] -->|Bile| B[GI Tract]
-    B -->|Conjugated drug| C[Gut bacteria]
-    C -->|Deconjugation| D[Free drug]
-    D -->|Reabsorption| A
+::: {style="margin-top: 0px; display: flex; justify-content: center;"}
+<iframe src="enterohepatic.html" width="70%" height="300px" style="border: none; transform: scale(1.5); transform-origin: top center; margin-bottom: 120px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
-    style C fill:#ffcccc
-```
+</iframe>
+:::
 
-**Clinical significance:**
+<br> <br> **Clinical significance:** - Prolongs drug elimination - Antibiotics disrupting gut flora can interrupt this cycle - Important for: β-lactams, mycophenolic acid, oral contraceptives
 
 -   Prolongs drug elimination
 -   Antibiotics disrupting gut flora can interrupt this cycle
 -   Important for: β-lactams, mycophenolic acid, oral contraceptives
+
+=======
 
 ::: callout-warning
 Antibiotics can reduce MPA levels in transplant patients → rejection risk!
@@ -411,13 +424,14 @@ Enterohepatic recirculation is an often-overlooked PK concept. Drugs are conjuga
 
 ## Distribution: Where Does the Drug Go?
 
-::: callout-note
-## Volume of Distribution (Vd)
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout-note
+# \## Volume of Distribution (Vd)
+
+## Volume of distribution (Vd)
 
 A proportionality constant relating plasma concentration to total amount of drug in the body
 
 $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
-:::
 
 ::: fragment
 **Important concept:** Vd is NOT a physiologic volume!
@@ -434,9 +448,9 @@ $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
 Volume of distribution is a key concept that students often misunderstand. It's not a real volume—it's a mathematical relationship. A drug with Vd of 500 L isn't really distributed in 500 liters; it means the drug is extensively bound in tissues, leaving low plasma concentrations. Aminoglycosides have small Vd (stay in ECF); macrolides have huge Vd (accumulate in tissues).
 :::
 
-------------------------------------------------------------------------
+## Factors affecting distribution
 
-## Factors Affecting Distribution
+<br>
 
 ::::: columns
 ::: {.column width="50%"}
@@ -458,6 +472,8 @@ Volume of distribution is a key concept that students often misunderstand. It's 
 :::
 :::::
 
+<br> <br>
+
 | Drug Type          | Binding Protein      | Effect on Vd |
 |:-------------------|:---------------------|:-------------|
 | Acidic (β-lactams) | Albumin              | Lower Vd     |
@@ -471,9 +487,9 @@ Distribution is affected by both drug and patient factors. Lipophilic drugs cros
 
 ## Protein Binding: Clinical Significance
 
-::: r-fit-text
-**Only UNBOUND drug is pharmacologically active!**
-:::
+<br>
+
+**Only UNBOUND drug is pharmacologically active!** <br>
 
 ::::: columns
 ::: {.column width="50%"}
@@ -531,8 +547,6 @@ Heme-containing enzymes in the liver (and gut) that oxidize drugs
 The CYP system handles phase I metabolism—oxidation, reduction, hydrolysis. CYP3A4 is the workhorse, metabolizing about half of all drugs. This is why drug interactions involving CYP3A4 are so common. The gut also has CYP3A4, contributing to first-pass metabolism.
 :::
 
-------------------------------------------------------------------------
-
 ## Genetic Polymorphism in Drug Metabolism
 
 ::: callout-warning
@@ -556,20 +570,11 @@ Polymorphisms create distinct metabolizer phenotypes:
 Genetic polymorphisms in CYP enzymes create distinct metabolizer phenotypes. This is particularly important for voriconazole, which is metabolized by CYP2C19. Poor metabolizers (more common in Asian populations) have dramatically higher levels. This is one reason voriconazole TDM is recommended. Some institutions do pharmacogenomic testing before starting certain drugs.
 :::
 
-------------------------------------------------------------------------
-
 ## Clinical Application: PK Boosting
 
-```{mermaid}
-%%| fig-width: 9
-flowchart LR
-    A[Protease Inhibitor] --> B[Gut CYP3A4]
-    B --> C[↓ Absorption]
-    R[Ritonavir] -.->|Inhibits| B
-    A --> D[↑ Bioavailability]
+<iframe src="cyp3a4_boosting.html" width="90%" height="400px" style="border: none; transform: scale(2.0); transform-origin: top center; margin-bottom: 300px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
-    style R fill:#f9f,stroke:#333
-```
+</iframe>
 
 **Examples of boosted regimens:**
 
@@ -584,8 +589,6 @@ Ritonavir is used as a PK enhancer, not for its antiviral activity!
 ::: notes
 We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so potently that we use it to boost other protease inhibitors. This allows lower doses and less frequent dosing. The same principle is used in Paxlovid for COVID-19. Cobicistat is a newer booster with no antiviral activity—it's purely a PK enhancer.
 :::
-
-------------------------------------------------------------------------
 
 ## Elimination: Renal Clearance
 
@@ -621,8 +624,6 @@ We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so pot
 Understanding elimination pathways is essential for dose adjustment. Renally cleared drugs need dose reduction in kidney disease. Tubular secretion is an active process that can be inhibited by other drugs—this is why probenecid can increase penicillin levels. The three mechanisms combine to determine total renal clearance.
 :::
 
-------------------------------------------------------------------------
-
 ## Elimination: Nonrenal Clearance
 
 **Nonrenal routes:**
@@ -642,9 +643,9 @@ Understanding elimination pathways is essential for dose adjustment. Renally cle
 Not all drugs are renally cleared. Ceftriaxone is unique among cephalosporins—40% is excreted unchanged in bile, so no dose adjustment needed for renal impairment. This makes it useful in patients with kidney disease. Hepatic metabolism requires dose adjustment in liver failure, which is harder to predict than renal dosing.
 :::
 
-------------------------------------------------------------------------
-
 ## Measuring Antimicrobial Potency: The MIC
+
+======= <br> <br>
 
 ::: callout-note
 ## Minimum Inhibitory Concentration (MIC)
@@ -663,9 +664,11 @@ The lowest concentration of an antimicrobial that inhibits visible growth of a m
 The MIC is fundamental to PK-PD but has limitations. It's a single point measurement that doesn't capture the dynamic in vivo situation. It's determined using doubling dilutions, so there's inherent imprecision—a true MIC of 3 would be reported as 4. MIC90 is used for epidemiologic comparisons between agents and helps set breakpoints.
 :::
 
-------------------------------------------------------------------------
+## Limitations of *In Vitro* parameters
 
 ## Limitations of In Vitro Parameters
+
+=======
 
 ::: callout-warning
 ## What MIC Doesn't Tell Us
@@ -690,22 +693,20 @@ Combine MIC with pharmacokinetic parameters to predict clinical outcomes
 The MIC is useful but incomplete. It doesn't tell us how fast bacteria are killed, whether there's persistent effect after drug removal, or how the immune system contributes. This is why we need PK-PD—integrating the MIC with drug exposure parameters gives us better predictors of clinical outcomes.
 :::
 
-------------------------------------------------------------------------
+## PK/PD parameters
 
-# PART 2: APPLICATIONS {background-color="#2c3e50"}
+![](images/pkdp_index.png){fig-align="center"}
 
-## PK-PD Indices, Dosing Strategies, and Clinical Applications
-
-------------------------------------------------------------------------
+# PART 2: APPLICATIONS {background-color="#9B0014"}
 
 ## The Three PK-PD Indices
 
-<!-- IMAGE NEEDED: Comprehensive PK-PD diagram showing all three indices -->
+<br> <br>
 
 | Index          | Formula           | What It Measures                   |
 |:---------------|:------------------|:-----------------------------------|
-| **C~max~/MIC** | Peak ÷ MIC        | Intensity of exposure              |
-| **AUC/MIC**    | AUC₀₋₂₄ ÷ MIC     | Total exposure relative to potency |
+| **C~max~/MIC** | Peak / MIC        | Intensity of exposure              |
+| **AUC/MIC**    | AUC₀₋₂₄ / MIC     | Total exposure relative to potency |
 | **T \> MIC**   | \% time above MIC | Duration of effective exposure     |
 
 :::: fragment
@@ -720,7 +721,11 @@ The "best" index depends on the antibiotic's mechanism of action and killing cha
 These three indices are the foundation of antibiotic PK-PD. Each index relates drug exposure to the MIC. Different antibiotics show strongest correlation with different indices. Choosing the right dosing strategy depends on understanding which index matters for your drug.
 :::
 
-------------------------------------------------------------------------
+## Example: Cefotaxime in animal models
+
+![](images/pkpdanimal.png){fig-align="center"}
+
+## Example: Ciprofloxacin in mice vs. humans
 
 ## PK-PD Index by Antibiotic Class
 
@@ -736,8 +741,6 @@ These three indices are the foundation of antibiotic PK-PD. Each index relates d
 ::: notes
 This table is your clinical reference. Aminoglycosides and fluoroquinolones show concentration-dependent killing—higher peaks are better. β-lactams show time-dependent killing—duration of exposure matters. Vancomycin was traditionally thought to be time-dependent, but AUC/MIC has emerged as the best predictor. These targets guide our dosing strategies.
 :::
-
-------------------------------------------------------------------------
 
 ## Concentration-Dependent Killing
 
@@ -1433,3 +1436,5 @@ These are the messages I hope you'll remember tomorrow. PK-PD isn't just academi
 | PAE          | Post-antibiotic effect                  |
 | T \> MIC     | Time above MIC                          |
 | TDM          | Therapeutic drug monitoring             |
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
