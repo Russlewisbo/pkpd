@@ -89,15 +89,17 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 Here's our roadmap for today. We'll spend the first 30 minutes on foundational concepts, then move into clinical applications. Feel free to ask questions as we go.
 :::
 
-## Why PK-PD Matters: A clinical vignette {.smaller}
+## Why PK-PD Matters: A clinical vignette
 
 <br>
 
 **Case Introduction**
 
-A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. <br> On day 3, he's not improving. The MIC comes back as **16 mg/L** (susceptible breakpoint).
+A 65-year-old man with *Pseudomonas aeruginosa* pneumonia is started on piperacillin-tazobactam 4.5g IV q8h. <br> On day 3, he's not improving. The MIC comes back as 16 mg/L (susceptible breakpoint).
 
-**What would you do?**
+<br> *What would you do?*
+
+<br>
 
 ::: fragment
 **Options to consider:**
@@ -117,7 +119,7 @@ Let's start with a case that illustrates why PK-PD matters. This patient has a s
 
 ## Pharmacokinetic and Pharmacodynamic Principles
 
-## What is Pharmacology?
+<br> What is Pharmacology?
 
 ::: callout-note
 ## Definition
@@ -263,13 +265,15 @@ This diagram shows the relationship between PK and PD. PK determines the concent
 Unlike most drugs that only affect the host, antiinfectives have a triangular relationship. This creates complexity but also opportunities for optimization. Doses are typically an order of magnitude higher than other drug classes because we're targeting non-mammalian sites. The microbiome effects are increasingly recognized as important.
 :::
 
-## The Concentration-time curve: Your roadmap
+## The concentration-time curve: Your roadmap
 
 <br>
 
 ![](images/AUC.png){fig-align="center"}
 
-## The Concentration-time curve
+## The concentration-time curve
+
+<br> <br>
 
 **Key parameters from the curve:**
 
@@ -286,10 +290,7 @@ The concentration-time curve is fundamental to PK-PD. Every dosing decision affe
 
 ## Understanding half-life (t½)
 
-# <br>
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout-note
-## Definition
+<br>
 
 **Half-life (t½)** = Time required for the plasma concentration to decrease by 50%
 
@@ -339,10 +340,6 @@ With repeated dosing, drug accumulates until we reach steady state. This is when
 ::: notes
 ADME is the backbone of pharmacokinetics. Each process has parameters we can measure and factors that affect them. Understanding these allows for dose individualization in different patient populations.
 :::
-
-## Absorption: Getting Drug Into the Body
-
-# \## Bioavailability (F)
 
 ## Absorption: Getting drug into the body
 
@@ -410,8 +407,6 @@ These examples illustrate the range of oral bioavailability. Fluoroquinolones an
 -   Antibiotics disrupting gut flora can interrupt this cycle
 -   Important for: β-lactams, mycophenolic acid, oral contraceptives
 
-=======
-
 ::: callout-warning
 Antibiotics can reduce MPA levels in transplant patients → rejection risk!
 :::
@@ -420,18 +415,15 @@ Antibiotics can reduce MPA levels in transplant patients → rejection risk!
 Enterohepatic recirculation is an often-overlooked PK concept. Drugs are conjugated in the liver, excreted in bile, deconjugated by gut bacteria, and reabsorbed. Antibiotics that disrupt gut flora can reduce levels of other medications—this is why we worry about antibiotics affecting oral contraceptive efficacy.
 :::
 
-------------------------------------------------------------------------
-
 ## Distribution: Where Does the Drug Go?
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: callout-note
-# \## Volume of Distribution (Vd)
-
-## Volume of distribution (Vd)
+<br> **Volume of distribution (Vd)**
 
 A proportionality constant relating plasma concentration to total amount of drug in the body
 
 $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
+
+<br> <br>
 
 ::: fragment
 **Important concept:** Vd is NOT a physiologic volume!
@@ -442,6 +434,7 @@ $$V_d = \frac{\text{Amount of drug in body}}{\text{Plasma concentration}}$$
 | \~14 L   | Extracellular fluid      |
 | \~42 L   | Total body water         |
 | \>42 L   | Extensive tissue binding |
+
 :::
 
 ::: notes
@@ -572,7 +565,7 @@ Genetic polymorphisms in CYP enzymes create distinct metabolizer phenotypes. Thi
 
 ## Clinical Application: PK Boosting
 
-<iframe src="cyp3a4_boosting.html" width="90%" height="400px" style="border: none; transform: scale(2.0); transform-origin: top center; margin-bottom: 300px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
+<iframe src="cyp3a4_boosting.html" width="100%" height="400px" style="border: none; transform: scale(2.0); transform-origin: top center; margin-bottom: 300px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
 </iframe>
 
@@ -645,7 +638,7 @@ Not all drugs are renally cleared. Ceftriaxone is unique among cephalosporins—
 
 ## Measuring Antimicrobial Potency: The MIC
 
-======= <br> <br>
+<br> <br>
 
 ::: callout-note
 ## Minimum Inhibitory Concentration (MIC)
@@ -665,10 +658,6 @@ The MIC is fundamental to PK-PD but has limitations. It's a single point measure
 :::
 
 ## Limitations of *In Vitro* parameters
-
-## Limitations of In Vitro Parameters
-
-=======
 
 ::: callout-warning
 ## What MIC Doesn't Tell Us
@@ -725,28 +714,37 @@ These three indices are the foundation of antibiotic PK-PD. Each index relates d
 
 ![](images/pkpdanimal.png){fig-align="center"}
 
+::: aside
+[@craig_1998]
+:::
+
 ## Example: Ciprofloxacin in mice vs. humans
+
+![](images/clipboard-406664738 copy.png){fig-align="center"}
+
+::: aside
+[@craig_1998]
+:::
 
 ## PK-PD Index by Antibiotic Class
 
-| Antibiotic Class | Primary Index           | Target                         |
-|:---------------------------|:------------------------|:------------------|
-| Aminoglycosides  | C~max~/MIC              | 8-10                           |
-| Fluoroquinolones | AUC/MIC (or C~max~/MIC) | 30-50 (Gram+), 100-125 (Gram-) |
-| β-Lactams        | T \> MIC                | 40-70% of interval             |
-| Vancomycin       | AUC/MIC                 | 400-600                        |
-| Daptomycin       | AUC/MIC (or C~max~/MIC) | Variable                       |
-| Linezolid        | AUC/MIC                 | 80-120                         |
+<br> <br>
 
-::: notes
+| Antibiotic Class | Primary Index | Target |
+|:---------------------------|:------------------------|:------------------|
+| Aminoglycosides | C~max~/MIC | 8-10 |
+| Fluoroquinolones | AUC/MIC (or C~max~/MIC) | 30-50 (Gram+), <br>100-125 (Gram-) |
+| β-Lactams | T \> MIC | 40-70% of interval |
+| Vancomycin | AUC/MIC | 400-600 |
+| Daptomycin | AUC/MIC (or C~max~/MIC) | Variable |
+| Linezolid | AUC/MIC | 80-120 |
+
+::: aside
 This table is your clinical reference. Aminoglycosides and fluoroquinolones show concentration-dependent killing—higher peaks are better. β-lactams show time-dependent killing—duration of exposure matters. Vancomycin was traditionally thought to be time-dependent, but AUC/MIC has emerged as the best predictor. These targets guide our dosing strategies.
 :::
 
 ## Concentration-Dependent Killing
-
-::: r-fit-text
-**Higher concentration = Faster killing**
-:::
+<br>
 
 **Characteristics:**
 
@@ -762,11 +760,11 @@ This table is your clinical reference. Aminoglycosides and fluoroquinolones show
 -   Metronidazole
 -   Amphotericin B
 
-::: notes
+::: aside
 Concentration-dependent agents kill faster at higher concentrations—there's no ceiling effect until you reach toxic levels. They also have prolonged PAE, meaning bacteria don't regrow immediately when drug levels fall. This allows once-daily dosing: give a big dose, achieve high peak, then let levels fall during the drug-free interval while PAE persists.
 :::
 
-------------------------------------------------------------------------
+
 
 ## Concentration-Dependent Killing: The Evidence
 
@@ -787,6 +785,10 @@ Examined C~max~/MIC ratios for enoxacin and netilmicin against Gram-negative org
 
 ::: notes
 This landmark study established the C~max~/MIC ratio of 8-10 as the target for concentration-dependent antibiotics. Below this threshold, not only did bacteria regrow, but they became resistant. This has profound implications—underdosing these agents can select for resistance. This is why we use high-dose extended-interval aminoglycoside regimens.
+:::
+
+::: aside
+[@Blaser1985]
 :::
 
 ------------------------------------------------------------------------
@@ -1436,5 +1438,3 @@ These are the messages I hope you'll remember tomorrow. PK-PD isn't just academi
 | PAE          | Post-antibiotic effect                  |
 | T \> MIC     | Time above MIC                          |
 | TDM          | Therapeutic drug monitoring             |
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
