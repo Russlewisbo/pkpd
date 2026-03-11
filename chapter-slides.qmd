@@ -64,7 +64,7 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 
 <br>
 
-::: {style="width: 70%; margin: 0 auto;"}
+:::::: {style="width: 70%; margin: 0 auto;"}
 ::::: columns
 ::: {.column width="50%"}
 **Part 1: Foundations** (\~30 min)
@@ -85,7 +85,7 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 -   Clinical case studies
 :::
 :::::
-:::
+::::::
 
 ::: notes
 Here's our roadmap for today. We'll spend the first 30 minutes on foundational concepts, then move into clinical applications. Feel free to ask questions as we go.
@@ -121,7 +121,7 @@ Let's start with a case that illustrates why PK-PD matters. This patient has a s
 
 ## Pharmacokinetic and Pharmacodynamic Principles
 
-<br> **What is Pharmacology?**
+<br> **What is pharmacology?**
 
 ::: callout-note
 ## Definition
@@ -381,7 +381,7 @@ Fraction of administered dose reaching systemic circulation
 Bioavailability tells us how much drug actually gets into the bloodstream. IV is our reference (100%). Oral bioavailability varies enormously—from nearly 100% for fluoroquinolones to very low for vancomycin (oral vancomycin stays in the gut). First-pass metabolism by gut and liver CYP enzymes can dramatically reduce bioavailability.
 :::
 
-## Clinical Examples: bioavailability
+## Clinical examples: bioavailability
 
 <br> <br>
 
@@ -396,7 +396,7 @@ Bioavailability tells us how much drug actually gets into the bloodstream. IV is
 <br> <br>
 
 ::: callout-important
-## IV-to-Oral Conversion
+## IV-to-Oral conversion
 
 High bioavailability drugs are excellent candidates for early IV-to-oral conversion—same exposure, lower cost, earlier discharge!
 :::
@@ -411,7 +411,6 @@ These examples illustrate the range of oral bioavailability. Fluoroquinolones an
 <iframe src="enterohepatic.html" width="70%" height="300px" style="border: none; transform: scale(1.5); transform-origin: top center; margin-bottom: 120px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
 </iframe>
-
 :::
 
 <br> <br> **Clinical significance:**
@@ -588,10 +587,6 @@ Genetic polymorphisms in CYP enzymes create distinct metabolizer phenotypes. Thi
 -   Lopinavir/**ritonavir** (Kaletra)
 -   Darunavir/**ritonavir** or /**cobicistat**
 -   Nirmatrelvir/**ritonavir** (Paxlovid)
-
-::: callout-tip
-Ritonavir is used as a PK enhancer, not for its antiviral activity!
-:::
 
 ::: notes
 We can exploit drug interactions intentionally. Ritonavir inhibits CYP3A4 so potently that we use it to boost other protease inhibitors. This allows lower doses and less frequent dosing. The same principle is used in Paxlovid for COVID-19. Cobicistat is a newer booster with no antiviral activity—it's purely a PK enhancer.
@@ -977,7 +972,7 @@ PK-PD is established through a progression of studies. In vitro hollow fiber mod
 The hollow fiber model is the gold standard for in vitro PK-PD. It's essentially an artificial capillary system where we can precisely control drug exposure. We can simulate human PK profiles and watch bacterial populations over days. FDA now accepts hollow fiber data to support dose selection for new antibiotics.
 :::
 
-## Translating PK-PD to Clinical dosing
+## Translating PK-PD to clinical dosing
 
 **From bench to bedside:**
 
@@ -1142,7 +1137,7 @@ Standard doses often **underdose** critically ill patients initially, then **ove
 Critically ill patients are the hardest to dose. Early in sepsis, volume expands dramatically, diluting drugs. ARC (GFR \>130 mL/min) is common in young septic patients—they clear drugs faster than normal. Then organ failure develops and clearance drops. Standard doses often fail to achieve targets. This population benefits most from TDM and individualized dosing.
 :::
 
-# Therapeutic Drug Monitoring: Principles {background-color="#9B0014"}
+# Therapeutic Drug Monitoring: <br>Key Principles {background-color="#9B0014"}
 
 ## When is TDM valuable? <br>
 
@@ -1243,14 +1238,22 @@ AUC-based vancomycin monitoring can be implemented two ways. The two-sample meth
 ::: callout-warning
 ## Voriconazole Toxicity
 
-Levels \>5.5 mg/L associated with: - Visual disturbances - Hepatotoxicity - CNS effects - Hallucinations
+Levels \>5.5 mg/L associated with:
+
+-   Visual disturbances
+
+-   Hepatotoxicity
+
+-    CNS effects
+
+-   Hallucinations
 :::
 
 ::: aside
 Azole antifungals have highly variable PK making TDM valuable. Voriconazole is metabolized by polymorphic CYP2C19—poor metabolizers can have toxic levels on standard doses. Posaconazole suspension requires high-fat meal for absorption. Newer formulations (tablets, IV- if avaialable) are more reliable. For serious fungal infections, TDM helps ensure adequate exposure.
 :::
 
-## Antiretroviral PK-PD: Unique Considerations
+## Antiretroviral PK-PD: Unique considerations
 
 <br> <br>
 
@@ -1264,7 +1267,14 @@ Azole antifungals have highly variable PK making TDM valuable. Voriconazole is m
 :::: fragment
 ::: callout-note
 ## The Therapeutic Window
-Antiretrovirals must achieve concentrations that: - Suppress viral replication (efficacy) - Don't cause toxicity - Prevent resistance emergence
+
+Antiretrovirals must achieve concentrations that:
+
+-   Suppress viral replication (efficacy)
+
+-   Don't cause toxicity
+
+-   Prevent resistance emergence
 :::
 ::::
 
@@ -1326,6 +1336,8 @@ The organism is susceptible, but the MIC is at the high end. Standard 30-minute 
 
 ## Case Study 3: Vancomycin monitoring
 
+<br>
+
 ::: callout-tip
 ## Clinical Scenario
 
@@ -1348,11 +1360,15 @@ This case illustrates why AUC-based monitoring is better than troughs. A trough 
 
 ## Return to Opening Case
 
+<br>
+
 ::: callout-tip
 ## Remember Our Patient?
 
 65-year-old man with *P. aeruginosa* pneumonia on pip-tazo 4.5g q8h, not improving. MIC = 16 mg/L.
 :::
+
+<br>
 
 **Now you can answer:**
 
@@ -1368,17 +1384,28 @@ This case illustrates why AUC-based monitoring is better than troughs. A trough 
 Now we can fully analyze this case. The patient isn't responding because standard pip-tazo dosing doesn't achieve adequate T\>MIC for an organism with MIC of 16. Extended infusion is the most efficient fix—it increases T\>MIC without increasing total drug exposure. This is exactly how PK-PD guides clinical decisions.
 :::
 
-## Summary: Key Clinical Pearls
+## Summary: Key Clinical pearls
+
 <br> <br>
-1.  **Know your PK-PD index:**
+
+1. **Know your PK-PD index:**
+
     -   C~max~/MIC: aminoglycosides, fluoroquinolones
+
     -   AUC/MIC: vancomycin, fluoroquinolones
-    -   T \> MIC: β-lactams
+
+    -   T \> MIC: β-lactams 2.
+
 2.  **Match dosing strategy to PK-PD:**
+
     -   Concentration-dependent → maximize peak
+
     -   Time-dependent → maximize duration
+
 3.  **Remember special populations:**
+
     -   Critically ill patients often need higher/more frequent doses initially
+
     -   TDM helps individualize therapy
 
 ::: notes
@@ -1398,14 +1425,13 @@ Let's consolidate the key takeaways. Know which index predicts efficacy for each
 | Azoles | TDM-guided | High variability |
 
 ::: aside
-Here's your quick reference card. Aminoglycosides: once-daily. β-lactams: extended infusion when needed. Vancomycin: AUC-based dosing. Azoles: TDM. These principles apply across most clinical situations. Adapt based on organism MIC and patient factors.
+Aminoglycosides: once-daily. β-lactams: extended infusion when needed. Vancomycin: AUC-based dosing. Azoles: TDM. These principles apply across most clinical situations. Adapt based on organism MIC and patient factors.
 :::
 
-
-
 ## Take-Home Messages
+<br> <br>
 
-<br> <br> 1. **PK-PD integration** is essential for optimizing anti-infective therapy
+1. **PK-PD integration** is essential for optimizing anti-infective therapy
 
 2.  **Underdosing is common** and promotes resistance
 
@@ -1427,8 +1453,6 @@ These are the messages I hope you'll remember tomorrow. PK-PD isn't just academi
 
 ::: {#refs}
 :::
-
-
 
 ## Supplementary: PK Abbreviations Reference {.smaller}
 
