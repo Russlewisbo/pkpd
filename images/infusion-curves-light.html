@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infusion Strategy Comparison</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #ffffff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .label-top { color: #94a3b8; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 4px; font-family: 'IBM Plex Mono', monospace; }
+  .title     { color: #1e293b; font-size: 21px; font-weight: 700; letter-spacing: .02em; margin-bottom: 3px; }
+  .subtitle  { color: #64748b; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px; font-family: 'IBM Plex Mono', monospace; }
+  .annotations { display: flex; gap: 28px; margin-top: 14px; }
+  .ann { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .9; font-family: 'IBM Plex Mono', monospace; }
+</style>
+</head>
+<body>
+
+<div class="label-top">β-Lactam PK/PD</div>
+<div class="title">Infusion Strategy Comparison</div>
+<div class="subtitle">Concentration – Time Profiles</div>
+
+<svg id="chart"></svg>
+
+<div class="annotations">
+  <span class="ann" style="color:#334155">▸ Same Daily Dose</span>
+  <span class="ann" style="color:#16a34a">▸ ↑ T &gt; MIC</span>
+  <span class="ann" style="color:#2563eb">▸ ↓ Peak Toxicity</span>
+</div>
+
+<script>
+(function () {
+  // ── Layout ────────────────────────────────────────────────────────────
+  const W = 760, H = 400;
+  const PAD = { top: 40, right: 148, bottom: 58, left: 64 };
+  const CW = W - PAD.left - PAD.right;
+  const CH = H - PAD.top - PAD.bottom;
+
+  // ── PK parameters ────────────────────────────────────────────────────
+  const k         = 0.55;
+  const Vd        = 1;
+  const Cl        = k * Vd;
+  const DAILY_DOSE = 33;
+  const MIC       = 1;
+  const T_MAX     = 24;
+  const C_MAX     = 11;
+
+  function genCurve(infTime, nDoses) {
+    const interval = T_MAX / nDoses;
+    const dosePerInterval = DAILY_DOSE / nDoses;
+    const R = dosePerInterval / infTime;
+    const pts = [];
+    for (let t = 0; t <= T_MAX; t += 0.04) {
+      let C = 0;
+      for (let d = 0; d < nDoses; d++) {
+        const tl = t - d * interval;
+        if (tl <= 0) continue;
+        const Cend = (R / Cl) * (1 - Math.exp(-k * Math.min(tl, infTime)));
+        C += tl <= infTime
+          ? (R / Cl) * (1 - Math.exp(-k * tl))
+          : Cend * Math.exp(-k * (tl - infTime));
+      }
+      pts.push([t, Math.min(C, C_MAX * 1.1)]);
+    }
+    return pts;
+  }
+
+  function toXY(t, c) {
+    return [
+      PAD.left + (t / T_MAX) * CW,
+      PAD.top  + CH - (c / C_MAX) * CH
+    ];
+  }
+
+  function ptsToPath(pts) {
+    return pts.map(([t, c], i) => {
+      const [x, y] = toXY(t, c);
+      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+  }
+
+  function ptsToArea(pts) {
+    const base = PAD.top + CH;
+    const [x0] = toXY(pts[0][0], 0);
+    const [xn] = toXY(pts[pts.length - 1][0], 0);
+    return ptsToPath(pts) + ` L${xn},${base} L${x0},${base} Z`;
+  }
+
+  // ── Curve definitions ────────────────────────────────────────────────
+  const CURVES = [
+    { label: 'Intermittent', sub: '30-min infusion', badge: 'T > MIC: ~30%',
+      infTime: 0.5, nDoses: 3, color: '#dc2626', gradStop: 'rgba(220,38,38,0.12)' },
+    { label: 'Extended',     sub: '3–4 h infusion',  badge: 'T > MIC: ~70%',
+      infTime: 3.5, nDoses: 3, color: '#2563eb', gradStop: 'rgba(37,99,235,0.12)' },
+    { label: 'Continuous',   sub: '24-h infusion',   badge: 'T > MIC: 100%',
+      infTime: 24,  nDoses: 1, color: '#16a34a', gradStop: 'rgba(22,163,74,0.12)'  },
+  ].map(c => ({ ...c, pts: genCurve(c.infTime, c.nDoses) }));
+
+  // ── SVG helpers ──────────────────────────────────────────────────────
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  const svg = document.getElementById('chart');
+  svg.setAttribute('xmlns', NS);
+  svg.setAttribute('width',  W);
+  svg.setAttribute('height', H);
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.style.overflow = 'visible';
+
+  // ── Defs: gradients + drop shadow ────────────────────────────────────
+  const defs = el('defs', {}, svg);
+  CURVES.forEach(c => {
+    const g = el('linearGradient', { id: `grad-${c.label}`, x1:'0', y1:'0', x2:'0', y2:'1' }, defs);
+    el('stop', { offset:'0%',   'stop-color': c.color, 'stop-opacity':'0.18' }, g);
+    el('stop', { offset:'100%', 'stop-color': c.color, 'stop-opacity':'0.02' }, g);
+  });
+
+  // Drop shadow for legend boxes
+  const filt = el('filter', { id:'shadow', x:'-10%', y:'-10%', width:'130%', height:'130%' }, defs);
+  const fe = el('feDropShadow', { dx:'0', dy:'1', stdDeviation:'2',
+    'flood-color':'#94a3b8', 'flood-opacity':'0.18' }, filt);
+
+  // ── Chart area background ─────────────────────────────────────────────
+  el('rect', { x: PAD.left, y: PAD.top, width: CW, height: CH,
+    fill:'#f8fafc', rx:'3', stroke:'#e2e8f0', 'stroke-width':'1' }, svg);
+
+  // ── Grid ──────────────────────────────────────────────────────────────
+  const yTicks = [0, 2, 4, 6, 8, 10];
+  const xTicks = [0, 4, 8, 12, 16, 20, 24];
+  yTicks.forEach(v => {
+    const y = PAD.top + CH - (v / C_MAX) * CH;
+    el('line', { x1: PAD.left, x2: PAD.left + CW, y1: y, y2: y,
+      stroke: v === 0 ? '#cbd5e1' : '#e2e8f0', 'stroke-width': v === 0 ? 1.5 : 1 }, svg);
+  });
+  xTicks.forEach(v => {
+    const x = PAD.left + (v / T_MAX) * CW;
+    el('line', { x1: x, x2: x, y1: PAD.top, y2: PAD.top + CH,
+      stroke:'#e2e8f0', 'stroke-width':'1' }, svg);
+  });
+
+  // ── MIC band ──────────────────────────────────────────────────────────
+  const micY = PAD.top + CH - (MIC / C_MAX) * CH;
+  el('rect', { x: PAD.left, y: micY, width: CW, height: PAD.top + CH - micY,
+    fill:'rgba(234,179,8,0.07)' }, svg);
+
+  // ── Area fills ────────────────────────────────────────────────────────
+  CURVES.forEach(c => {
+    el('path', { d: ptsToArea(c.pts), fill:`url(#grad-${c.label})` }, svg);
+  });
+
+  // ── MIC dashed line ───────────────────────────────────────────────────
+  el('line', { x1: PAD.left, x2: PAD.left + CW, y1: micY, y2: micY,
+    stroke:'#b45309', 'stroke-width':'1.6', 'stroke-dasharray':'7 4', opacity:'.85' }, svg);
+  const micLbl = el('text', { x: PAD.left + CW + 7, y: micY + 4,
+    fill:'#b45309', 'font-size':'11', 'font-family':'IBM Plex Mono,monospace',
+    'font-weight':'600' }, svg);
+  micLbl.textContent = 'MIC';
+
+  // ── Curves ────────────────────────────────────────────────────────────
+  CURVES.forEach(c => {
+    el('path', { d: ptsToPath(c.pts), fill:'none', stroke: c.color,
+      'stroke-width':'2.4', 'stroke-linejoin':'round' }, svg);
+  });
+
+  // ── Axes ──────────────────────────────────────────────────────────────
+  el('line', { x1: PAD.left, x2: PAD.left + CW,
+    y1: PAD.top + CH, y2: PAD.top + CH, stroke:'#94a3b8', 'stroke-width':'1.5' }, svg);
+  el('line', { x1: PAD.left, x2: PAD.left,
+    y1: PAD.top, y2: PAD.top + CH, stroke:'#94a3b8', 'stroke-width':'1.5' }, svg);
+
+  xTicks.forEach(v => {
+    const x = PAD.left + (v / T_MAX) * CW;
+    el('line', { x1: x, x2: x, y1: PAD.top + CH, y2: PAD.top + CH + 4,
+      stroke:'#94a3b8', 'stroke-width':'1' }, svg);
+    const t = el('text', { x, y: PAD.top + CH + 18, 'text-anchor':'middle',
+      fill:'#475569', 'font-size':'11', 'font-family':'IBM Plex Mono,monospace' }, svg);
+    t.textContent = v;
+  });
+  const xLbl = el('text', { x: PAD.left + CW / 2, y: H - 5,
+    'text-anchor':'middle', fill:'#64748b', 'font-size':'12',
+    'font-family':'IBM Plex Sans,sans-serif', 'letter-spacing':'0.07em' }, svg);
+  xLbl.textContent = 'Time (hours)';
+
+  yTicks.forEach(v => {
+    const y = PAD.top + CH - (v / C_MAX) * CH;
+    el('line', { x1: PAD.left - 4, x2: PAD.left, y1: y, y2: y,
+      stroke:'#94a3b8', 'stroke-width':'1' }, svg);
+    const t = el('text', { x: PAD.left - 10, y: y + 4, 'text-anchor':'end',
+      fill:'#475569', 'font-size':'11', 'font-family':'IBM Plex Mono,monospace' }, svg);
+    t.textContent = v;
+  });
+  const cy = PAD.top + CH / 2;
+  const yLbl = el('text', { x: 15, y: cy, 'text-anchor':'middle',
+    fill:'#64748b', 'font-size':'12', 'font-family':'IBM Plex Sans,sans-serif',
+    'letter-spacing':'0.07em', transform:`rotate(-90,15,${cy})` }, svg);
+  yLbl.textContent = 'Concentration (× MIC)';
+
+  // ── Legend ────────────────────────────────────────────────────────────
+  CURVES.forEach((c, i) => {
+    const lx = PAD.left + CW + 16;
+    const ly = PAD.top + 8 + i * 74;
+    el('rect', { x: lx, y: ly, width: 120, height: 62, rx:'6',
+      fill:'#ffffff', stroke: c.color, 'stroke-width':'1.5',
+      filter:'url(#shadow)' }, svg);
+    el('line', { x1: lx + 10, x2: lx + 32, y1: ly + 14, y2: ly + 14,
+      stroke: c.color, 'stroke-width':'2.5' }, svg);
+    el('circle', { cx: lx + 21, cy: ly + 14, r:'3.5', fill: c.color }, svg);
+    const tL = el('text', { x: lx + 40, y: ly + 18, fill: c.color,
+      'font-size':'11', 'font-family':'IBM Plex Sans,sans-serif', 'font-weight':'700' }, svg);
+    tL.textContent = c.label;
+    const tS = el('text', { x: lx + 10, y: ly + 34, fill:'#64748b',
+      'font-size':'10', 'font-family':'IBM Plex Mono,monospace' }, svg);
+    tS.textContent = c.sub;
+    const tB = el('text', { x: lx + 10, y: ly + 50, fill:'#b45309',
+      'font-size':'10', 'font-family':'IBM Plex Mono,monospace', 'font-weight':'600' }, svg);
+    tB.textContent = c.badge;
+  });
+
+})();
+</script>
+</body>
+</html>
