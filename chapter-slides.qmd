@@ -409,6 +409,7 @@ These examples illustrate the range of oral bioavailability. Fluoroquinolones an
 <iframe src="enterohepatic.html" width="70%" height="300px" style="border: none; transform: scale(1.5); transform-origin: top center; margin-bottom: 120px;" sandbox="allow-same-origin allow-scripts allow-downloads allow-forms">
 
 </iframe>
+
 :::
 
 <br> <br> **Clinical significance:**
@@ -1261,9 +1262,6 @@ Azole antifungals have highly variable PK making TDM valuable. Voriconazole is m
 :::: fragment
 ::: callout-note
 ## The Therapeutic Window
-
-<br> <br>
-
 Antiretrovirals must achieve concentrations that: - Suppress viral replication (efficacy) - Don't cause toxicity - Prevent resistance emergence
 :::
 ::::
@@ -1285,6 +1283,8 @@ Antiretrovirals present unique PK-PD challenges. Many work inside cells where we
 
 **Extended-interval:** 7 mg/kg q24h = 560 mg q24h **Peak expected:** \~20 mg/L → C~max~/MIC = 10 ✓
 :::
+
+<br> <br>
 
 ::: fragment
 **Answer:** Extended-interval dosing achieves the PK-PD target of 8-10
@@ -1312,11 +1312,13 @@ Day 3: Still febrile, blood cultures remain positive.
 -   With MIC of 16 mg/L, standard dosing achieves T \> MIC of only \~30%
 -   Target: T \> MIC ≥50%
 
+<br> <br>
+
 ::: fragment
 **Solution:** Extended infusion 4.5g q8h over 4 hours (with loading dose) OR increase to q6h dosing
 :::
 
-::: aside
+::: notes
 The organism is susceptible, but the MIC is at the high end. Standard 30-minute infusions don't maintain levels above 16 mg/L long enough. Extended infusion over 4 hours maintains higher trough concentrations, increasing T\>MIC to \>50%. Alternatively, more frequent dosing (q6h) also increases T\>MIC. This is PK-PD in action.
 :::
 
@@ -1331,6 +1333,8 @@ The organism is susceptible, but the MIC is at the high end. Standard 30-minute 
 
 **New approach:** Using Bayesian software, estimated AUC = 680 mg·h/L - AUC/MIC = 680 (target: 400-600) - This patient is **overexposed** → nephrotoxicity risk
 :::
+
+<br> <br>
 
 ::: fragment
 **Action:** Reduce dose to target AUC/MIC of 400-600
@@ -1363,7 +1367,7 @@ Now we can fully analyze this case. The patient isn't responding because standar
 :::
 
 ## Summary: Key Clinical Pearls
-
+<br> <br>
 1.  **Know your PK-PD index:**
     -   C~max~/MIC: aminoglycosides, fluoroquinolones
     -   AUC/MIC: vancomycin, fluoroquinolones
@@ -1395,11 +1399,11 @@ Let's consolidate the key takeaways. Know which index predicts efficacy for each
 Here's your quick reference card. Aminoglycosides: once-daily. β-lactams: extended infusion when needed. Vancomycin: AUC-based dosing. Azoles: TDM. These principles apply across most clinical situations. Adapt based on organism MIC and patient factors.
 :::
 
-------------------------------------------------------------------------
+
 
 ## Take-Home Messages
 
-<br> <br> 1. **PK-PD integration** is essential for optimizing antiinfective therapy
+<br> <br> 1. **PK-PD integration** is essential for optimizing anti-infective therapy
 
 2.  **Underdosing is common** and promotes resistance
 
@@ -1415,8 +1419,6 @@ Here's your quick reference card. Aminoglycosides: once-daily. β-lactams: exten
 These are the messages I hope you'll remember tomorrow. PK-PD isn't just academic—it directly impacts patient outcomes. Think about PK-PD every time you prescribe an antibiotic. Ask yourself: Am I achieving the right target for this drug, this organism, this patient? If not, how can I optimize?
 :::
 
-------------------------------------------------------------------------
-
 ## References {.smaller}
 
 <br>
@@ -1424,7 +1426,7 @@ These are the messages I hope you'll remember tomorrow. PK-PD isn't just academi
 ::: {#refs}
 :::
 
-------------------------------------------------------------------------
+
 
 ## Supplementary: PK Abbreviations Reference {.smaller}
 
