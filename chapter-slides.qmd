@@ -64,6 +64,7 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 
 <br>
 
+::: {style="width: 70%; margin: 0 auto;"}
 ::::: columns
 ::: {.column width="50%"}
 **Part 1: Foundations** (\~30 min)
@@ -84,6 +85,7 @@ Welcome to this lecture on PK-PD of antiinfectives. This is a 1-1.5 hour session
 -   Clinical case studies
 :::
 :::::
+:::
 
 ::: notes
 Here's our roadmap for today. We'll spend the first 30 minutes on foundational concepts, then move into clinical applications. Feel free to ask questions as we go.
@@ -119,7 +121,7 @@ Let's start with a case that illustrates why PK-PD matters. This patient has a s
 
 ## Pharmacokinetic and Pharmacodynamic Principles
 
-<br> What is Pharmacology?
+<br> **What is Pharmacology?**
 
 ::: callout-note
 ## Definition
