@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-04-23">
+
+<title>Pharmacokinetics and Pharmacodynamics of Antiinfective Agents</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="chapter-webpage_files/libs/clipboard/clipboard.min.js"></script>
+<script src="chapter-webpage_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="chapter-webpage_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="chapter-webpage_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="chapter-webpage_files/libs/quarto-html/popper.min.js"></script>
+<script src="chapter-webpage_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="chapter-webpage_files/libs/quarto-html/anchor.min.js"></script>
+<link href="chapter-webpage_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="chapter-webpage_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="chapter-webpage_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="chapter-webpage_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="chapter-webpage_files/libs/bootstrap/bootstrap-4d7f0bce1131f3e5f9547cd857cfbfc8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-introduction" id="toc-sec-introduction" class="nav-link active" data-scroll-target="#sec-introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-pk-principles" id="toc-sec-pk-principles" class="nav-link" data-scroll-target="#sec-pk-principles"><span class="header-section-number">2</span> Pharmacokinetic Principles</a>
+  <ul class="collapse">
+  <li><a href="#sec-absorption" id="toc-sec-absorption" class="nav-link" data-scroll-target="#sec-absorption"><span class="header-section-number">2.1</span> Absorption</a></li>
+  <li><a href="#sec-distribution" id="toc-sec-distribution" class="nav-link" data-scroll-target="#sec-distribution"><span class="header-section-number">2.2</span> Distribution</a></li>
+  <li><a href="#sec-metabolism" id="toc-sec-metabolism" class="nav-link" data-scroll-target="#sec-metabolism"><span class="header-section-number">2.3</span> Metabolism</a></li>
+  <li><a href="#sec-elimination" id="toc-sec-elimination" class="nav-link" data-scroll-target="#sec-elimination"><span class="header-section-number">2.4</span> Elimination</a></li>
+  </ul></li>
+  <li><a href="#sec-pk-abbreviations" id="toc-sec-pk-abbreviations" class="nav-link" data-scroll-target="#sec-pk-abbreviations"><span class="header-section-number">3</span> Pharmacokinetic Abbreviations Reference</a></li>
+  <li><a href="#sec-antimicrobial-potency" id="toc-sec-antimicrobial-potency" class="nav-link" data-scroll-target="#sec-antimicrobial-potency"><span class="header-section-number">4</span> Antimicrobial Potency</a>
+  <ul class="collapse">
+  <li><a href="#methods-to-measure-antimicrobial-activity" id="toc-methods-to-measure-antimicrobial-activity" class="nav-link" data-scroll-target="#methods-to-measure-antimicrobial-activity"><span class="header-section-number">4.1</span> Methods to Measure Antimicrobial Activity</a></li>
+  <li><a href="#limitations-of-in-vitro-parameters" id="toc-limitations-of-in-vitro-parameters" class="nav-link" data-scroll-target="#limitations-of-in-vitro-parameters"><span class="header-section-number">4.2</span> Limitations of In Vitro Parameters</a></li>
+  <li><a href="#drug-interactions-synergism-additivity-and-antagonism" id="toc-drug-interactions-synergism-additivity-and-antagonism" class="nav-link" data-scroll-target="#drug-interactions-synergism-additivity-and-antagonism"><span class="header-section-number">4.3</span> Drug Interactions: Synergism, Additivity, and Antagonism</a></li>
+  </ul></li>
+  <li><a href="#sec-pd-indices" id="toc-sec-pd-indices" class="nav-link" data-scroll-target="#sec-pd-indices"><span class="header-section-number">5</span> Pharmacodynamics Indices</a>
+  <ul class="collapse">
+  <li><a href="#the-three-primary-pk-pd-indices" id="toc-the-three-primary-pk-pd-indices" class="nav-link" data-scroll-target="#the-three-primary-pk-pd-indices"><span class="header-section-number">5.1</span> The Three Primary PK-PD Indices</a></li>
+  <li><a href="#distribution-and-elimination-phases" id="toc-distribution-and-elimination-phases" class="nav-link" data-scroll-target="#distribution-and-elimination-phases"><span class="header-section-number">5.2</span> Distribution and Elimination Phases</a></li>
+  </ul></li>
+  <li><a href="#sec-methodology" id="toc-sec-methodology" class="nav-link" data-scroll-target="#sec-methodology"><span class="header-section-number">6</span> Methodology for Study of PK-PD Effects</a>
+  <ul class="collapse">
+  <li><a href="#sec-in-vitro-models" id="toc-sec-in-vitro-models" class="nav-link" data-scroll-target="#sec-in-vitro-models"><span class="header-section-number">6.1</span> In Vitro Models</a></li>
+  <li><a href="#sec-animal-models" id="toc-sec-animal-models" class="nav-link" data-scroll-target="#sec-animal-models"><span class="header-section-number">6.2</span> Animal Models</a></li>
+  <li><a href="#sec-clinical-trials" id="toc-sec-clinical-trials" class="nav-link" data-scroll-target="#sec-clinical-trials"><span class="header-section-number">6.3</span> Clinical Trials</a></li>
+  </ul></li>
+  <li><a href="#sec-killing-patterns" id="toc-sec-killing-patterns" class="nav-link" data-scroll-target="#sec-killing-patterns"><span class="header-section-number">7</span> Concentration-Dependent vs.&nbsp;Time-Dependent Killing</a>
+  <ul class="collapse">
+  <li><a href="#sec-concentration-dependent" id="toc-sec-concentration-dependent" class="nav-link" data-scroll-target="#sec-concentration-dependent"><span class="header-section-number">7.1</span> Concentration-Dependent Killing Agents</a></li>
+  <li><a href="#sec-time-dependent" id="toc-sec-time-dependent" class="nav-link" data-scroll-target="#sec-time-dependent"><span class="header-section-number">7.2</span> Time-Dependent Killing Agents</a></li>
+  </ul></li>
+  <li><a href="#sec-pae" id="toc-sec-pae" class="nav-link" data-scroll-target="#sec-pae"><span class="header-section-number">8</span> Postantibiotic Effect</a></li>
+  <li><a href="#sec-applied-pkpd" id="toc-sec-applied-pkpd" class="nav-link" data-scroll-target="#sec-applied-pkpd"><span class="header-section-number">9</span> Applied Clinical Pharmacokinetics and Pharmacodynamics</a>
+  <ul class="collapse">
+  <li><a href="#sec-extended-interval" id="toc-sec-extended-interval" class="nav-link" data-scroll-target="#sec-extended-interval"><span class="header-section-number">9.1</span> Higher-Dose Extended-Interval Dosing</a></li>
+  <li><a href="#sec-continuous-infusion" id="toc-sec-continuous-infusion" class="nav-link" data-scroll-target="#sec-continuous-infusion"><span class="header-section-number">9.2</span> Continuous-Infusion and Extended-Infusion Regimens</a></li>
+  <li><a href="#sec-dose-refinement" id="toc-sec-dose-refinement" class="nav-link" data-scroll-target="#sec-dose-refinement"><span class="header-section-number">9.3</span> Dose-Refinement Considerations</a></li>
+  </ul></li>
+  <li><a href="#sec-antiretroviral-pd" id="toc-sec-antiretroviral-pd" class="nav-link" data-scroll-target="#sec-antiretroviral-pd"><span class="header-section-number">10</span> Antiretroviral Pharmacodynamics</a>
+  <ul class="collapse">
+  <li><a href="#the-therapeutic-window-concept" id="toc-the-therapeutic-window-concept" class="nav-link" data-scroll-target="#the-therapeutic-window-concept"><span class="header-section-number">10.1</span> The Therapeutic Window Concept</a></li>
+  <li><a href="#pk-pd-relationships-by-antiretroviral-class" id="toc-pk-pd-relationships-by-antiretroviral-class" class="nav-link" data-scroll-target="#pk-pd-relationships-by-antiretroviral-class"><span class="header-section-number">10.2</span> PK-PD Relationships by Antiretroviral Class</a></li>
+  <li><a href="#antiretroviral-therapeutic-drug-monitoring" id="toc-antiretroviral-therapeutic-drug-monitoring" class="nav-link" data-scroll-target="#antiretroviral-therapeutic-drug-monitoring"><span class="header-section-number">10.3</span> Antiretroviral Therapeutic Drug Monitoring</a></li>
+  </ul></li>
+  <li><a href="#sec-other-antivirals" id="toc-sec-other-antivirals" class="nav-link" data-scroll-target="#sec-other-antivirals"><span class="header-section-number">11</span> Pharmacodynamics for Other Antiviral Drugs</a>
+  <ul class="collapse">
+  <li><a href="#hepatitis-c-virus-hcv" id="toc-hepatitis-c-virus-hcv" class="nav-link" data-scroll-target="#hepatitis-c-virus-hcv"><span class="header-section-number">11.1</span> Hepatitis C Virus (HCV)</a></li>
+  <li><a href="#cytomegalovirus-cmv" id="toc-cytomegalovirus-cmv" class="nav-link" data-scroll-target="#cytomegalovirus-cmv"><span class="header-section-number">11.2</span> Cytomegalovirus (CMV)</a></li>
+  <li><a href="#herpes-simplex-virus-type-2-hsv-2" id="toc-herpes-simplex-virus-type-2-hsv-2" class="nav-link" data-scroll-target="#herpes-simplex-virus-type-2-hsv-2"><span class="header-section-number">11.3</span> Herpes Simplex Virus Type 2 (HSV-2)</a></li>
+  </ul></li>
+  <li><a href="#sec-conclusions" id="toc-sec-conclusions" class="nav-link" data-scroll-target="#sec-conclusions"><span class="header-section-number">12</span> Conclusions</a></li>
+  <li><a href="#sec-references" id="toc-sec-references" class="nav-link" data-scroll-target="#sec-references"><span class="header-section-number">13</span> References</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pharmacokinetics and Pharmacodynamics of Antiinfective Agents</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>Pharmacokinetics (PK) and pharmacodynamics (PD) systems analyses provide the mathematical framework within pharmacology to identify antiinfective dosing regimens with the greatest risk-benefit ratio <span class="citation" data-cites="Buxton2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>]</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Definitions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Pharmacology</strong>: The study concerning a compound related to its history, source, physical and chemical properties, compounding, biochemical and physiologic effects, mechanisms of action and resistance, absorption, distribution, metabolism, excretion, and therapeutic and other uses <span class="citation" data-cites="Buxton2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>]</span></p></li>
+<li><p><strong>Pharmacokinetics (PK)</strong>: Describes the process by which a drug enters and leaves the body based on absorption, distribution, metabolism, and excretion to define systemic exposure <span class="citation" data-cites="Blumenthal2018">[<a href="#ref-Blumenthal2018" role="doc-biblioref">2</a>]</span></p></li>
+<li><p><strong>Pharmacodynamics (PD)</strong>: Describes the biochemical and physiologic response of the drug and its mechanism of action <span class="citation" data-cites="Blumenthal2018">[<a href="#ref-Blumenthal2018" role="doc-biblioref">2</a>]</span></p></li>
+</ul>
+</div>
+</div>
+<p>PK-PD analyses are integrated to define the exposure response, where the response can be a measure of safety, efficacy, or emergence of resistance. Optimal dosing regimens rely on modeling and simulation to balance the probability of efficacy relative to safety thresholds <span class="citation" data-cites="Buxton2018 Blumenthal2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>,<a href="#ref-Blumenthal2018" role="doc-biblioref">2</a>]</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Unique Aspects of Antiinfective PK-PD
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antiinfective PK-PD is unique in pharmacology in that this relationship includes the effects of the drug on:</p>
+<ol type="1">
+<li>The infective pathogen</li>
+<li>The host</li>
+<li>Collateral effects on the microbiome <span class="citation" data-cites="Craig1998 Drusano2007">[<a href="#ref-Craig1998" role="doc-biblioref">3</a>,<a href="#ref-Drusano2007" role="doc-biblioref">4</a>]</span></li>
+</ol>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-pkpd-framework" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pkpd-framework-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 633.69 332.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-328 629.69,-328 629.69,4 -4,4"></polygon>
+<!-- patient -->
+<g id="node1" class="node">
+<title>patient</title>
+<text text-anchor="middle" x="48.24" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Patient factors</text>
+</g>
+<!-- PK -->
+<g id="node2" class="node">
+<title>PK</title>
+<ellipse fill="none" stroke="black" cx="157.24" cy="-234" rx="100.75" ry="18"></ellipse>
+<text text-anchor="middle" x="157.24" y="-229.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Pharmacokinetics (PK)</text>
+</g>
+<!-- patient&#45;&gt;PK -->
+<g id="edge1" class="edge">
+<title>patient-&gt;PK</title>
+<path fill="none" stroke="black" d="M74.9,-287.88C89.34,-278.61 107.33,-267.05 122.82,-257.1"></path>
+<polygon fill="black" stroke="black" points="125.07,-259.81 131.6,-251.47 121.29,-253.92 125.07,-259.81"></polygon>
+</g>
+<!-- PKPD -->
+<g id="node8" class="node">
+<title>PKPD</title>
+<ellipse fill="none" stroke="black" cx="270.24" cy="-162" rx="38.32" ry="18"></ellipse>
+<text text-anchor="middle" x="270.24" y="-157.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">PK/PD</text>
+</g>
+<!-- PK&#45;&gt;PKPD -->
+<g id="edge6" class="edge">
+<title>PK-&gt;PKPD</title>
+<path fill="none" stroke="black" d="M183.73,-216.59C200.39,-206.26 221.97,-192.9 239.4,-182.1"></path>
+<polygon fill="black" stroke="black" points="241.43,-184.96 248.09,-176.72 237.75,-179.01 241.43,-184.96"></polygon>
+</g>
+<!-- drug -->
+<g id="node3" class="node">
+<title>drug</title>
+<text text-anchor="middle" x="157.24" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Drug factors</text>
+</g>
+<!-- drug&#45;&gt;PK -->
+<g id="edge2" class="edge">
+<title>drug-&gt;PK</title>
+<path fill="none" stroke="black" d="M157.24,-287.7C157.24,-279.98 157.24,-270.71 157.24,-262.11"></path>
+<polygon fill="black" stroke="black" points="160.74,-262.1 157.24,-252.1 153.74,-262.1 160.74,-262.1"></polygon>
+</g>
+<!-- intrinsic -->
+<g id="node4" class="node">
+<title>intrinsic</title>
+<text text-anchor="middle" x="279.24" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Intrinsic resistance</text>
+</g>
+<!-- PD -->
+<g id="node5" class="node">
+<title>PD</title>
+<ellipse fill="none" stroke="black" cx="402.24" cy="-234" rx="107.7" ry="18"></ellipse>
+<text text-anchor="middle" x="402.24" y="-229.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Pharmacodynamics (PD)</text>
+</g>
+<!-- intrinsic&#45;&gt;PD -->
+<g id="edge3" class="edge">
+<title>intrinsic-&gt;PD</title>
+<path fill="none" stroke="black" d="M309.33,-287.88C325.92,-278.43 346.69,-266.61 364.37,-256.55"></path>
+<polygon fill="black" stroke="black" points="366.34,-259.45 373.3,-251.47 362.88,-253.37 366.34,-259.45"></polygon>
+</g>
+<!-- PD&#45;&gt;PKPD -->
+<g id="edge7" class="edge">
+<title>PD-&gt;PKPD</title>
+<path fill="none" stroke="black" d="M371.29,-216.59C351.07,-205.86 324.66,-191.86 303.92,-180.86"></path>
+<polygon fill="black" stroke="black" points="305.3,-177.63 294.82,-176.04 302.02,-183.82 305.3,-177.63"></polygon>
+</g>
+<!-- acquired -->
+<g id="node6" class="node">
+<title>acquired</title>
+<text text-anchor="middle" x="421.24" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Acquired resistance</text>
+</g>
+<!-- acquired&#45;&gt;PD -->
+<g id="edge4" class="edge">
+<title>acquired-&gt;PD</title>
+<path fill="none" stroke="black" d="M416.54,-287.7C414.42,-279.9 411.87,-270.51 409.52,-261.83"></path>
+<polygon fill="black" stroke="black" points="412.88,-260.84 406.88,-252.1 406.12,-262.67 412.88,-260.84"></polygon>
+</g>
+<!-- inoculum -->
+<g id="node7" class="node">
+<title>inoculum</title>
+<text text-anchor="middle" x="564.24" y="-301.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Infection inoculum</text>
+</g>
+<!-- inoculum&#45;&gt;PD -->
+<g id="edge5" class="edge">
+<title>inoculum-&gt;PD</title>
+<path fill="none" stroke="black" d="M524.61,-287.88C501.62,-277.94 472.55,-265.38 448.52,-255"></path>
+<polygon fill="black" stroke="black" points="449.8,-251.74 439.24,-250.99 447.03,-258.17 449.8,-251.74"></polygon>
+</g>
+<!-- microbiological -->
+<g id="node9" class="node">
+<title>microbiological</title>
+<polygon fill="none" stroke="black" points="349.14,-108 191.33,-108 191.33,-72 349.14,-72 349.14,-108"></polygon>
+<text text-anchor="middle" x="270.24" y="-85.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Microbiological outcome</text>
+</g>
+<!-- PKPD&#45;&gt;microbiological -->
+<g id="edge8" class="edge">
+<title>PKPD-&gt;microbiological</title>
+<path fill="none" stroke="black" d="M270.24,-143.7C270.24,-135.98 270.24,-126.71 270.24,-118.11"></path>
+<polygon fill="black" stroke="black" points="273.74,-118.1 270.24,-108.1 266.74,-118.1 273.74,-118.1"></polygon>
+</g>
+<!-- clinical -->
+<g id="node10" class="node">
+<title>clinical</title>
+<polygon fill="none" stroke="black" points="326.27,-36 214.21,-36 214.21,0 326.27,0 326.27,-36"></polygon>
+<text text-anchor="middle" x="270.24" y="-13.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Clinical outcome</text>
+</g>
+<!-- microbiological&#45;&gt;clinical -->
+<g id="edge9" class="edge">
+<title>microbiological-&gt;clinical</title>
+<path fill="none" stroke="black" d="M270.24,-71.7C270.24,-63.98 270.24,-54.71 270.24,-46.11"></path>
+<polygon fill="black" stroke="black" points="273.74,-46.1 270.24,-36.1 266.74,-46.1 273.74,-46.1"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pkpd-framework-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Conceptual framework relating pharmacokinetics and pharmacodynamics to clinical outcomes.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-pk-pd-process" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pk-pd-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 569.29 192.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 188)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-188 565.29,-188 565.29,4 -4,4"></polygon>
+<g id="clust2" class="cluster">
+<title>cluster_1</title>
+<polygon fill="lightblue" stroke="lightblue" points="278.8,-17 278.8,-176 553.29,-176 553.29,-17 278.8,-17"></polygon>
+<text text-anchor="middle" x="416.05" y="-159.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Pharmacodynamics (PD)</text>
+</g>
+<g id="clust1" class="cluster">
+<title>cluster_0</title>
+<polygon fill="lightblue" stroke="lightblue" points="8,-59 8,-142 258.8,-142 258.8,-59 8,-59"></polygon>
+<text text-anchor="middle" x="133.4" y="-125.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Pharmacokinetics (PK)</text>
+</g>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<polygon fill="white" stroke="white" points="121.73,-106 16.09,-106 16.09,-70 121.73,-70 121.73,-106"></polygon>
+<text text-anchor="middle" x="68.91" y="-83.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Dosing regimen</text>
+</g>
+<!-- dosing -->
+<g id="node2" class="node">
+<title>dosing</title>
+<polygon fill="yellow" stroke="yellow" points="250.8,-108.6 157.82,-108.6 157.82,-67.4 250.8,-67.4 250.8,-108.6"></polygon>
+<text text-anchor="middle" x="204.31" y="-92.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Conc. vs.</text>
+<text text-anchor="middle" x="204.31" y="-75.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">time in serum</text>
+<text text-anchor="middle" x="123.98" y="-54.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Absorption</text>
+<text text-anchor="middle" x="123.98" y="-37.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Distribution</text>
+<text text-anchor="middle" x="123.98" y="-21" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Metabolism</text>
+<text text-anchor="middle" x="123.98" y="-4.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Elimination</text>
+</g>
+<!-- start&#45;&gt;dosing -->
+<g id="edge1" class="edge">
+<title>start-&gt;dosing</title>
+<path fill="none" stroke="black" d="M121.87,-88C130.29,-88 139.05,-88 147.56,-88"></path>
+<polygon fill="black" stroke="black" points="147.78,-91.5 157.78,-88 147.78,-84.5 147.78,-91.5"></polygon>
+</g>
+<!-- tissue -->
+<g id="node3" class="node">
+<title>tissue</title>
+<polygon fill="white" stroke="white" points="378.26,-142.6 287.94,-142.6 287.94,-101.4 378.26,-101.4 378.26,-142.6"></polygon>
+<text text-anchor="middle" x="333.1" y="-126.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Conc. vs.</text>
+<text text-anchor="middle" x="333.1" y="-109.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">time in tissue</text>
+</g>
+<!-- dosing&#45;&gt;tissue -->
+<g id="edge2" class="edge">
+<title>dosing-&gt;tissue</title>
+<path fill="none" stroke="black" d="M251.08,-100.27C259.74,-102.6 268.88,-105.05 277.77,-107.43"></path>
+<polygon fill="black" stroke="black" points="277.1,-110.87 287.67,-110.08 278.91,-104.11 277.1,-110.87"></polygon>
+</g>
+<!-- infection -->
+<g id="node4" class="node">
+<title>infection</title>
+<polygon fill="white" stroke="white" points="379.19,-83.4 287.01,-83.4 287.01,-24.6 379.19,-24.6 379.19,-83.4"></polygon>
+<text text-anchor="middle" x="333.1" y="-66.6" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Conc. vs.</text>
+<text text-anchor="middle" x="333.1" y="-49.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00">time at site of</text>
+<text text-anchor="middle" x="333.1" y="-33" font-family="Helvetica,Arial,sans-serif" font-size="14.00">infection</text>
+</g>
+<!-- dosing&#45;&gt;infection -->
+<g id="edge3" class="edge">
+<title>dosing-&gt;infection</title>
+<path fill="none" stroke="black" d="M251.08,-75.73C259.54,-73.46 268.44,-71.07 277.13,-68.74"></path>
+<polygon fill="black" stroke="black" points="278.07,-72.11 286.82,-66.14 276.25,-65.35 278.07,-72.11"></polygon>
+</g>
+<!-- PD1 -->
+<g id="node5" class="node">
+<title>PD1</title>
+<polygon fill="white" stroke="white" points="543.08,-142.6 417.6,-142.6 417.6,-101.4 543.08,-101.4 543.08,-142.6"></polygon>
+<text text-anchor="middle" x="480.34" y="-126.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Pharmacological or</text>
+<text text-anchor="middle" x="480.34" y="-109.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">toxicological effect</text>
+</g>
+<!-- tissue&#45;&gt;PD1 -->
+<g id="edge4" class="edge">
+<title>tissue-&gt;PD1</title>
+<path fill="none" stroke="black" d="M378.47,-122C387.63,-122 397.5,-122 407.36,-122"></path>
+<polygon fill="black" stroke="black" points="407.6,-125.5 417.6,-122 407.6,-118.5 407.6,-125.5"></polygon>
+</g>
+<!-- PD2 -->
+<g id="node6" class="node">
+<title>PD2</title>
+<polygon fill="white" stroke="white" points="545.23,-74.6 415.45,-74.6 415.45,-33.4 545.23,-33.4 545.23,-74.6"></polygon>
+<text text-anchor="middle" x="480.34" y="-58.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00">Antimicrobial effect</text>
+<text text-anchor="middle" x="480.34" y="-41.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00">vs. time</text>
+</g>
+<!-- infection&#45;&gt;PD2 -->
+<g id="edge5" class="edge">
+<title>infection-&gt;PD2</title>
+<path fill="none" stroke="black" d="M379.26,-54C387.55,-54 396.4,-54 405.27,-54"></path>
+<polygon fill="black" stroke="black" points="405.28,-57.5 415.28,-54 405.28,-50.5 405.28,-57.5"></polygon>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pk-pd-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The pharmacokinetic–pharmacodynamic process from dosing regimen to antimicrobial effect <span class="citation" data-cites="craig_1998">[<a href="#ref-craig_1998" role="doc-biblioref">5</a>]</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Because antiinfective agents chiefly affect nonmammalian target sites, the doses of these agents tend to be an order of magnitude higher than those of other pharmacologic classes <span class="citation" data-cites="Silver2011">[<a href="#ref-Silver2011" role="doc-biblioref">6</a>]</span>. Another challenge involves reductions in potency of antiinfective agents over time due to emergence of resistance.</p>
+</section>
+<section id="sec-pk-principles" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-pk-principles"><span class="header-section-number">2</span> Pharmacokinetic Principles</h2>
+<p>The plasma or serum concentration-time curve represents complex physiologic processes that are simplified and visually represented by the concentration-time curve. The shape of this curve can be modified by altering the rates of drug entry, distribution, metabolic transformation, and elimination through intrinsic or extrinsic factors <span class="citation" data-cites="Vieira2014">[<a href="#ref-Vieira2014" role="doc-biblioref">7</a>]</span>.</p>
+<div id="fig-concentration-time" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-concentration-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/AUC.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-concentration-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Simulated serum concentration-time profile illustrating key pharmacokinetic parameters.
+</figcaption>
+</figure>
+</div>
+<div id="fig-steady-state" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/steadystate.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Steady-state drug accumulation with repeated dosing. Steady state is reached after approximately 4–5 half-lives.
+</figcaption>
+</figure>
+</div>
+<div id="fig-adme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-adme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/adme_diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-adme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The four pillars of pharmacokinetics: Absorption, Distribution, Metabolism, and Elimination (ADME).
+</figcaption>
+</figure>
+</div>
+<section id="sec-absorption" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-absorption"><span class="header-section-number">2.1</span> Absorption</h3>
+<p><em>Absorption</em> describes the movement of drug from an extravascular space to an intravascular space <span class="citation" data-cites="Buxton2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>]</span>. For antiinfective agents, the two most common modes of drug administration that require absorption are the oral and intramuscular routes.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Bioavailability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The amount of drug that reaches the systemic circulation is expressed as a percentage of the total amount that could have been absorbed. This percentage is defined as the drug’s absolute or relative <strong>bioavailability</strong>:</p>
+<ul>
+<li><strong>Absolute bioavailability</strong>: Comparison of extravascular route with intravenous administration</li>
+<li><strong>Relative bioavailability</strong>: Comparison of two different extravascularly administered dosage forms <span class="citation" data-cites="Buxton2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>]</span></li>
+</ul>
+</div>
+</div>
+<section id="factors-affecting-oral-absorption" class="level4" data-number="2.1.1">
+<h4 data-number="2.1.1" class="anchored" data-anchor-id="factors-affecting-oral-absorption"><span class="header-section-number">2.1.1</span> Factors Affecting Oral Absorption</h4>
+<p>A major process variable in oral drug absorption is the solubility and permeability of the compound in the gastrointestinal tract. Most drugs in development tend to be insoluble, requiring significant efforts through medicinal chemistry or pharmaceutical sciences for formulation development <span class="citation" data-cites="Burger2018">[<a href="#ref-Burger2018" role="doc-biblioref">8</a>]</span>.</p>
+<p>Oral absorption can be saturable or nonsaturable with factors such as:</p>
+<ul>
+<li>Degradation in the gut by acid or proteolysis</li>
+<li>Gut metabolism and first-pass liver drug metabolism by enzymes</li>
+<li>Influx and efflux transporters influencing the rate and extent of absorption</li>
+<li>Drug interactions with other compounds or food that may bind the drug or reduce solubility</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Enterohepatic Recirculation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Drugs and their conjugated metabolites can be secreted through the bile into the intestines and reabsorbed into circulation through deconjugation by gut flora, a process known as <strong>enterohepatic recirculation</strong>. This mechanism plays an important role in prolonging the elimination of drugs such as certain antibiotics, nonsteroidal antiinflammatory drugs, hormones, opioids, digoxin, and warfarin.</p>
+</div>
+</div>
+<iframe src="enterohepatic.html" width="100%" height="450px" style="border: none;">
+</iframe>
+</section>
+</section>
+<section id="sec-distribution" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sec-distribution"><span class="header-section-number">2.2</span> Distribution</h3>
+<p>The shape of the concentration-time curve is modeled most commonly using a proportionality constant known as the <em>volume of distribution (V<sub>d</sub>)</em> and is termed the <em>apparent volume of distribution (V<sub>d</sub>/F)</em> when the drug is administered by the extravascular route <span class="citation" data-cites="Toutain2004">[<a href="#ref-Toutain2004" role="doc-biblioref">9</a>]</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Important Concept
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The V<sub>d</sub> is not a real or physiologic volume, but rather a value that relates drug concentration in the system to the amount of drug present in that system. This system can be defined as a single compartment (V<sub>d1</sub>) or as multiple compartments (V<sub>d1</sub>, V<sub>d2</sub>, … V<sub>dn</sub>) to mathematically fit the shape of the concentration-time curve.</p>
+</div>
+</div>
+<section id="factors-affecting-distribution" class="level4" data-number="2.2.1">
+<h4 data-number="2.2.1" class="anchored" data-anchor-id="factors-affecting-distribution"><span class="header-section-number">2.2.1</span> Factors Affecting Distribution</h4>
+<p>Factors that alter the physiologic distribution of drug into tissue include:</p>
+<ul>
+<li>Lipophilicity</li>
+<li>Partition coefficient of the drug between different types of tissues</li>
+<li>Blood flow to tissues</li>
+<li>pH and binding affinity to plasma proteins relative to tissue components <span class="citation" data-cites="Buxton2018">[<a href="#ref-Buxton2018" role="doc-biblioref">1</a>]</span></li>
+</ul>
+<p>Drug transporters play a role in defining the net drug concentration at the site of infection through influx and efflux transporters <span class="citation" data-cites="Gandhi2012">[<a href="#ref-Gandhi2012" role="doc-biblioref">10</a>]</span>. Transporter function can be influenced by genetic and environmental factors and thus varies from person to person.</p>
+</section>
+<section id="protein-binding-considerations" class="level4" data-number="2.2.2">
+<h4 data-number="2.2.2" class="anchored" data-anchor-id="protein-binding-considerations"><span class="header-section-number">2.2.2</span> Protein Binding Considerations</h4>
+<p>Drugs binding to serum proteins have a major influence on V<sub>d</sub>:</p>
+<div id="tbl-protein-binding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-protein-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Effect of Protein Binding on Volume of Distribution
+</figcaption>
+<div aria-describedby="tbl-protein-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug Type</th>
+<th style="text-align: left;">Binding Protein</th>
+<th style="text-align: left;">Effect on V<sub>d</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Acidic drugs (β-lactams)</td>
+<td style="text-align: left;">Albumin</td>
+<td style="text-align: left;">Lower V<sub>d</sub> (retained in plasma)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Basic drugs (macrolides)</td>
+<td style="text-align: left;">α<sub>1</sub>-acid glycoprotein</td>
+<td style="text-align: left;">Larger V<sub>d</sub> (retained in tissues)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Clinical Pearl
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Protein binding is an important consideration for antimicrobial agents because <strong>unbound drug</strong> is available to exert antimicrobial activity, and in vitro methods used to assess potency through the MIC evaluate unbound drug <span class="citation" data-cites="Craig1977">[<a href="#ref-Craig1977" role="doc-biblioref">11</a>]</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-metabolism" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="sec-metabolism"><span class="header-section-number">2.3</span> Metabolism</h3>
+<p>Drug metabolism reactions are classified as either phase I or phase II reactions <span class="citation" data-cites="Blumenthal2018 Burger2018">[<a href="#ref-Blumenthal2018" role="doc-biblioref">2</a>,<a href="#ref-Burger2018" role="doc-biblioref">8</a>]</span>.</p>
+<section id="phase-i-reactions" class="level4" data-number="2.3.1">
+<h4 data-number="2.3.1" class="anchored" data-anchor-id="phase-i-reactions"><span class="header-section-number">2.3.1</span> Phase I Reactions</h4>
+<p><em>Phase I reactions</em> can transform a substrate into an active or inactive metabolite and in some cases into a more toxic substrate. Phase I reactions generally are under the control of the <em>cytochrome P-450 (CYP) system</em>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CYP Enzyme System
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>CYP enzymes are heme-containing proteins located in the endoplasmic reticulum of a variety of cell types, most abundantly in the liver</li>
+<li>CYP enzymes are controlled by a superfamily of genes classified into families according to their amino acid sequences</li>
+<li>The term <em>CYP3A4</em> designates a mammalian enzyme (CYP) family 3, subfamily A, gene 4</li>
+</ul>
+</div>
+</div>
+<p><strong>Primary CYP Enzymes for Drug Metabolism</strong> (in decreasing order of importance):</p>
+<ol type="1">
+<li>CYP3A</li>
+<li>CYP2D6</li>
+<li>CYP2C</li>
+<li>CYP1A2</li>
+<li>CYP2E1</li>
+</ol>
+</section>
+<section id="genetic-polymorphism" class="level4" data-number="2.3.2">
+<h4 data-number="2.3.2" class="anchored" data-anchor-id="genetic-polymorphism"><span class="header-section-number">2.3.2</span> Genetic Polymorphism</h4>
+<p>CYP enzymes are affected by many factors that stimulate or inhibit their ability to metabolize drugs. Genetic factors have been shown to result in a phenomenon called <strong>polymorphism</strong> <span class="citation" data-cites="Karczewski2012">[<a href="#ref-Karczewski2012" role="doc-biblioref">12</a>]</span>.</p>
+<p>For some CYP enzymes, such as CYP2D6, distinct metabolic patterns exist in a population:</p>
+<ul>
+<li>Poor metabolizers</li>
+<li>Intermediate metabolizers</li>
+<li>Extensive metabolizers</li>
+<li>Ultrarapid metabolizers</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Clinical Application: Ritonavir Boosting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ritonavir has been used to decrease the activity of CYP3A isozymes in the gut, allowing greater absorption of other protease inhibitors (PIs) such as tipranavir and darunavir and reducing the overall cost of therapy. The recently approved treatment for COVID-19, Paxlovid, relies on ritonavir-boosted nirmatrelvir <span class="citation" data-cites="Hammond2022">[<a href="#ref-Hammond2022" role="doc-biblioref">13</a>]</span>.</p>
+</div>
+</div>
+<iframe src="cyp3a4_boosting.html" width="100%" height="450px" style="border: none;">
+</iframe>
+</section>
+<section id="phase-ii-reactions" class="level4" data-number="2.3.3">
+<h4 data-number="2.3.3" class="anchored" data-anchor-id="phase-ii-reactions"><span class="header-section-number">2.3.3</span> Phase II Reactions</h4>
+<p><em>Phase II reactions</em>, which also show genetic polymorphism, involve conjugation of the parent compound with larger molecules, which increases the polarity of the parent molecule and permits excretion. Although phase II reactions generally lead to inactivation of the parent compound, occasionally conjugation increases the potency of the parent compound or results in the formation of another biologically active compound.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Antibiotic-Drug Interactions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Oral antibiotics that disrupt intestinal microflora such as ciprofloxacin, amoxicillin-clavulanic acid, metronidazole, and trimethoprim-sulfamethoxazole have been shown to result in subtherapeutic MPA (mycophenolic acid) concentrations and increase the risk of organ rejection. This highlights the importance of considering the impact of gut flora disruptions on the pharmacology of medications with a narrow therapeutic index.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-elimination" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="sec-elimination"><span class="header-section-number">2.4</span> Elimination</h3>
+<p>The AUC over a specific time period is proportional to the dose administered (for drugs that follow linear PK) and inversely related to <em>total drug clearance (CL<sub>T</sub>)</em> <span class="citation" data-cites="Vieira2014">[<a href="#ref-Vieira2014" role="doc-biblioref">7</a>]</span>. CL<sub>T</sub> reflects the unit volume of a system that is cleared of drug per unit time (e.g., L/h).</p>
+<section id="routes-of-elimination" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="routes-of-elimination"><span class="header-section-number">2.4.1</span> Routes of Elimination</h4>
+<p><strong>Renal Clearance (CL<sub>r</sub>)</strong>: Describes the volume per unit time that the body eliminates a substance via the kidneys, through various mechanisms including:</p>
+<ul>
+<li>Glomerular filtration</li>
+<li>Tubular secretion (an energy-dependent, transporter-mediated process)</li>
+<li>Tubular reabsorption</li>
+</ul>
+<p><strong>Nonrenal Clearance (CL<sub>nr</sub>)</strong>: Describes the sum of clearance pathways that do not involve the kidneys <span class="citation" data-cites="Blumenthal2018">[<a href="#ref-Blumenthal2018" role="doc-biblioref">2</a>]</span>, including:</p>
+<ul>
+<li>Biliary tree (e.g., ceftriaxone)</li>
+<li>Intestine (e.g., azithromycin)</li>
+<li>Skin and lungs (respiration)</li>
+<li>DNA chelation and inactivation (e.g., aminoglycosides in cystic fibrosis sputum)</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="sec-pk-abbreviations" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-pk-abbreviations"><span class="header-section-number">3</span> Pharmacokinetic Abbreviations Reference</h2>
+<div id="tbl-abbreviations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-abbreviations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Quick Reference Pharmacologic Abbreviations and Their Definitions
+</figcaption>
+<div aria-describedby="tbl-abbreviations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 35%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type of Term</th>
+<th style="text-align: left;">Abbreviation</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pharmacokinetics</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Absorption</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Bioavailability: absolute bioavailability</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">K<sub>a</sub></td>
+<td style="text-align: left;">Absorption rate constant</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Distribution</td>
+<td style="text-align: left;">V<sub>d</sub></td>
+<td style="text-align: left;">Volume of distribution</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V<sub>d</sub>/F</td>
+<td style="text-align: left;">Apparent volume of distribution</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V<sub>ss</sub></td>
+<td style="text-align: left;">Volume of distribution at steady state</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CL<sub>D</sub></td>
+<td style="text-align: left;">Distributional clearance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Metabolism</td>
+<td style="text-align: left;">K<sub>m</sub></td>
+<td style="text-align: left;">Drug concentration at which enzyme system metabolizes at half of V<sub>m</sub></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V<sub>m</sub></td>
+<td style="text-align: left;">Maximal metabolic capacity (Michaelis-Menten)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CYP</td>
+<td style="text-align: left;">Cytochrome P-450 enzyme systems</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Elimination</td>
+<td style="text-align: left;">CL<sub>r</sub></td>
+<td style="text-align: left;">Renal clearance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CL<sub>nr</sub></td>
+<td style="text-align: left;">Nonrenal clearance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">CL<sub>T</sub></td>
+<td style="text-align: left;">Total clearance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">t<sub>½</sub></td>
+<td style="text-align: left;">Half-life</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pharmacodynamics</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">MIC<sub>90</sub></td>
+<td style="text-align: left;">Minimal inhibitory concentration for 90% of isolates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">EC<sub>50</sub></td>
+<td style="text-align: left;">Effective concentration for 50% of all isolates</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">MPC</td>
+<td style="text-align: left;">Mutant prevention concentration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">MSW</td>
+<td style="text-align: left;">Mutant selection window</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">IC<sub>50</sub></td>
+<td style="text-align: left;">Inhibitory concentration for 50% of isolates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">C<sub>max</sub>/MIC</td>
+<td style="text-align: left;">Peak antimicrobial serum concentration to MIC ratio</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AUC/MIC</td>
+<td style="text-align: left;">24-h area under the serum antimicrobial concentration-time curve to MIC ratio</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">AUIC</td>
+<td style="text-align: left;">24-h area under the inhibitory curve</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">T &gt; MIC</td>
+<td style="text-align: left;">Time that serum antimicrobial concentrations are above the organism’s MIC</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">PAE</td>
+<td style="text-align: left;">Postantibiotic effect</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-antimicrobial-potency" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-antimicrobial-potency"><span class="header-section-number">4</span> Antimicrobial Potency</h2>
+<p>Antimicrobial agents may be bacteriostatic at low concentrations but bactericidal at high concentrations. These bacteriostatic and bactericidal concentrations have been used to quantitate the activity of an agent against an organism <span class="citation" data-cites="Turnidge2007">[<a href="#ref-Turnidge2007" role="doc-biblioref">14</a>]</span>.</p>
+<section id="methods-to-measure-antimicrobial-activity" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="methods-to-measure-antimicrobial-activity"><span class="header-section-number">4.1</span> Methods to Measure Antimicrobial Activity</h3>
+<p>Approaches to measure antimicrobial activity have broadly included:</p>
+<ol type="1">
+<li><strong>Agar-based macrodilution and microdilution systems</strong>: Can include disk-diffusion of an antibiotic to create a zone of inhibition (diameter measurement)</li>
+<li><strong>Broth dilution systems</strong>: Allow measurement of an MIC based on a doubling-dilution (log<sub>2</sub>) scale (e.g., 0.5, 1, 2, 4 mg/L)</li>
+<li><strong>Gradient strips</strong>: Create antimicrobial gradients to quantitate the MIC on an arithmetic scale</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Microbiological Parameters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>MIC<sub>90</sub></strong>: <em>MIC for 90% of all surveyed isolates</em> of a bacterial species</li>
+<li><strong>IC<sub>50</sub> or EC<sub>50</sub></strong>: <em>Inhibitory or effective concentration for 50% of all surveyed isolates</em> of a strain of virus</li>
+<li><strong>Minimal bactericidal concentration</strong>: The lowest concentration at or above the MIC required to kill a microorganism</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="limitations-of-in-vitro-parameters" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="limitations-of-in-vitro-parameters"><span class="header-section-number">4.2</span> Limitations of In Vitro Parameters</h3>
+<p>Although these in vitro parameters are helpful epidemiologically, they represent determination of fixed values that cannot fully reflect the dynamic in vivo process such as <span class="citation" data-cites="Rizk2019">[<a href="#ref-Rizk2019" role="doc-biblioref">15</a>]</span>:</p>
+<ol type="1">
+<li>The time course of activity or the potential for persistent antiinfective effect after the concentration at the site has decreased below the MIC or minimal bactericidal concentration</li>
+<li>The interaction of the immune system with the drug and pathogen</li>
+<li>Exposures necessary to prevent the development of resistance or organism mutation</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Combination Drug Use
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Importantly, these parameters reflect specific drug-organism in vitro measurements that cannot reflect the combination drug use profile as empirical therapy and for documented polymicrobial infections <span class="citation" data-cites="Turnidge2007">[<a href="#ref-Turnidge2007" role="doc-biblioref">14</a>]</span>.</p>
+</div>
+</div>
+</section>
+<section id="drug-interactions-synergism-additivity-and-antagonism" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="drug-interactions-synergism-additivity-and-antagonism"><span class="header-section-number">4.3</span> Drug Interactions: Synergism, Additivity, and Antagonism</h3>
+<p>Although antiinfective agents can be used individually, in many instances they are used together:</p>
+<ul>
+<li><strong>Synergism</strong>: Activity of two or more antiinfective agents given together that is greater than the sum of activity had the agents been given separately</li>
+<li><strong>Additivity</strong> (also known as <em>indifference</em>): Activity of two or more agents together that equals the sum of activity of each agent</li>
+<li><strong>Antagonism</strong>: Activity of two or more antiinfective agents given together that is lower than the activity of the most active agent given separately</li>
+</ul>
+<p>Combinations of agents are used to enhance efficacy, rate, and extent of organism killing or to reduce the development of resistance but can have conflicting results <span class="citation" data-cites="Torella2010">[<a href="#ref-Torella2010" role="doc-biblioref">16</a>]</span>.</p>
+</section>
+</section>
+<section id="sec-pd-indices" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-pd-indices"><span class="header-section-number">5</span> Pharmacodynamics Indices</h2>
+<p>PD combines PK parameters and microbiology parameters to describe drug effect in relation to some measure of exposure. These PK measures of exposure include <span class="citation" data-cites="Rizk2019">[<a href="#ref-Rizk2019" role="doc-biblioref">15</a>]</span>:</p>
+<ul>
+<li>Maximal concentration (C<sub>max</sub>; peak)</li>
+<li>Minimal concentration (C<sub>min</sub>; trough)</li>
+<li>AUC integrated over a specified time period (AUC<sub>0–t</sub>) or infinity (AUC<sub>0–inf</sub>)</li>
+<li>Duration of time that the concentration exceeds a threshold value</li>
+</ul>
+<section id="the-three-primary-pk-pd-indices" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="the-three-primary-pk-pd-indices"><span class="header-section-number">5.1</span> The Three Primary PK-PD Indices</h3>
+<p>In the case of antiinfective agents, three PK-PD indices based on serum or plasma concentrations have been associated with efficacy:</p>
+<div id="fig-pkpd-indices" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pkpd-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pkdp_index.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pkpd-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Common PK-PD indices for antiinfective agents: C<sub>max</sub>/MIC, AUC/MIC, and T &gt; MIC.
+</figcaption>
+</figure>
+</div>
+<div id="tbl-pkpd-indices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pkpd-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Primary PK-PD Indices for Antiinfective Agents
+</figcaption>
+<div aria-describedby="tbl-pkpd-indices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">PK-PD Index</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Associated Antibiotic Classes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>C<sub>max</sub>/MIC</strong></td>
+<td style="text-align: left;">Peak antimicrobial concentration to MIC ratio</td>
+<td style="text-align: left;">Aminoglycosides, fluoroquinolones, daptomycin</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>AUC/MIC</strong></td>
+<td style="text-align: left;">24-h area under the curve to MIC ratio</td>
+<td style="text-align: left;">Fluoroquinolones, vancomycin, glycopeptides</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>T &gt; MIC</strong></td>
+<td style="text-align: left;">Time that concentrations remain above the MIC</td>
+<td style="text-align: left;">β-lactams, carbapenems, cephalosporins</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Correlation Between Indices
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antimicrobial agents deemed to be concentration dependent with a good correlation to C<sub>max</sub>/MIC also have some degree of correlation to AUC/MIC. The same phenomenon is true for antimicrobial agents deemed to manifest time-dependent PK-PD <span class="citation" data-cites="Tam2011">[<a href="#ref-Tam2011" role="doc-biblioref">17</a>]</span>.</p>
+</div>
+</div>
+</section>
+<section id="distribution-and-elimination-phases" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="distribution-and-elimination-phases"><span class="header-section-number">5.2</span> Distribution and Elimination Phases</h3>
+<p>The rise and fall in drug concentrations are often evaluated through blood sampling and most often have two phases:</p>
+<ol type="1">
+<li><strong>Distribution phase (α phase)</strong>: A more rapid initial decline referred to as the distribution phase</li>
+<li><strong>Elimination phase (β phase)</strong>: Followed by a reduction in the slope referred to as the elimination phase</li>
+</ol>
+<p>This second phase in the concentration-time profile often coincides with the concentration profile expected in the interstitial space of tissues with the scale of this profile dependent on the degree of plasma protein binding.</p>
+</section>
+</section>
+<section id="sec-methodology" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-methodology"><span class="header-section-number">6</span> Methodology for Study of PK-PD Effects</h2>
+<section id="sec-in-vitro-models" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="sec-in-vitro-models"><span class="header-section-number">6.1</span> In Vitro Models</h3>
+<p>The most widely accepted model used to study in vitro PK-PD effects of antiinfective agents is the “hollow fiber model” system <span class="citation" data-cites="Blaser1985 Bulitta2019">[<a href="#ref-Blaser1985" role="doc-biblioref">18</a>,<a href="#ref-Bulitta2019" role="doc-biblioref">19</a>]</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hollow Fiber Model
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Uses a cartridge composed of thousands of hollow porous fibers sealed at each end</li>
+<li>Growth media enters one end and passes through the inside of the fibers to the opposite end</li>
+<li>Microorganisms or virally infected cells are inoculated on the outside of the fibers and multiply in the space between the fibers (extracapillary space)</li>
+<li>Antiinfective agents, nutrients, and metabolic waste can cross the fibers but the larger microorganisms cannot</li>
+</ul>
+</div>
+</div>
+<p><strong>Advantages</strong>: - Can expose microorganisms to predetermined dynamic or static concentrations simulating expected PK in humans - Allows sampling via a port to quantify microorganism load and drug concentrations - Offers control over bacterial inoculum and drug concentration-time profiles</p>
+<p><strong>Limitations</strong>: - Does not currently assess the effects of the immune system on organism killing or growth inhibition - Results in relatively high organism loads and lack host immune function - May predict higher effective doses than would be defined by immune intact animal models</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hfim-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hfim-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/invitromodel.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hfim-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Hollow fiber infection model schematic.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hfim-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hfim-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/invitromodel2.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hfim-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Hollow fiber cartridge detail showing extracapillary space where organisms are cultured.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-animal-models" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="sec-animal-models"><span class="header-section-number">6.2</span> Animal Models</h3>
+<p>Rodent models are often used to determine PK-PD by first making the animal neutropenic before infection to improve the model’s reliability and reproducibility. Craig et al.&nbsp;showed that the presence of neutrophils may affect antibacterial activity with fluoroquinolones, penicillin, clindamycin, and doxycycline <span class="citation" data-cites="Kiem2002">[<a href="#ref-Kiem2002" role="doc-biblioref">20</a>]</span>.</p>
+<p><strong>Advantages</strong>: - Allow for frequent sampling of blood and tissue - Allow a broad dosage range to be investigated along with a wide range of organism inocula - Allow investigation of variation in a single parameter at a time</p>
+<p><strong>Limitations</strong>: - Lack of standardization of the inoculum size (often large inocula are required to produce infection) - Faster rate of drug elimination in small mammals compared with humans - AUC values may not replicate human concentration-time profiles</p>
+</section>
+<section id="sec-clinical-trials" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="sec-clinical-trials"><span class="header-section-number">6.3</span> Clinical Trials</h3>
+<p>Preclinical and early clinical (phase I and II) PK-PD relationships are often being applied to justify dose selection for the two phase III clinical trials that are necessary to gain regulatory approval to market a drug <span class="citation" data-cites="Martinez2012 Rizk2019">[<a href="#ref-Rizk2019" role="doc-biblioref">15</a>,<a href="#ref-Martinez2012" role="doc-biblioref">21</a>]</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Limitation of Phase III Trials
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The high cost of phase III trials limits significant modification of the study design to rectify and retest assumptions about dose selection. Hence most human trials that have defined PK-PD relationships have been based on the retrospective review of postmarketing drugs or post hoc subgroup analyses of prospectively collected data.</p>
+</div>
+</div>
+<p>Clinical trials have used three measures of assessment to relate to antimicrobial PK-PD <span class="citation" data-cites="Scaglione2009">[<a href="#ref-Scaglione2009" role="doc-biblioref">22</a>]</span>:</p>
+<ol type="1">
+<li>Clinical outcome</li>
+<li>Microbiologic cure</li>
+<li>Development of resistance</li>
+</ol>
+</section>
+</section>
+<section id="sec-killing-patterns" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="sec-killing-patterns"><span class="header-section-number">7</span> Concentration-Dependent vs.&nbsp;Time-Dependent Killing</h2>
+<section id="sec-concentration-dependent" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="sec-concentration-dependent"><span class="header-section-number">7.1</span> Concentration-Dependent Killing Agents</h3>
+<p>Concentration-dependent killing agents include:</p>
+<ul>
+<li>Aminoglycosides</li>
+<li>Fluoroquinolones</li>
+<li>Metronidazole</li>
+<li>Daptomycin</li>
+</ul>
+<p>For these agents, higher C<sub>max</sub>/MIC ratios are required for gram-positive pathogens compared with gram-negative pathogens.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-animal-model" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-animal-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pkpdanimal.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-animal-model-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: PK-PD indices from animal infection models: cefotaxime against <em>S. pneumoniae</em> <span class="citation" data-cites="craig_1998">[<a href="#ref-craig_1998" role="doc-biblioref">5</a>]</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-cipro-pkpd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cipro-pkpd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/clipboard-406664738%20copy.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cipro-pkpd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Comparison of ciprofloxacin PK-PD relationships in mice versus humans <span class="citation" data-cites="craig_1998">[<a href="#ref-craig_1998" role="doc-biblioref">5</a>]</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Fluoroquinolone PK-PD and Resistance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Evaluation of the influence of PK-PD on bacterial resistance has been best characterized with fluoroquinolones and aminoglycosides. Blaser et al.&nbsp;examined the C<sub>max</sub>/MIC ratio for enoxacin and netilmicin against various gram-negative organisms. Regrowth of organisms occurred in all cultures when enoxacin or netilmicin attained ratios lower than 8. On redosing of these antibiotics after bacterial regrowth, no killing was seen because of the development of resistance <span class="citation" data-cites="Blaser1987">[<a href="#ref-Blaser1987" role="doc-biblioref">23</a>]</span>.</p>
+</div>
+</div>
+</section>
+<section id="sec-time-dependent" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="sec-time-dependent"><span class="header-section-number">7.2</span> Time-Dependent Killing Agents</h3>
+<p>Time-dependent killing agents include:</p>
+<ul>
+<li>Penicillins</li>
+<li>Cephalosporins</li>
+<li>Aztreonam</li>
+<li>Vancomycin (for which AUC/MIC is predictive)</li>
+<li>Carbapenems</li>
+<li>Macrolides</li>
+<li>Linezolid</li>
+<li>Tigecycline</li>
+<li>Doxycycline</li>
+<li>Clindamycin</li>
+</ul>
+<p>For agents active against gram-negative bacteria, the rate of kill is maximized when concentrations at the site of the bacterial infection are typically four times higher than the MIC of the organism <span class="citation" data-cites="Craig1998">[<a href="#ref-Craig1998" role="doc-biblioref">3</a>]</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>T &gt; MIC Thresholds
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A report using animal studies with <em>Streptococcus pneumoniae</em> in which treatment was performed with penicillins or cephalosporins showed:</p>
+<ul>
+<li>When T &gt; MIC was ≤20% of the dosing interval → <strong>100% mortality</strong></li>
+<li>When T &gt; MIC was 40% to 50% of the dosing interval → <strong>0% to 10% mortality</strong> <span class="citation" data-cites="Rizk2019">[<a href="#ref-Rizk2019" role="doc-biblioref">15</a>]</span></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-pae" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="sec-pae"><span class="header-section-number">8</span> Postantibiotic Effect</h2>
+<p>After a short exposure of bacteria to an antimicrobial agent, complete or partial suppression of bacterial growth may last for a period of time after the drug is removed. This phenomenon is termed the <strong>postantibiotic effect (PAE)</strong> <span class="citation" data-cites="Craig1998">[<a href="#ref-Craig1998" role="doc-biblioref">3</a>]</span>.</p>
+<div id="tbl-pae" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pae-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Postantibiotic Effect Duration by Antibiotic Class
+</figcaption>
+<div aria-describedby="tbl-pae-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 37%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Antibiotic Class</th>
+<th style="text-align: left;">PAE Against Gram-Negative</th>
+<th style="text-align: left;">PAE Against Gram-Positive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aminoglycosides</td>
+<td style="text-align: left;">2–6 hours</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fluoroquinolones</td>
+<td style="text-align: left;">2–6 hours</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">β-Lactam antibiotics</td>
+<td style="text-align: left;">Little or no PAE</td>
+<td style="text-align: left;">2 hours</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Clinical Implications of PAE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>An agent with a <strong>long PAE</strong> can be dosed less frequently than an antimicrobial agent lacking a PAE</li>
+<li>An agent with <strong>little or no PAE</strong> may be most effective if given as a continuous infusion so that the serum concentration always exceeds the MIC</li>
+</ul>
+</div>
+</div>
+<p>Factors that affect the in vitro PAE include:</p>
+<ul>
+<li>Specific combinations of antimicrobial agents</li>
+<li>Antimicrobial concentration</li>
+<li>Duration of antimicrobial exposure</li>
+<li>pH</li>
+<li>Size of inoculum</li>
+<li>Type of growth medium</li>
+<li>Bacterial growth phase</li>
+</ul>
+</section>
+<section id="sec-applied-pkpd" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="sec-applied-pkpd"><span class="header-section-number">9</span> Applied Clinical Pharmacokinetics and Pharmacodynamics</h2>
+<p>The exposure-response relationship predictive of effect and safety may not be complete when an antiinfective agent is first marketed. Over the past 50 years, the principles outlined earlier have been applied to improve the clinical management of patients through design of alternative drug dose regimens that take advantage of the exposure-response relationship <span class="citation" data-cites="Martinez2012">[<a href="#ref-Martinez2012" role="doc-biblioref">21</a>]</span>.</p>
+<p>These strategies have broadly included:</p>
+<ol type="1">
+<li><strong>Higher-dose extended-interval dosing</strong>: For concentration-dependent antimicrobial agents</li>
+<li><strong>Continuous or extended infusions</strong>: For time-dependent antimicrobial agents</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Precision Medicine Approach
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Conceptually, use of more intensive dosing regimens at treatment initiation followed by dose titration with clinical improvement or worsening would be ideal. Testing this approach requires more complex covariate-adjusted response-adaptive designs of antiinfective agents with a companion biomarker of response to tease out true differences between regimens <span class="citation" data-cites="Musuamba2017">[<a href="#ref-Musuamba2017" role="doc-biblioref">24</a>]</span>.</p>
+</div>
+</div>
+<section id="sec-extended-interval" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="sec-extended-interval"><span class="header-section-number">9.1</span> Higher-Dose Extended-Interval Dosing</h3>
+<p>This dosing strategy has primarily been used to optimize the PK-PD profile of concentration-dependent antimicrobial agents such as:</p>
+<ul>
+<li>Tobramycin</li>
+<li>Levofloxacin</li>
+<li>Daptomycin</li>
+<li>Oritavancin</li>
+<li>Dalbavancin</li>
+<li>Azithromycin</li>
+</ul>
+<section id="aminoglycoside-extended-interval-dosing" class="level4" data-number="9.1.1">
+<h4 data-number="9.1.1" class="anchored" data-anchor-id="aminoglycoside-extended-interval-dosing"><span class="header-section-number">9.1.1</span> Aminoglycoside Extended-Interval Dosing</h4>
+<p>High-dose extended-interval aminoglycoside dosing serves as the model for validation of this approach <span class="citation" data-cites="Pai2014">[<a href="#ref-Pai2014" role="doc-biblioref">25</a>]</span>:</p>
+<div id="tbl-aminoglycoside-dosing" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-aminoglycoside-dosing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Comparison of Traditional vs Extended-Interval Aminoglycoside Dosing
+</figcaption>
+<div aria-describedby="tbl-aminoglycoside-dosing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Traditional Dosing</th>
+<th style="text-align: left;">Extended-Interval Dosing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gentamicin/Tobramycin dose</td>
+<td style="text-align: left;">1 mg/kg TID</td>
+<td style="text-align: left;">5–7 mg/kg once daily</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Target C<sub>max</sub>/MIC</td>
+<td style="text-align: left;">Variable</td>
+<td style="text-align: left;">8–10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rationale</td>
+<td style="text-align: left;">Maintain levels</td>
+<td style="text-align: left;">Optimize PK-PD, minimize toxicity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-oda-nomogram" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oda-nomogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ODA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oda-nomogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Hartford nomogram for extended-interval aminoglycoside TDM. Trough levels drawn 6–14 hours post-dose are plotted to determine dosing interval <span class="citation" data-cites="nicolau.etal_1995">[<a href="#ref-nicolau.etal_1995" role="doc-biblioref">26</a>]</span>.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Clinical Target for Tobramycin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The objective of the tobramycin regimen of 5–10 mg/kg once daily is to achieve a serum concentration of 16–20 mg/L 1.5–2 hours after a half-hour infusion (postdistribution phase). We seek to achieve a serum C<sub>max</sub>/MIC ratio of <strong>8–10</strong>, based on an MIC<sub>90</sub> of tobramycin against <em>P. aeruginosa</em> of 2 mg/L because this PK-PD index has been correlated to predict clinical success <span class="citation" data-cites="Moore1987">[<a href="#ref-Moore1987" role="doc-biblioref">27</a>]</span>.</p>
+</div>
+</div>
+</section>
+<section id="front-loaded-regimens" class="level4" data-number="9.1.2">
+<h4 data-number="9.1.2" class="anchored" data-anchor-id="front-loaded-regimens"><span class="header-section-number">9.1.2</span> Front-Loaded Regimens</h4>
+<p>The application of higher doses at treatment initiation has more recently been referred to as <strong>front-loaded regimens</strong>, based on similar theories to suppress tumor growth <span class="citation" data-cites="Goldie1983">[<a href="#ref-Goldie1983" role="doc-biblioref">28</a>]</span>.</p>
+<p>Examples include:</p>
+<ul>
+<li><strong>Oritavancin</strong>: Single 1200 mg dose shown to have similar safety and efficacy as daily administration (200 mg for 3–7 days) for complicated skin and soft tissue infections <span class="citation" data-cites="Dunbar2011">[<a href="#ref-Dunbar2011" role="doc-biblioref">29</a>]</span></li>
+<li><strong>Azithromycin</strong>: 5-day treatment course (500 mg loading, then 250 mg × 4 days) approved for community-acquired pneumonia</li>
+<li><strong>Rifampin</strong>: Higher dose of 15 mg/kg/day versus standard 10 mg/kg/day studied in tuberculous meningitis <span class="citation" data-cites="Heemskerk2016">[<a href="#ref-Heemskerk2016" role="doc-biblioref">30</a>]</span></li>
+</ul>
+</section>
+</section>
+<section id="sec-continuous-infusion" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="sec-continuous-infusion"><span class="header-section-number">9.2</span> Continuous-Infusion and Extended-Infusion Regimens</h3>
+<p>The effects of intermittent, extended, and continuous infusion on the serum concentration time profile are illustrated in <strong>?@fig-infusion-comparison</strong>.</p>
+<iframe src="images/infusion_strategy.html" width="100%" height="500px" style="border: none;">
+</iframe>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Principle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Concentrations above a threshold concentration (e.g., 8 mg/L) are maintained for the longest period of time with the use of an initial combination of a short infusion (loading dose) followed by a continuous infusion. As a consequence, concentrations can be maintained above this threshold with a <strong>2-g/day regimen</strong> compared with a <strong>3-g/day regimen</strong> (30% lower total daily dose).</p>
+</div>
+</div>
+<section id="loading-dose-importance" class="level4" data-number="9.2.1">
+<h4 data-number="9.2.1" class="anchored" data-anchor-id="loading-dose-importance"><span class="header-section-number">9.2.1</span> Loading Dose Importance</h4>
+<iframe src="images/loadingdose.html" width="100%" height="500px" style="border: none;">
+</iframe>
+<p>Use of a continuous infusion regimen <strong>without a loading dose</strong> will lead to a delay in the time that the concentration exceeds a threshold. Martinez et al.&nbsp;reviewed this topic and highlighted the importance of achieving effective concentrations at treatment initiation when the organism load is expected to be at its highest <span class="citation" data-cites="Martinez2012">[<a href="#ref-Martinez2012" role="doc-biblioref">21</a>]</span>.</p>
+</section>
+<section id="clinical-evidence-for-extended-infusions" class="level4" data-number="9.2.2">
+<h4 data-number="9.2.2" class="anchored" data-anchor-id="clinical-evidence-for-extended-infusions"><span class="header-section-number">9.2.2</span> Clinical Evidence for Extended Infusions</h4>
+<p>A systematic review and meta-analysis of extended and continuous infusion of piperacillin-tazobactam and carbapenems based on nonrandomized studies suggested that these dosing approaches may be associated with a lower risk for mortality compared with shorter intermittent infusions <span class="citation" data-cites="Falagas2013">[<a href="#ref-Falagas2013" role="doc-biblioref">31</a>]</span>.</p>
+<div id="tbl-extended-infusion-evidence" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-extended-infusion-evidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Summary of Clinical Evidence for Extended/Continuous Infusion Strategies
+</figcaption>
+<div aria-describedby="tbl-extended-infusion-evidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Study Type</th>
+<th style="text-align: left;">Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Meta-analysis of prolonged-infusion piperacillin-tazobactam</td>
+<td style="text-align: left;">1.46-fold lower odds of mortality with prolonged infusions <span class="citation" data-cites="Rhodes2018">[<a href="#ref-Rhodes2018" role="doc-biblioref">32</a>]</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BLING-II trial (piperacillin-tazobactam, meropenem)</td>
+<td style="text-align: left;">Comparable outcomes; no definitive superiority <span class="citation" data-cites="Dulhunty2015">[<a href="#ref-Dulhunty2015" role="doc-biblioref">33</a>]</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BLISS trial</td>
+<td style="text-align: left;">Comparable outcomes between continuous and intermittent β-lactam infusion <span class="citation" data-cites="AbdulAziz2016">[<a href="#ref-AbdulAziz2016" role="doc-biblioref">34</a>]</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Implementation Challenges
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Surveys suggest that translation or acceptance of this dosing paradigm still requires a consensus guideline, education, and acceptance in the United States and abroad.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-dose-refinement" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="sec-dose-refinement"><span class="header-section-number">9.3</span> Dose-Refinement Considerations</h3>
+<p>Selection of a specific antiinfective dosing regimen relies on the assumption that a dose-response relationship exists in support of this regimen <span class="citation" data-cites="Dulhunty2013">[<a href="#ref-Dulhunty2013" role="doc-biblioref">35</a>]</span>. The regimen that is approved for clinical use is the population average dose that maximizes the probability of clinical effect.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Limitation of Population-Based Dosing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The optimal dose of an antiinfective agent for every specific population (e.g., pregnant patients, patients receiving dialysis, pediatric patients) is not known when it is first approved for clinical use. Therefore a system to aid dose selection or refinement that is necessary to calculate the optimal dose has developed.</p>
+</div>
+</div>
+<section id="therapeutic-drug-monitoring-tdm" class="level4" data-number="9.3.1">
+<h4 data-number="9.3.1" class="anchored" data-anchor-id="therapeutic-drug-monitoring-tdm"><span class="header-section-number">9.3.1</span> Therapeutic Drug Monitoring (TDM)</h4>
+<p>The clearest example of dose refinement is documented with the triazole antifungal agents, owing to high interpatient variability in drug absorption and metabolism:</p>
+<ul>
+<li><strong>Itraconazole and posaconazole</strong>: Unpredictable oral absorption necessitates TDM</li>
+<li><strong>Voriconazole</strong>: Metabolized by CYP2C19 isoenzymes encoded by a polymorphic gene; common coadministered drugs such as omeprazole can inhibit this isoenzyme system</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>TDM Practice Guidelines
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The most recent practice guidelines for the diagnosis and management of aspergillosis include clinical scenarios in which TDM of voriconazole, itraconazole, and posaconazole is justifiable.</p>
+</div>
+</div>
+</section>
+<section id="vancomycin-tdm-evolution" class="level4" data-number="9.3.2">
+<h4 data-number="9.3.2" class="anchored" data-anchor-id="vancomycin-tdm-evolution"><span class="header-section-number">9.3.2</span> Vancomycin TDM Evolution</h4>
+<p>In practice, TDM of the aminoglycosides and vancomycin is most common, but definitions of the target exposure ranges associated with effect and toxicity have changed over time.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Vancomycin AUC/MIC Target
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let us assume that a vancomycin AUC/MIC target &gt;400 h<sup>−1</sup> is associated with a higher probability of effect against a pathogen with a modal MIC<sub>90</sub> of 1 mg/L. A 2-g daily dose achieves a median AUC of 400 mg · h/L in a population and so represents the average population dose.</p>
+<p><strong>Clinical scenario</strong>: A patient is treated empirically with 2 g/day but is then determined to be infected with MRSA having a vancomycin MIC of 0.5 mg/L. Should we reduce the dose in half to achieve an AUC of 200 mg · h/L?</p>
+<p>The answer is most likely <strong>no</strong>. Alternatively, if the MIC was 2 mg/L, should we double the daily dose? The answer may be yes, but we should also expect the risk for toxicity to increase.</p>
+</div>
+</div>
+<p>We expect the current practice of vancomycin TDM to evolve from simple measurement and dose adjustment based on trough concentrations to one that considers AUC estimation using two serum samples or a single serum sample with Bayesian analysis.</p>
+</section>
+</section>
+</section>
+<section id="sec-antiretroviral-pd" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="sec-antiretroviral-pd"><span class="header-section-number">10</span> Antiretroviral Pharmacodynamics</h2>
+<p>Antiretrovirals can be used to suppress viral replication in people living with HIV or as preexposure prophylaxis to prevent transmission in people who are at high risk of HIV acquisition.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Unique Aspects of Antiretroviral PK-PD
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In contrast to the previously discussed antimicrobials, antiretrovirals are unique in their site of action, which is most commonly inside or on the surface of the mammalian cell. Toxicity can result from interference with the host cell’s physiology as seen with the early antiretroviral agents commonly associated with adverse events, including diarrhea and mitochondrial toxicity.</p>
+</div>
+</div>
+<!-- IMAGE NEEDED: Figure 19.7 - Hypothetical exposure vs. desired/undesired drug effect curves showing therapeutic window -->
+<section id="the-therapeutic-window-concept" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="the-therapeutic-window-concept"><span class="header-section-number">10.1</span> The Therapeutic Window Concept</h3>
+<p>Using dosing strategies that achieve a concentration profile between effective and toxic thresholds in each individual patient is of utmost importance. One strategy to manage this balance is to design treatment regimens that combine antiretrovirals targeting different phases of the viral life cycle.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Combination Therapy Rationale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Combination therapy harnesses the pharmacologic principles of additivity and synergy, where the effect of the drugs given in combination is equal to or above what would be expected given the potency of each individual agent, respectively. Thus combination dosing can lower the concentrations required for viral inhibition and widen the therapeutic window.</p>
+</div>
+</div>
+</section>
+<section id="pk-pd-relationships-by-antiretroviral-class" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="pk-pd-relationships-by-antiretroviral-class"><span class="header-section-number">10.2</span> PK-PD Relationships by Antiretroviral Class</h3>
+<section id="protease-inhibitors-pis" class="level4" data-number="10.2.1">
+<h4 data-number="10.2.1" class="anchored" data-anchor-id="protease-inhibitors-pis"><span class="header-section-number">10.2.1</span> Protease Inhibitors (PIs)</h4>
+<p>PK-PD relationships have been well-studied for commonly prescribed PIs:</p>
+<div id="tbl-pi-pkpd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pi-pkpd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: PK-PD Relationships for Protease Inhibitors
+</figcaption>
+<div aria-describedby="tbl-pi-pkpd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Drug</th>
+<th style="text-align: left;">Key PK-PD Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Atazanavir</td>
+<td style="text-align: left;">AUC significantly correlated with antiviral activity; C<sub>trough</sub> correlated with hyperbilirubinemia</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Darunavir</td>
+<td style="text-align: left;">Early reports described significant PK-PD for twice-daily dosing; not substantiated for once-daily dosing</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lopinavir/ritonavir</td>
+<td style="text-align: left;">C<sub>trough</sub> is an important predictor of response in treatment-experienced patients</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="non-nucleoside-reverse-transcriptase-inhibitors-nnrtis" class="level4" data-number="10.2.2">
+<h4 data-number="10.2.2" class="anchored" data-anchor-id="non-nucleoside-reverse-transcriptase-inhibitors-nnrtis"><span class="header-section-number">10.2.2</span> Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTIs)</h4>
+<ul>
+<li><strong>Efavirenz</strong>: Target plasma concentrations between 1000 and 4000 ng/mL to minimize the risk of virologic failure and central nervous system toxicity</li>
+<li><strong>Rilpivirine</strong>: C<sub>trough</sub> of 100 ng/mL is a significant predictor of virologic suppression at 48 weeks of therapy</li>
+<li><strong>Doravirine</strong>: C<sub>trough</sub> significantly correlated with viral suppression in phase IIb dose-ranging studies</li>
+</ul>
+</section>
+<section id="integrase-strand-transfer-inhibitors-instis" class="level4" data-number="10.2.3">
+<h4 data-number="10.2.3" class="anchored" data-anchor-id="integrase-strand-transfer-inhibitors-instis"><span class="header-section-number">10.2.3</span> Integrase Strand Transfer Inhibitors (INSTIs)</h4>
+<p>The role of C<sub>trough</sub> as a marker of efficacy of INSTIs may be less clear:</p>
+<ul>
+<li><strong>Dolutegravir</strong>: C<sub>trough</sub> best predicted plasma viral load reduction on day 11 of monotherapy with an EC<sub>50</sub> C<sub>trough</sub> value of 36 ng/mL</li>
+<li><strong>Raltegravir</strong>: PK-PD relationships correlating C<sub>trough</sub> with antiviral activity have been described for once-daily dosing but not observed for 400 mg twice-daily dosing</li>
+<li><strong>Bictegravir</strong>: Preliminary evidence of significant PK-PD relationship, though phase III trials did not corroborate</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why INSTIs May Lack Clear PK-PD Relationships
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The notable absence of definitive PK-PD indices for INSTIs is likely attributed to potent, well-tolerated clinical doses achieving PK exposure at the plateau of the exposure-response curve.</p>
+</div>
+</div>
+</section>
+<section id="nucleoside-reverse-transcriptase-inhibitors-nrtis" class="level4" data-number="10.2.4">
+<h4 data-number="10.2.4" class="anchored" data-anchor-id="nucleoside-reverse-transcriptase-inhibitors-nrtis"><span class="header-section-number">10.2.4</span> Nucleoside Reverse Transcriptase Inhibitors (NRTIs)</h4>
+<p>Defining PK-PD relationships for NRTIs is more difficult because these drugs are intracellularly phosphorylated to their active diphosphate and triphosphate metabolites.</p>
+<ul>
+<li>Plasma parent drug concentrations do not consistently correlate with metabolite concentrations</li>
+<li>However, increases in zidovudine triphosphate (50%) and lamivudine triphosphate (33%) concentrations have been positively correlated with the rate of HIV-1 RNA decline after starting therapy</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tenofovir Alafenamide: Targeted Prodrug Approach
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>High plasma tenofovir concentrations have been associated with increased risk of nephrotoxicity. The prodrug formulation, <strong>tenofovir alafenamide</strong>, reduces this risk by maximizing cellular uptake, thereby minimizing plasma tenofovir exposure. This case illustrates the use of a targeted-prodrug approach to alter biodistribution and PK-PD of a compound to improve efficacy and safety.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="antiretroviral-therapeutic-drug-monitoring" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="antiretroviral-therapeutic-drug-monitoring"><span class="header-section-number">10.3</span> Antiretroviral Therapeutic Drug Monitoring</h3>
+<p>With established PK-PD relationships, antiretroviral TDM can be considered. Some antiretroviral drugs (particularly PIs and raltegravir) can have significant intraindividual PK variability owing to food effects and other environmental influences.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Current Guidelines for Antiretroviral TDM
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TDM for efficacy and toxicity can be warranted in certain clinical circumstances in which virologic response may be unpredictable or antiretroviral options are limited:</p>
+<ul>
+<li>Pregnant patients who have risk factors associated with virologic failure</li>
+<li>Patients with pathophysiologic conditions that alter drug PK (GI, hepatic, or renal dysfunction)</li>
+<li>Antiretroviral treatment–experienced patients</li>
+<li>Patients with clinically significant drug or food interactions</li>
+<li>Patients with concentration-dependent drug toxicities</li>
+<li>Patients with alternative dosing regimens or antiretroviral combinations</li>
+<li>Treatment-adherent patients with lack of virologic response</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-other-antivirals" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="sec-other-antivirals"><span class="header-section-number">11</span> Pharmacodynamics for Other Antiviral Drugs</h2>
+<section id="hepatitis-c-virus-hcv" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="hepatitis-c-virus-hcv"><span class="header-section-number">11.1</span> Hepatitis C Virus (HCV)</h3>
+<p>PK-PD relationships have also been established in the treatment of HCV. Since the first direct-acting agents (DAAs) were approved for HCV treatment in 2011, 10 more agents with improved potency have joined the market.</p>
+<ul>
+<li><strong>Boceprevir and telaprevir</strong>: Virologic suppression was highly dependent on C<sub>min</sub> (demonstrated in the phase II telaprevir trial)</li>
+<li><strong>Newer DAAs</strong>: PK-PD relationships have been more difficult to define; multiple studies have failed to describe a predictable relationship for sofosbuvir-ledipasvir PK estimates and SVR</li>
+</ul>
+</section>
+<section id="cytomegalovirus-cmv" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="cytomegalovirus-cmv"><span class="header-section-number">11.2</span> Cytomegalovirus (CMV)</h3>
+<p><strong>Foscarnet</strong>, a polymerase and reverse-transcriptase inhibitor used to treat CMV, exhibits both a PK-PD and PK-toxicity relationship:</p>
+<ul>
+<li>AUC strongly correlates with outcomes of increased days to progression of CMV retinitis</li>
+<li>AUC also correlates with increased nephrotoxicity risk</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Foscarnet TDM in Hemodialysis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TDM is not well validated for foscarnet but has been successfully employed in patients receiving hemodialysis. In this report, dose adjustments were made to achieve C<sub>max</sub> concentrations of 500–800 µM between the proposed efficacy (CMV IC<sub>50</sub> = 100–300 µM) and toxicity (&gt;1000 µM) thresholds.</p>
+</div>
+</div>
+</section>
+<section id="herpes-simplex-virus-type-2-hsv-2" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="herpes-simplex-virus-type-2-hsv-2"><span class="header-section-number">11.3</span> Herpes Simplex Virus Type 2 (HSV-2)</h3>
+<p>The interplay between PK and PD is well-illustrated by an observation from the CAPRISA-004 trial that intravaginal administration of 1% tenofovir gel (being studied for HIV preexposure prophylaxis) decreased risk of HSV type 2 (HSV-2).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Topical Drug Delivery Advantage
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Oral doses of tenofovir required to achieve genital tract tenofovir concentrations near the HSV-2 EC<sub>50</sub> (14,000–19,000 ng/mL) would exceed the safety limits for plasma exposure. Yet, topical administration bypasses these safety concerns and delivers tenofovir (TFV) directly to the site of action.</p>
+<p>Subsequent analyses of CAPRISA-004 demonstrated a significant correlation between genital TFV concentration ≥10,000 ng/mL and decreased risk of HSV-2 acquisition—illustrating that a comprehensive understanding of PK-PD relationships can be harnessed to develop new clinical applications for old drugs.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-conclusions" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="sec-conclusions"><span class="header-section-number">12</span> Conclusions</h2>
+<p>Optimal dose selection of an antiinfective agent for an individual patient is an indispensable goal of clinical practice. The study of the interrelationship between drug exposure and response through PK-PD analyses is now an established component of antiinfective drug development.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Key Takeaways
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>PK-PD provides a framework</strong> to follow a pathway that integrates information from in vitro, in vivo, clinical, and in silico experiments to define a dosing regimen that increases the probability of effect and reduces the probability of toxicity in a population</p></li>
+<li><p><strong>Various nonpharmacologic factors</strong> can influence efficacy and safety-related outcomes in individuals; these unmeasured or immeasurable factors can confound our assessment of the “true” exposure-response relationship</p></li>
+<li><p><strong>Clinical use of an agent in populations underrepresented in early studies</strong> leads to an identification of pharmacologic and nonpharmacologic factors that influence outcome</p></li>
+<li><p><strong>Our understanding evolves</strong> with the clinical use of an agent; continued innovations in genomics, assays, and computer software capabilities will foster individualized antiinfective dose selection</p></li>
+<li><p><strong>The interplay between the gut microbiome and antiinfective drugs</strong> is imperative for advancing our comprehension of pharmacomicrobiomics, with the ultimate aim of translating these insights into practical clinical recommendations</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="sec-references" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="sec-references"><span class="header-section-number">13</span> References</h2>
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-Buxton2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Buxton I, Benet L. Pharmacokinetics: The dynamics of drug absorption, distribution, metabolism, and elimination. Goodman and Gilman’s: The Pharmacological Basis of Therapeutics 2018.</div>
+</div>
+<div id="ref-Blumenthal2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Blumenthal D, Garrison J. Pharmacodynamics: Molecular mechanisms of drug action. Goodman and Gilman’s: The Pharmacological Basis of Therapeutics 2018.</div>
+</div>
+<div id="ref-Craig1998" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Craig W. <a href="https://doi.org/10.1086/516284">Pharmacokinetic/pharmacodynamic parameters: Rationale for antibacterial dosing of mice and men</a>. Clin Infect Dis 1998;26(1):1–10.</div>
+</div>
+<div id="ref-Drusano2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Drusano G. <a href="https://doi.org/10.1086/518137">Pharmacokinetics and pharmacodynamics of antimicrobials</a>. Clin Infect Dis 2007;45:S89–S95.</div>
+</div>
+<div id="ref-craig_1998" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Craig WA. Pharmacokinetic/pharmacodynamic parameters: Rationale for antibacterial dosing of mice and men. Clinical Infectious Diseases 1998;26(1):1–10. Available from <a href="https://academic.oup.com/cid/article-lookup/doi/10.1086/516284">https://academic.oup.com/cid/article-lookup/doi/10.1086/516284</a></div>
+</div>
+<div id="ref-Silver2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Silver L. <a href="https://doi.org/10.1128/CMR.00030-10">Challenges of antibacterial discovery</a>. Clin Microbiol Rev 2011;24(1):71–109.</div>
+</div>
+<div id="ref-Vieira2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Vieira M, Kim M, Shebley M. <a href="https://doi.org/10.1007/s10928-013-9349-8">Population pharmacokinetic model selection for drug development</a>. J Pharmacokinet Pharmacodyn 2014;41:1–16.</div>
+</div>
+<div id="ref-Burger2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Burger D, Aarnoutse R. Clinical pharmacology of antiretroviral agents. Antimicrob Agents Chemother 2018.</div>
+</div>
+<div id="ref-Toutain2004" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Toutain P, Bousquet-Melou A. <a href="https://doi.org/10.1111/j.1365-2885.2004.00602.x">Volumes of distribution</a>. J Vet Pharmacol Ther 2004;27:441–453.</div>
+</div>
+<div id="ref-Gandhi2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Gandhi M, Greenblatt R, Bacchetti P, et al. <a href="https://doi.org/10.1093/infdis/jis508">A single-nucleotide polymorphism in CYP2B6 leads to &gt;3-fold increases in efavirenz concentrations in plasma and hair among HIV-infected women</a>. J Infect Dis 2012;206:1453–1461.</div>
+</div>
+<div id="ref-Craig1977" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Craig W, Kunin C. <a href="https://www.ncbi.nlm.nih.gov/pubmed/779599">Significance of serum protein and tissue binding of antimicrobial agents</a>. Annu Rev Med 1977;27:287–300.</div>
+</div>
+<div id="ref-Karczewski2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Karczewski K, Daneshjou R, Altman R. <a href="https://doi.org/10.1371/journal.pcbi.1002817">Chapter 7: pharmacogenomics</a>. PLoS Comput Biol 2012;8(12):e1002817.</div>
+</div>
+<div id="ref-Hammond2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Hammond J, Leister-Tebbe H, Gardner A, et al. <a href="https://doi.org/10.1056/NEJMoa2118542">Oral nirmatrelvir for high-risk, nonhospitalized adults with covid-19</a>. N Engl J Med 2022;386:1397–1408.</div>
+</div>
+<div id="ref-Turnidge2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Turnidge J, Paterson D. <a href="https://doi.org/10.1128/CMR.00047-06">Setting and revising antibacterial susceptibility breakpoints</a>. Clin Microbiol Rev 2007;20(3):391–408.</div>
+</div>
+<div id="ref-Rizk2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Rizk M, Bhavnani S, Galen J, et al. <a href="https://doi.org/10.1002/cpt.1406">Consideration for dose selection and clinical pharmacokinetic/pharmacodynamic studies for antibacterial agents at the current crossroads</a>. Clin Pharmacol Ther 2019;106(3):510–511.</div>
+</div>
+<div id="ref-Torella2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Torella J, Chait R, Kishony R. <a href="https://doi.org/10.1371/journal.pcbi.1000796">Optimal drug synergy in antimicrobial treatments</a>. PLoS Comput Biol 2010;6(6):e1000796.</div>
+</div>
+<div id="ref-Tam2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Tam V, Nikolaou M. <a href="https://doi.org/10.1371/journal.pcbi.1001043">A novel approach to pharmacodynamic assessment of antimicrobial agents: New insights to dosing regimen design</a>. PLoS Comput Biol 2011;7(1):e1001043.</div>
+</div>
+<div id="ref-Blaser1985" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">Blaser J, Stone B, Groner M, Zinner S. <a href="https://doi.org/10.1128/AAC.27.3.343">Comparative study with enoxacin and netilmicin in a pharmacodynamic model to determine importance of ratio of antibiotic peak concentration to MIC for bactericidal activity and emergence of resistance</a>. Antimicrob Agents Chemother 1985;27(3):343–349.</div>
+</div>
+<div id="ref-Bulitta2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">Bulitta J, Hope W, Eakin A, et al. <a href="https://doi.org/10.1128/AAC.02307-18">Generating robust and informative nonclinical in vitro and in vivo bacterial infection model efficacy data to support translation to humans</a>. Antimicrob Agents Chemother 2019;63(5):e02307–18.</div>
+</div>
+<div id="ref-Kiem2002" class="csl-entry" role="listitem">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">Kiem S, Schentag J. Interpretation of antibiotic concentration ratios measured in epithelial lining fluid. Antimicrob Agents Chemother 2002;52:24–36.</div>
+</div>
+<div id="ref-Martinez2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Martinez M, Papich M, Drusano G. <a href="https://doi.org/10.1128/AAC.05360-11">Dosing regimen matters: The importance of early intervention and rapid attainment of the pharmacokinetic/pharmacodynamic target</a>. Antimicrob Agents Chemother 2012;56(6):2795–2805.</div>
+</div>
+<div id="ref-Scaglione2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">Scaglione F, Paraboni L. <a href="https://doi.org/10.1016/j.ijantimicag.2008.03.015">Pharmacokinetics/pharmacodynamics of antibacterials in the intensive care unit: Setting appropriate dosing regimens</a>. Int J Antimicrob Agents 2009;32(4):294–301.</div>
+</div>
+<div id="ref-Blaser1987" class="csl-entry" role="listitem">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">Blaser J, Stone B, Zinner S. <a href="https://doi.org/10.1093/jac/20.suppl_a.59">Two compartment kinetic model with multiple artificial capillary units</a>. J Antimicrob Chemother 1987;20:59–74.</div>
+</div>
+<div id="ref-Musuamba2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline">Musuamba F, Manolis E, Holford N, et al. <a href="https://doi.org/10.1002/psp4.12196">Advanced methods for dose and regimen finding during drug development: Summary of the EMA/EFPIA workshop on dose finding (london 4-5 december 2014)</a>. CPT Pharmacometrics Syst Pharmacol 2017;6(7):418–429.</div>
+</div>
+<div id="ref-Pai2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline">Pai M, Rodvold K. <a href="https://doi.org/10.1016/j.diagmicrobio.2013.10.011">Aminoglycoside dosing in patients by kidney function and area under the curve: The sawchuk-zaske dosing program revisited in the era of obesity</a>. Diagn Microbiol Infect Dis 2014;78(2):178–187.</div>
+</div>
+<div id="ref-nicolau.etal_1995" class="csl-entry" role="listitem">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline">Nicolau DP, Freeman CD, Belliveau PP, Nightingale CH, Ross JW, Quintiliani R. Experience with a once-daily aminoglycoside program administered to 2,184 adult patients. Antimicrobial agents and chemotherapy 1995;39(3):650–655. Available from <a href="http://www.ncbi.nlm.nih.gov/pubmed/7793867">http://www.ncbi.nlm.nih.gov/pubmed/7793867</a></div>
+</div>
+<div id="ref-Moore1987" class="csl-entry" role="listitem">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline">Moore R, Lietman P, Smith C. <a href="https://doi.org/10.1093/infdis/155.1.93">Clinical response to aminoglycoside therapy: Importance of the ratio of peak concentration to minimal inhibitory concentration</a>. J Infect Dis 1987;155(1):93–99.</div>
+</div>
+<div id="ref-Goldie1983" class="csl-entry" role="listitem">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline">Goldie J, Coldman A. Quantitative model for multiple levels of drug resistance in clinical tumors. Cancer Treat Rep 1983;67:923–931.</div>
+</div>
+<div id="ref-Dunbar2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">29. </div><div class="csl-right-inline">Dunbar L, Milata J, McClure T, et al. <a href="https://doi.org/10.1128/AAC.00029-11">Comparison of the efficacy and safety of oritavancin front-loaded dosing regimens to daily dosing: An analysis of the SIMPLIFI trial</a>. Antimicrob Agents Chemother 2011;55(7):3476–3484.</div>
+</div>
+<div id="ref-Heemskerk2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">30. </div><div class="csl-right-inline">Heemskerk A, Bang N, Mai N, et al. <a href="https://doi.org/10.1056/NEJMoa1507062">Intensified antituberculosis therapy in adults with tuberculous meningitis</a>. N Engl J Med 2016;374:124–134.</div>
+</div>
+<div id="ref-Falagas2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">31. </div><div class="csl-right-inline">Falagas M, Tansarli G, Ikawa K, Vardakas K. <a href="https://doi.org/10.1093/cid/cis857">Clinical outcomes with extended or continuous versus short-term intravenous infusion of carbapenems and piperacillin/tazobactam: A systematic review and meta-analysis</a>. Clin Infect Dis 2013;56(2):272–282.</div>
+</div>
+<div id="ref-Rhodes2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">32. </div><div class="csl-right-inline">Rhodes N, Liu J, O’Donnell J, et al. <a href="https://doi.org/10.1097/CCM.0000000000002836">Prolonged infusion piperacillin-tazobactam decreases mortality and improves outcomes in severely ill patients: Results of a systematic review and meta-analysis</a>. Crit Care Med 2018;46(2):236–243.</div>
+</div>
+<div id="ref-Dulhunty2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline">Dulhunty J, Roberts J, Davis J, et al. <a href="https://doi.org/10.1164/rccm.201505-0857OC">A multicenter randomized trial of continuous versus intermittent β-lactam infusion in severe sepsis</a>. Am J Respir Crit Care Med 2015;192(11):1298–1305.</div>
+</div>
+<div id="ref-AbdulAziz2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">34. </div><div class="csl-right-inline">Abdul-Aziz M, Sulaiman H, Mat-Nor M, et al. <a href="https://doi.org/10.1007/s00134-015-4188-0">Beta-lactam infusion in severe sepsis (BLISS): A prospective, two-centre, open-labelled randomised controlled trial of continuous versus intermittent beta-lactam infusion in critically ill patients with severe sepsis</a>. Intensive Care Med 2016;42(10):1535–1545.</div>
+</div>
+<div id="ref-Dulhunty2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">35. </div><div class="csl-right-inline">Dulhunty J, Roberts J, Davis J, et al. <a href="https://doi.org/10.1093/cid/cis856">Continuous infusion of beta-lactam antibiotics in severe sepsis: A multicenter double-blind, randomized controlled trial</a>. Clin Infect Dis 2013;56(2):236–244.</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

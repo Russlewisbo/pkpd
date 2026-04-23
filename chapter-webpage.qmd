@@ -1,9 +1,6 @@
 ---
 title: "Pharmacokinetics and Pharmacodynamics of Antiinfective Agents"
-subtitle: "Chapter 19"
-author:
-  - name: Manjunath P. Pai
-  - name: Mackenzie L. Cottrell
+
 date: last-modified
 format:
   html:
@@ -42,13 +39,83 @@ Antiinfective PK-PD is unique in pharmacology in that this relationship includes
 3. Collateral effects on the microbiome [@Craig1998; @Drusano2007]
 :::
 
+```{dot}
+//| label: fig-pkpd-framework
+//| fig-cap: "Conceptual framework relating pharmacokinetics and pharmacodynamics to clinical outcomes."
+digraph G {
+  fontname="Helvetica,Arial,sans-serif"
+  node [fontname="Helvetica,Arial,sans-serif"]
+  edge [fontname="Helvetica,Arial,sans-serif"]
+
+  patient -> PK;
+  drug -> PK;
+  intrinsic -> PD;
+  acquired -> PD;
+  inoculum -> PD;
+  PK -> PKPD;
+  PD -> PKPD;
+  PKPD -> microbiological;
+  microbiological -> clinical;
+
+  clinical        [shape=box,  label="Clinical outcome"];
+  microbiological [shape=box,  label="Microbiological outcome"];
+  PK              [shape=oval, label="Pharmacokinetics (PK)"];
+  PD              [shape=oval, label="Pharmacodynamics (PD)"];
+  PKPD            [shape=oval, label="PK/PD"];
+  patient         [shape=none, label="Patient factors"];
+  drug            [shape=none, label="Drug factors"];
+  intrinsic       [shape=none, label="Intrinsic resistance"];
+  acquired        [shape=none, label="Acquired resistance"];
+  inoculum        [shape=none, label="Infection inoculum"];
+}
+```
+
+```{dot}
+//| label: fig-pk-pd-process
+//| fig-cap: "The pharmacokinetic–pharmacodynamic process from dosing regimen to antimicrobial effect [@craig_1998]."
+digraph G {
+  rankdir=LR
+  fontname="Helvetica,Arial,sans-serif"
+  node [fontname="Helvetica,Arial,sans-serif"]
+  edge [fontname="Helvetica,Arial,sans-serif"]
+
+  subgraph cluster_0 {
+    style=filled; color=lightblue;
+    node [style=filled, color=white];
+    start -> dosing;
+    dosing -> tissue;
+    dosing -> infection;
+    label="Pharmacokinetics (PK)";
+  }
+
+  subgraph cluster_1 {
+    style=filled; color=lightblue;
+    node [style=filled, color=white];
+    tissue -> PD1;
+    infection -> PD2;
+    label="Pharmacodynamics (PD)";
+  }
+
+  start     [shape=box,       label="Dosing regimen"];
+  dosing    [shape=rectangle, style=filled, color=yellow, label="Conc. vs.\ntime in serum", xlabel="Absorption\nDistribution\nMetabolism\nElimination"];
+  tissue    [shape=rectangle, style=filled, color=white,  label="Conc. vs.\ntime in tissue"];
+  infection [shape=rectangle, style=filled, color=white,  label="Conc. vs.\ntime at site of\ninfection"];
+  PD1       [shape=rectangle, label="Pharmacological or\ntoxicological effect"];
+  PD2       [shape=rectangle, label="Antimicrobial effect\nvs. time"];
+}
+```
+
 Because antiinfective agents chiefly affect nonmammalian target sites, the doses of these agents tend to be an order of magnitude higher than those of other pharmacologic classes [@Silver2011]. Another challenge involves reductions in potency of antiinfective agents over time due to emergence of resistance.
 
 ## Pharmacokinetic Principles {#sec-pk-principles}
 
 The plasma or serum concentration-time curve represents complex physiologic processes that are simplified and visually represented by the concentration-time curve. The shape of this curve can be modified by altering the rates of drug entry, distribution, metabolic transformation, and elimination through intrinsic or extrinsic factors [@Vieira2014].
 
-<!-- IMAGE NEEDED: Figure 19.2 - Simulated serum concentration-time profile showing oral vs IV administration -->
+![Simulated serum concentration-time profile illustrating key pharmacokinetic parameters.](images/AUC.png){#fig-concentration-time fig-align="center"}
+
+![Steady-state drug accumulation with repeated dosing. Steady state is reached after approximately 4–5 half-lives.](images/steadystate.png){#fig-steady-state fig-align="center"}
+
+![The four pillars of pharmacokinetics: Absorption, Distribution, Metabolism, and Elimination (ADME).](images/adme_diagram.png){#fig-adme fig-align="center" width="700"}
 
 ### Absorption {#sec-absorption}
 
@@ -77,6 +144,9 @@ Oral absorption can be saturable or nonsaturable with factors such as:
 ## Enterohepatic Recirculation
 Drugs and their conjugated metabolites can be secreted through the bile into the intestines and reabsorbed into circulation through deconjugation by gut flora, a process known as **enterohepatic recirculation**. This mechanism plays an important role in prolonging the elimination of drugs such as certain antibiotics, nonsteroidal antiinflammatory drugs, hormones, opioids, digoxin, and warfarin.
 :::
+
+<iframe src="enterohepatic.html" width="100%" height="450px" style="border: none;">
+</iframe>
 
 ### Distribution {#sec-distribution}
 
@@ -152,6 +222,9 @@ For some CYP enzymes, such as CYP2D6, distinct metabolic patterns exist in a pop
 ## Clinical Application: Ritonavir Boosting
 Ritonavir has been used to decrease the activity of CYP3A isozymes in the gut, allowing greater absorption of other protease inhibitors (PIs) such as tipranavir and darunavir and reducing the overall cost of therapy. The recently approved treatment for COVID-19, Paxlovid, relies on ritonavir-boosted nirmatrelvir [@Hammond2022].
 :::
+
+<iframe src="cyp3a4_boosting.html" width="100%" height="450px" style="border: none;">
+</iframe>
 
 #### Phase II Reactions
 
@@ -269,7 +342,7 @@ PD combines PK parameters and microbiology parameters to describe drug effect in
 
 In the case of antiinfective agents, three PK-PD indices based on serum or plasma concentrations have been associated with efficacy:
 
-<!-- IMAGE NEEDED: Figure 19.3 - Common antibiotic PK-PD relationships showing Cmax, AUC0-24, T>MIC, and Cmin -->
+![Common PK-PD indices for antiinfective agents: C~max~/MIC, AUC/MIC, and T > MIC.](images/pkdp_index.png){#fig-pkpd-indices fig-align="center"}
 
 | PK-PD Index | Description | Associated Antibiotic Classes |
 |:------------|:------------|:------------------------------|
@@ -317,6 +390,12 @@ The most widely accepted model used to study in vitro PK-PD effects of antiinfec
 - Results in relatively high organism loads and lack host immune function
 - May predict higher effective doses than would be defined by immune intact animal models
 
+::: {layout-ncol=2}
+![Hollow fiber infection model schematic.](images/invitromodel.png){#fig-hfim-1}
+
+![Hollow fiber cartridge detail showing extracapillary space where organisms are cultured.](images/invitromodel2.png){#fig-hfim-2}
+:::
+
 ### Animal Models {#sec-animal-models}
 
 Rodent models are often used to determine PK-PD by first making the animal neutropenic before infection to improve the model's reliability and reproducibility. Craig et al. showed that the presence of neutrophils may affect antibacterial activity with fluoroquinolones, penicillin, clindamycin, and doxycycline [@Kiem2002].
@@ -359,7 +438,11 @@ Concentration-dependent killing agents include:
 
 For these agents, higher C~max~/MIC ratios are required for gram-positive pathogens compared with gram-negative pathogens.
 
-<!-- IMAGE NEEDED: Figure 19.4 - Time-kill curves for P. aeruginosa showing concentration-dependent killing with tobramycin, ciprofloxacin, and ticarcillin -->
+::: {layout-ncol=2}
+![PK-PD indices from animal infection models: cefotaxime against *S. pneumoniae* [@craig_1998].](images/pkpdanimal.png){#fig-animal-model}
+
+![Comparison of ciprofloxacin PK-PD relationships in mice versus humans [@craig_1998].](images/clipboard-406664738 copy.png){#fig-cipro-pkpd}
+:::
 
 ::: {.callout-tip}
 ## Fluoroquinolone PK-PD and Resistance
@@ -456,6 +539,8 @@ High-dose extended-interval aminoglycoside dosing serves as the model for valida
 
 : Comparison of Traditional vs Extended-Interval Aminoglycoside Dosing {#tbl-aminoglycoside-dosing}
 
+![Hartford nomogram for extended-interval aminoglycoside TDM. Trough levels drawn 6–14 hours post-dose are plotted to determine dosing interval [@nicolau.etal_1995].](images/ODA.png){#fig-oda-nomogram fig-align="center" width="700"}
+
 ::: {.callout-important}
 ## Clinical Target for Tobramycin
 The objective of the tobramycin regimen of 5–10 mg/kg once daily is to achieve a serum concentration of 16–20 mg/L 1.5–2 hours after a half-hour infusion (postdistribution phase). We seek to achieve a serum C~max~/MIC ratio of **8–10**, based on an MIC~90~ of tobramycin against *P. aeruginosa* of 2 mg/L because this PK-PD index has been correlated to predict clinical success [@Moore1987].
@@ -475,7 +560,8 @@ Examples include:
 
 The effects of intermittent, extended, and continuous infusion on the serum concentration time profile are illustrated in @fig-infusion-comparison.
 
-<!-- IMAGE NEEDED: Figure 19.5 - Simulated serum concentration-time profile comparing 1-h, 4-h, and continuous infusion -->
+<iframe src="images/infusion_strategy.html" width="100%" height="500px" style="border: none;">
+</iframe>
 
 ::: {.callout-note}
 ## Key Principle
@@ -484,7 +570,8 @@ Concentrations above a threshold concentration (e.g., 8 mg/L) are maintained for
 
 #### Loading Dose Importance
 
-<!-- IMAGE NEEDED: Figure 19.6 - Comparison of continuous infusion with and without loading dose -->
+<iframe src="images/loadingdose.html" width="100%" height="500px" style="border: none;">
+</iframe>
 
 Use of a continuous infusion regimen **without a loading dose** will lead to a delay in the time that the concentration exceeds a threshold. Martinez et al. reviewed this topic and highlighted the importance of achieving effective concentrations at treatment initiation when the organism load is expected to be at its highest [@Martinez2012].
 
